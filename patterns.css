@@ -1,0 +1,47 @@
+.appContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.appContainer section {
+  padding: 10px;
+}
+
+.input {
+  background: #f2f2f2;
+}
+
+.output {
+  background: #666;
+}
+
+.note {
+  background: #444;
+}
+
+.note:nth-child(4n) {
+  margin-right: 4px;
+}
+
+.noteOff {
+  background: silver;
+}
+
+.noteOn {
+  background: red;
+}
+
+#ptn-input {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #333;
+}
+
+#piano-roll {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 2px;
+  grid-auto-rows: 40px;
+}

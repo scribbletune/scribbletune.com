@@ -1,0 +1,54 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont,
+		"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+		"Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+}
+
+h1 {
+	font-weight: 900;
+}
+
+a {
+	color: #666;
+	font-weight: bold;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1260px;
+}
+
+.menu, nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin: 5px;
+}
+
+nav ul li a:focus {
+	color: red;
+}
+
+footer {
+	font-size: 12px;
+	position: static;
+	margin-top:30px;
+}
+
+@media(min-height:520px) {
+	footer {
+		font-size: 12px;
+		position: fixed;
+		bottom: 10px;
+	}
+}
