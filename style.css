@@ -130,3 +130,11 @@ em {
 	background: #FFFBED;
 	font-weight: bold;
 }
+
+.sidebar p {
+	font-size: 0.9em;
+}
+
+.sidebar p a {
+	font-weight: bold;
+}
