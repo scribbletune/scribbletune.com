@@ -49,10 +49,9 @@
 						</ul>
 					</li>
 					<li><a href="#scale">scale/mode</a></li>
+					<li><a href="#chord">chord</a></li>
+					<li><a href="#progression">progression</a></li>
 					<li><a href="#midi">midi</a></li>
-					<li>
-						<a href="#chord">chord</a>
-					</li>
 				</ul>
 				<hr>
 				<h3>Feedback/Issues</h3>
@@ -65,10 +64,10 @@
 					<p>A clip is a like a measure of music. It can be a single bar or two bars or how many ever bars you need. In <abbr title="Digital Audio Workstation">DAW</abbr>s such as Ableton Live and Propellerhead Reason, a clip is what you create in the session or arrangement view to capture a musical idea.</p>
 
 					<p>The <em>clip</em> method takes an object literal as an argument. This object lets you define the parameters of that clip. Here is an example of the <em>clip</em> method being called with an object that sets up the most basic properties of the <em>clip</em>:</p>
-					<pre class="prettyprint"><code>var scribble = require('scribbletune');
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
 
 // Create a clip that plays the middle C
-var clip = scribble.clip({
+const clip = scribble.clip({
 	notes: 'c4',
 	pattern: 'x'
 });
@@ -79,10 +78,10 @@ scribble.midi(clip, 'c.mid');</code></pre>
 				<div id="notes" class="section">
 					<h4>notes {String|Array}</h4>
 					<p>This property lets you set up the notes we want to play in the clip. You can enter notes manually or use the built-in scale/mode method to generate notes from a scale and further mangle them into an array. For instance, in the preceding example we set the 'c4' note as the only note to be played across a pattern. You can even set up a bunch of notes:</p>
-					<pre class="prettyprint"><code>var scribble = require('scribbletune');
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
 
 // Create a clip that plays the C major scale
-var clip = scribble.clip({
+const clip = scribble.clip({
 	notes: 'c4 d4 e4 f4 g4 a4 b4 c5', // Or ['c4', 'd4', 'e4' ...]
 	pattern: 'x'.repeat(8)
 });
@@ -117,7 +116,7 @@ scribble.midi(clip, 'cscale.mid');</code></pre>
 
 				<div id="scale" class="section">
 					<h2>scale/mode <span class="meta pull-right">returns: Array</span></h2>
-					<p>A <em>scale</em> is a set of musical notes ordered by pitch. A displaced order of a scale is also called a <em>mode</em>. Scribbletune exports the same method as <em>scale</em> as well as <em>mode</em>.</p>
+					<p>A <em>scale</em> is a set of musical notes ordered by pitch. A displaced order of a scale is also called a <em>mode</em>. Scribbletune exports the same method as <em>scale</em> as well as <em>mode</em>. One thing to bare in mind is, the names of the scales/modes are to be provided all in lower case as such "harmonic major" or "major" etc.</p>
 
 					<p>The <em>scale</em> method takes 2 mandatory + 2 optional parameters:</p>
 					<ul>
@@ -126,10 +125,10 @@ scribble.midi(clip, 'cscale.mid');</code></pre>
 						<li>octave {Number} default: 4</li>
 						<li>addRootFromNextOctave {Boolean} default: true</li>
 					</ul>
-					<pre class="prettyprint"><code>var scribble = require('scribbletune');
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
 
 // Create a clip that plays the middle C
-var cMinor = scribble.scale('c4 minor'); // [ 'c4', 'd4', 'd#4' ... ]
+let cMinor = scribble.scale('c4 minor'); // [ 'c4', 'd4', 'd#4' ... ]
 
 // The scale method can also be refered to as `mode`
 cMinor = scribble.mode('c4 minor'); // [ 'c4', 'd4', 'd#4' ... ]
@@ -140,31 +139,12 @@ cMinor = scribble.mode('c4 aeolian'); // [ 'c4', 'd4', 'd#4', 'f4' ...]</code></
 					<p>There are a bunch of scales and modes available in Scribbletune. You can list the available modes by invoking the <em>modes</em> method. To view a list now, <a href="https://github.com/walmik/scribbletune/blob/master/src/modes.js">click here</a>.</p>
 				</div>
 
-				<div id="midi" class="section">
-					<h2>midi</h2>
-					<p>As the name suggests, the <em>midi</em> method generates a MIDI file from it's input. It takes 1 mandatory and 1 optional parameter:</p>
-					<ol>
-						<li>clip {Array} The clip that you create using the <em>clip</em> method</li>
-						<li>filename {String} This is optional. If you don't provide a filename, Scribbletune will create a file called music.mid</li>
-					</ol>
-					<pre class="prettyprint"><code>var scribble = require('scribbletune');
-
-var clip = scribble.clip({
-	notes: 'c4',
-	pattern: 'x_______'
-});
-
-scribble.midi(clip); // Will create a file called music.mid
-// OR
-scribble.midi(clip, 'c.mid'); // Will create a file called c.mid</code></pre>
-				</div>
-
 				<div id="chord" class="section">
 					<h2>chord</h2>
 					<p>Scribbletune recognizes chords by their commonly used names. For instance here is a chord progression set up via chord names:</p>
-					<pre class="prettyprint"><code>var scribble = require('scribbletune');
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
 
-var clip = scribble.clip({
+const clip = scribble.clip({
 	// Use chord names directly in the notes array
 	// M stands for Major, m stands for minor
 	notes: 'CM FM GM CM',
@@ -176,15 +156,47 @@ scribble.midi(clip, 'chords.mid');</code></pre>
 					<p>Here's how that looks on a piano roll when imported into a DAW</p>
 					<img src="images/chords.png">
 					<p>Other than recognizing chords in a notes array, Scribbletune uses Tonal.js to get a particular chord as an array of notes from that chord:</p>
-					<pre class="prettyprint"><code>var scribble = require('scribbletune');
-var cMajorChord = scribble.chord('CM'); // [ 'c4', 'e4', 'g4' ]</code></pre>
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
+const cMajorChord = scribble.chord('CM'); // [ 'c4', 'e4', 'g4' ]</code></pre>
 					<p>To get the chord on a particular octave, just append a hyphen and a number:</p>
-					<pre class="prettyprint"><code>var scribble = require('scribbletune');
-var cMajorChord = scribble.chord('CM-5'); // [ 'c5', 'e5', 'g5' ]</code></pre>
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
+const cMajorChord = scribble.chord('CM-5'); // [ 'c5', 'e5', 'g5' ]</code></pre>
 					<p>Lastly, you can get an array of the available chords by calling the getChords method:</p>
-					<pre class="prettyprint"><code>var scribble = require('scribbletune');
-var availableChords = scribble.chords(); // Lists all available chords</code></pre>
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
+const availableChords = scribble.chords(); // Lists all available chords</code></pre>
 				</div>
+				<div id="progression" class="section">
+					<h2>progression</h2>
+					<p><i>This is an experimental feature.</i> As of now it supports providing common chord progressions for major, minor and seventh chords. For e.g. <em>I IV V ii</em> on C Major would produce a string such as <em>CM FM GM Dm</em> which you can use while creating a clip as the chords you'd like as part of that clip's notes.</p>
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
+
+const clip = scribble.clip({
+	notes: scribble.progression('C4 major', 'I IV V ii'),  // Here 4 is the octave
+	pattern: 'x_'.repeat(4) + 'x_______'
+});
+
+scribble.midi(clip, 'chords.mid');</code></pre>
+				</div><!-- End of progression -->
+
+				<div id="midi" class="section">
+					<h2>midi</h2>
+					<p>As the name suggests, the <em>midi</em> method generates a MIDI file from it's input. It takes 1 mandatory and 1 optional parameter:</p>
+					<ol>
+						<li>clip {Array} The clip that you create using the <em>clip</em> method</li>
+						<li>filename {String} This is optional. If you don't provide a filename, Scribbletune will create a file called music.mid</li>
+					</ol>
+					<pre class="prettyprint"><code>const scribble = require('scribbletune');
+
+const clip = scribble.clip({
+	notes: 'c4',
+	pattern: 'x_______'
+});
+
+scribble.midi(clip); // Will create a file called music.mid
+// OR
+scribble.midi(clip, 'c.mid'); // Will create a file called c.mid</code></pre>
+				</div> <!-- End midi -->
+
 				<hr>
 				<div>
 					<p>If you like this project then please <a href="https://github.com/scribbletune/scribbletune">Star it on Github</a>!</p>
@@ -196,10 +208,12 @@ var availableChords = scribble.chords(); // Lists all available chords</code></p
 
 	</div> <!-- container -->
 	<script>
-		// temporary hack for http to https
-		if (location.protocol === 'http:') {
-			location.href = 'https://scribbletune.com/documentation.html';
-		} else {
+		(function(){
+			// temporary hack for http to https
+			if (location.protocol === 'http:') {
+				location.href = 'https://scribbletune.com/documentation.html';
+			}
+
 			document.querySelectorAll('.api-menu a').forEach(function(el, idx) {
 				el.onclick = function() {
 					document.querySelector('.selected').className = '';
@@ -214,7 +228,7 @@ var availableChords = scribble.chords(); // Lists all available chords</code></p
 			
 			ga('create', 'UA-8347688-20', 'auto');
 			ga('send', 'pageview');
-		}
+		}());
 	</script>
 </body>
 
