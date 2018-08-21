@@ -58,6 +58,7 @@ select, button {
 .menu {
 	display: flex;
 	flex-direction: column;
+	text-align: center;
 }
 
 .menu, nav ul {
@@ -117,6 +118,7 @@ footer {
 	width: 100%;
 }
 
+/* Make the footer sticky for desktop */
 @media(min-height:520px) {
 	footer {
 		font-size: 12px;
