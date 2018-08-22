@@ -81,7 +81,7 @@ select, button {
 
 @media (min-width: 320px) and (max-width: 767px) {
 	.instrument {
-		margin-top: 40px;
+		margin-top: 60px;
 	}
 
 	.page .logo {
