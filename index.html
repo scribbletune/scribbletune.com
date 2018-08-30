@@ -2,57 +2,32 @@
 layout: default
 ---
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">{{ site.title }}</h1>
-  <p class="lead">{{ site.description }}</p>
+<div class="hero px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+	<h1 class="display-4">{{ site.title }}</h1>
+	<p class="lead">{{ site.description }}</p>
 </div>
+<div class="hero mx-auto">
+	<pre class="prettyprint"><code>npm install scribbletune</code></pre>
+	<p>Let's put something together. Create a file called chords.js and paste the following in it,</p>
+	
+	<pre class="prettyprint"><code>const scribble = require('../src/');
 
-<div class="container">
-  <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Node module</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>tonal for scales and chords</li>
-          <li>jsmidgen for MIDI file generation</li>
-          <li>homegrown pattern language</li>
-          <li>utility methods</li>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-      </div>
-    </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Browser</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>all features from node module</li>
-          <li>webaudio API via tone.js</li>
-          <li>quickstart methods</li>
-          <li>music production software like functions</li>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-      </div>
-    </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Experiments</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>extends core to do more</li>
-          <li>Johann - generate charts</li>
-          <li>Live - Ableton Live like experience</li>
-          <li>Help center access</li>
-        </ul>
-        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
-      </div>
-    </div>
-  </div>
+// Create a clip that contains a musical idea
+let clip = scribble.clip({
+	notes: 'F#m C#m DM Bm EM AM DM C#m AM',
+	pattern: '[xx][x-]'.repeat(8)
+});
+
+scribble.midi(clip, 'chords.mid');</code></pre>
+	<p>Now execute that file in the terminal at the same location as you saved it,</p>
+	<pre class="prettyprint"><code>node chords.js</code></pre>
+
+	<p>This will generate a MIDI file called chords.mid in the same location as you executed this script. Here's how it sounded when I imported it into Garage Band and used the Synthesizer > EDM Chord > Sunrise Chords virtual instrument with a little reverb:</p>
+	<audio controls="">
+		<source src="/sounds/chords.mp3" type="audio/mpeg">
+	</audio>
+
+	<hr>
+
+	<p>This is just a humble beginning. You can do a lot more with Scribbletune! <a href="/documentation">Read the documentation</a> or show your ❤ Star this project on <a href="https://github.com/scribbletune/scribbletune">Github</a>! </p>
 </div>
