@@ -38,3 +38,13 @@ aside h6 {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.documentation {
+    h4, h5, h6 {
+        margin-top: 20px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
