@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Session
+title: session
 permalink: /documentation/browser/session
 ---
 

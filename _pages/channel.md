@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Channel
+title: channel
 permalink: /documentation/browser/channel
 ---
 

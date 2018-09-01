@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Loop
+title: loop
 permalink: /documentation/browser/loop
 ---
 

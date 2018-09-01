@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Scale
+title: scale
 permalink: /documentation/core/scale
 ---
 

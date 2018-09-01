@@ -1,11 +1,11 @@
 <aside>
 	<h6>SCRIBBLETUNE API</h6>
 	<ul>
-		<li><a href="/documentation/core/clip">clip</a></li>
-		<li><a href="/documentation/core/scale">scale</a></li>
-		<li><a href="/documentation/core/chord">chord</a></li>
-		<li><a href="/documentation/core/progression">progression</a></li>
-		<li><a href="/documentation/core/midi">midi</a></li>
+		<li {% if page.title == 'clip' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/clip">clip</a></li>
+		<li {% if page.title == 'scale' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/scale">scale</a></li>
+		<li {% if page.title == 'chord' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/chord">chord</a></li>
+		<li {% if page.title == 'progression' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/progression">progression</a></li>
+		<li {% if page.title == 'midi' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/midi">midi</a></li>
 	</ul>
 
 	<!-- <h6>Browser</h6>

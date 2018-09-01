@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Clip
+title: clip
 permalink: /documentation/core/clip
 ---
 
