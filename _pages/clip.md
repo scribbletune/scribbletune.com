@@ -11,16 +11,16 @@ A clip is a container for a musical idea.  is a like a measure of music. It can 
 The clip method takes an object literal as an argument. This object lets you define the parameters of that clip. Here is an example of the clip method being called with an object that sets up the most basic properties of the clip:
 
 ```
-const scribble = require('scribbletune');
+import { clip } from 'scribbletune';
 
 // Create a clip that plays the middle C
-const clip = scribble.clip({
+const c = clip({
 	notes: 'c4',
 	pattern: 'x'
 });
 
 // Render a MIDI file of this clip
-scribble.midi(clip, 'c.mid');
+scribble.midi(c, 'c.mid');
 ```
 
 ##### Input parameters
@@ -32,10 +32,10 @@ The clip method accepts a JavaScript object as the only argument. This object ca
 This property lets you set up the notes we want to play in the clip. You can enter notes manually or use the built-in scale/mode method to generate notes from a scale and further mangle them into an array. For instance, in the preceding example we set the 'c4' note as the only note to be played across a pattern. You can even set up a bunch of notes:
 
 ```
-const scribble = require('scribbletune');
+import { clip } from 'scribbletune';
 
 // Create a clip that plays the C major scale
-const clip = scribble.clip({
+const c = clip({
 	notes: 'c4 d4 e4 f4 g4 a4 b4 c5', // Or ['c4', 'd4', 'e4' ...]
 	pattern: 'x'.repeat(8)
 });
