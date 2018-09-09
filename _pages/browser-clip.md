@@ -26,7 +26,7 @@ const scribble = require('scribbletune');
 
 Then you can go ahead and create a clip like you d normally do, but this time you'd also add an additional property to make it use the global Tone.js (which you loaded via SCRIPT tag earlier).
 
-### Synth
+#### Synth
 
 ```
 scribble.clip({ 
@@ -46,7 +46,7 @@ Tone.Transport.start();
 
 On reloading the page you should now hear the synth play at the set pattern.
 
-### Sample
+#### Sample
 
 Along with Tone.js provided synths/instruments, you can even set up an individual `wav` file to play a pattern.
 ```
@@ -66,7 +66,7 @@ Tone.Transport.start();
 On reloading the page you should now hear your sample (wav file) play at the set pattern.
 
 
-### Sampler
+#### Sampler
 
 Finally, you can provide a set of samples as individual notes to create an entire instrument from scratch and use that instead,
 
