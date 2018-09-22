@@ -16,14 +16,17 @@ import { scale } from 'scribbletune';
 // Create a clip that plays the middle C
 let cMinor = scale('c4 minor'); // [ 'c4', 'd4', 'd#4' ... ]
 
-// The scale method can also be refered to as `mode`
-cMinor = scale('c4 minor'); // [ 'c4', 'd4', 'd#4' ... ]
-
 // That's the same as
 cMinor = scale('c4 aeolian'); // [ 'c4', 'd4', 'd#4', 'f4' ...]
 ```
 
-You can list all the available scales by invoking `scales` method.
+Scales are also exposed as modes.
+```
+import { mode } from 'scribbletune';
+cMinor = mode('c4 aeolian'); // [ 'c4', 'd4', 'd#4', 'f4' ...]
+```
+
+You can list all the available scales by invoking `scales` or `modes` method.
 
 ```
 import { scales } from 'scribbletune';
