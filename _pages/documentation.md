@@ -25,4 +25,4 @@ scribble.midi(clip, 'c.mid');
 
 ```
 
-Please use the menu alongside for the various methods available.
+Please use the menu alongside for the various methods available or click here to learn how to [start using Scribbletune](/documentation/installation) in your project.

@@ -1,18 +1,21 @@
 <aside>
+	<h6>GETTING STARTED</h6>
+	<ul>
+		<li {% if page.title == 'installation' %} class="active"{% endif %}><a href="/documentation/installation">Installation</a></li>
+	</ul>
 	<h6>SCRIBBLETUNE API</h6>
 	<ul>
-		<li {% if page.title == 'clip' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/clip">clip</a></li>
-		<li {% if page.title == 'scale' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/scale">scale</a></li>
-		<li {% if page.title == 'chord' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/chord">chord</a></li>
-		<li {% if page.title == 'progression' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/progression">progression</a></li>
-		<li {% if page.title == 'midi' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/core/midi">midi</a></li>
+		<li {% if page.title == 'clip' %} class="active"{% endif %}><a href="/documentation/core/clip">clip</a></li>
+		<li {% if page.title == 'scale' %} class="active"{% endif %}><a href="/documentation/core/scale">scale</a></li>
+		<li {% if page.title == 'chord' %} class="active"{% endif %}><a href="/documentation/core/chord">chord</a></li>
+		<li {% if page.title == 'progression' %} class="active"{% endif %}><a href="/documentation/core/progression">progression</a></li>
+		<li {% if page.title == 'midi' %} class="active"{% endif %}><a href="/documentation/core/midi">midi</a></li>
 	</ul>
 
 	<h6>Browser</h6>
-	<p>Contains all the methods from Core as well as the following</p>
 	<ul>
-		<li {% if page.title == 'browser-clip' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/browser/browser-clip">clip (extended)</a></li>
-		<li {% if page.title == 'session' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/browser/session">session</a></li>
-		<li {% if page.title == 'channel' %} class="active" {{ page.title }}{% endif %}><a href="/documentation/browser/channel">channel</a></li>
+		<li {% if page.title == 'browser-clip' %} class="active"{% endif %}><a href="/documentation/browser/browser-clip">clip (extended)</a></li>
+		<li {% if page.title == 'session' %} class="active"{% endif %}><a href="/documentation/browser/session">session</a></li>
+		<li {% if page.title == 'channel' %} class="active"{% endif %}><a href="/documentation/browser/channel">channel</a></li>
 	</ul>
 </aside>
