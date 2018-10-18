@@ -17,7 +17,7 @@ const scribble = require('scribbletune');
 // Create a clip that plays the middle C
 const clip = scribble.clip({
 	notes: scribble.scale('C4 major'),
-	pattern: 'x'
+	pattern: 'xxxxxxx'
 });
 
 // Render a MIDI file of this clip
