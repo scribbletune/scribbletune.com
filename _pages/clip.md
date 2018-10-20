@@ -68,3 +68,7 @@ An underscore implies a sustain to the preceding x. More underscores imply more 
 ###### shuffle `{Boolean}`
 
 Setting this property will randomize the order of the notes you set in the clip method.
+
+Here is an example of how multiple clips exported as MIDI files sounded when I imported these into Garage Band and played them over samples of a kick drum, snare and hi hats and a basic synth,
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247079528&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>

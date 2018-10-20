@@ -11,26 +11,34 @@ A scale is a set of musical notes ordered by pitch. Scribbletune uses [tonal](ht
 The scale method takes a string input that denotes the key and the scale you want. 
 
 ```
-import { scale } from 'scribbletune';
+const scribble = require('scribbletune');
 
-// Create a clip that plays the middle C
-let cMinor = scale('c4 minor'); // [ 'c4', 'd4', 'd#4' ... ]
+// Get the C major scale
+let cMajor = scribble.scale('c4 major'); // [ 'c4', 'd4', 'e4' ... ]
 
 // That's the same as
-cMinor = scale('c4 aeolian'); // [ 'c4', 'd4', 'd#4', 'f4' ...]
+cMajor = scribble.scale('c4 ionian'); // [ 'c4', 'd4', 'e4', 'f4' ...]
+
+// Create a clip that plays this C major scale
+const clip = scribble.clip({
+  notes: cMajor,
+  pattern: 'xxxxxxx'
+});
+
+// Export this clip as a MIDI file
+scribble.midi(clip, 'c-major.mid');
 ```
+This will generate a MIDI file at the same location as you run this script. This is how it sounded when I imported the generated `c-major.mid` MIDI file into Garage Band
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247076595&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 Scales are also exposed as modes.
 ```
-import { mode } from 'scribbletune';
-cMinor = mode('c4 aeolian'); // [ 'c4', 'd4', 'd#4', 'f4' ...]
+let cMinor = scribble.mode('c4 aeolian'); // [ 'c4', 'd4', 'd#4', 'f4' ...]
 ```
 
 You can list all the available scales by invoking `scales` or `modes` method.
 
 ```
-import { scales } from 'scribbletune';
-
-// Create a clip that plays the middle C
-const allScales = scales(); // returns an array of all the available scales
+const allScales = scribble.scales(); // returns an array of all the available scales from tonal
 ```

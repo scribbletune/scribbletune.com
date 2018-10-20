@@ -8,7 +8,7 @@ pre {
 /* desert scheme ported from vim to google prettify */
 pre.prettyprint { display: block; background-color: #1f2328; line-height: 1.7em; }
 pre .nocode { background-color: none; color: #1f2328 }
-pre .str { color: #ed5353 } /* string  - pink */
+pre .str { color: #ff5500 } /* string  - pink */
 pre .kwd { color: #f7da4a; font-weight: bold }
 pre .com { color: #379e97 }
 pre .typ { color: #98fb98 } /* type    - lightgreen */
@@ -17,7 +17,7 @@ pre .pun { color: #fff }    /* punctuation */
 pre .pln { color: #fff }    /* plaintext */
 pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
 pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
-pre .atv { color: #ed5353 } /* attribute value - pink */
+pre .atv { color: #ff5500 } /* attribute value - pink */
 pre .dec { color: #98fb98 } /* decimal         - lightgreen */
 
 /* Specify class=linenums on a code to get line numbering */
