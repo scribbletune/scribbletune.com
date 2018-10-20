@@ -57,9 +57,7 @@ scribble.midi(c, 'arp.mid');
 This will create a midi file called "arp.mid" at the same location as you run this script with `node` and it will arpeggiate the triads Cm, Fm, Cm, Fm, Cm, Gm, Cm and DM chords each with 4 notes in them ordered as 1 0 3 2. So if the first arpeggio (for Cm) was C4 D#4 G4 C5 then the order of these notes would be 1 0 3 2, which is D#4 C4 C5 G4
 
 Here's how it sounded when I imported the MIDI file it produced into Ableton Live
-<audio controls="">
-  <source src="/sounds/arp.mp3" type="audio/mpeg">
-</audio>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/517314963&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 You can use this in the browser as well. Just make sure to pull in Tone.js first however!
 
