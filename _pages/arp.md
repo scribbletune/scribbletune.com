@@ -59,5 +59,5 @@ This will create a midi file called "arp.mid" at the same location as you run th
 Here's how it sounded when I imported the MIDI file it produced into Ableton Live
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/517314963&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-You can use this in the browser as well. Just make sure to pull in Tone.js first however! [Here is an example application](https://scribbletune.github.io/live/rpg8.html) that uses the `arp` method and allows you to build arpeggios and then download them as a MIDI file that you can use in your production.
+You can use this in the browser as well. Just make sure to pull in Tone.js first however! [Here is a quick and dirty example UI application](https://scribbletune.github.io/live/rpg8.html) that uses the `arp` method and allows you to build arpeggios and then download them as a MIDI file that you can use in your production.
 
