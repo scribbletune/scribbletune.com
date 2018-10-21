@@ -25,3 +25,28 @@ midi(c); // Will create a file called music.mid
 // OR
 midi(c, 'c.mid'); // Will create a file called c.mid
 ```
+<br>
+
+##### Create downloadable MIDI files from the browser
+
+An additional feature as of v1.9.0 available in the `midi` method is the ability to export a byte string instead of MIDI file. This is useful when you want to provide an ability to allow users to create MIDI data and download it as a MIDI file from the browser. Just pass the `null` keyword as the second parameter of the `midi` method.
+
+```
+import {clip, midi} from 'scribbletune';
+
+const c = clip({
+  notes: 'c4',
+  pattern: 'x'
+});
+
+const bytes = midi(c, null); // Pass `null` as the second param to get bytes
+const b64 = btoa(midi(c, bytes)); // Encode byte string from Scribbletune as base64
+const uri = 'data:audio/midi;base64,' + b64;
+const link=document.createElement('a');
+
+link.href=uri;
+link.download = 'music.mid';
+link.click(); // this will start a download of the MIDI byte string as a file called "music.mid"
+```
+
+Please refer to the [installation section](/documentation/installation) to learn how to use Scribbletune in the browser.
