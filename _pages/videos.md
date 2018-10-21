@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Media
-permalink: /media/
+title: Videos
+permalink: /videos/
 ---
 
 Scribbletune can be used to create full length tracks in the browser or from the terminal by exporting MIDI files!
 {: .lead}
 
-Here are some full length tracks created with Scribbletune in Live events. Wherever applicable the video to the event is provided as well so that you can see how the track was put together (listed in descending order in terms of sound quality):
+Here are some full length tracks created with Scribbletune in Live events with their videos (listed in descending order in terms of sound quality):
 
 <br>
 
