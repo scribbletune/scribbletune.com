@@ -42,7 +42,9 @@ const notesArr = scribble.arp({
   count: 4, // you can set any number from 2 to 8
   // The default value of order is 01234567 as count is 8 by default
   // but here we set count to 4 hence we are only using the first 4 indices to set a order
-  order: '1032'
+  order: '1032' // Any number up to the `count`
+  // Here the `count` is 4, hence any combination of 0, 1, 2 and 3
+  // If the `count` was 3 then you can use any combination of 0, 1 and 2
 });
 
 const c = scribble.clip({
