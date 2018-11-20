@@ -10,8 +10,21 @@ html, body {
     height: 100%;
 }
 
+body {
+    background-color: #262b33;
+    color: #c3c8d1;
+}
+
 pre {
     text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+p {
+    margin-bottom: 1.5rem;
 }
 
 footer {
@@ -19,16 +32,29 @@ footer {
 }
 
 a {
-    color: #379e97;
+    color: #a1b5e4;
 }
 
 a:hover {
-    color: #379e97;
+    color: #6e8bce;
+    text-decoration: none;
 }
 
 aside h6 {
-    color: silver;
+    color: #4a4f53;
     text-transform: uppercase;
+}
+
+aside a {
+    color: #d4dbe0;
+}
+
+.top-nav {
+    background: #121213;
+}
+
+.top-nav a, footer a {
+    color: white;
 }
 
 .logo {
@@ -55,4 +81,5 @@ aside h6 {
 
 .active a {
     font-weight: bold;
+    color: #6e8bce;
 }
