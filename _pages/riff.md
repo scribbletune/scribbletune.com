@@ -12,9 +12,11 @@ Before we go on, here's a sample of what we are gonna end up creating using Scri
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%230c0809&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-As you can imagine, this is a commonly used technique to create riffs. You randomly click some of the steps in a 16 beat pattern and moves them around while sticking to a particular scale. Then, on a lower octave, add notes to the missing steps on a particular key to act as the counter point notes. This works great and quickly creates a nice little riff.
+As you can imagine, this is a commonly used technique to create riffs. You randomly click some of the steps in a 16 beat pattern and moves them around while sticking to a particular scale. Then, on a lower octave, add notes to the missing steps on a particular key to act as the counter point notes. This works great and quickly creates a nice little riff that looks a bit like this,
 
-You can even create a JavaScript function that does this and allow it to accept some things such as "key", "scale" and "chord degrees" to use as the progression. If you'd like to skip the explanation and directly use the script, then please [click here](https://gist.github.com/walmik/f3d2a0557810c68fa2e40ecff9f32343)
+![Quarter notes](/images/riff-piano-roll.png)
+
+Instead of doing it in a DAW, you can create a JavaScript function instead, that does this and allow it to accept some things such as "key", "scale" and "chord degrees" to use as the progression. If you'd like to skip the explanation and directly use the script, then please [click here](https://gist.github.com/walmik/f3d2a0557810c68fa2e40ecff9f32343)
 
 #### Pattern
 
@@ -111,5 +113,10 @@ function getClip(prog = 'i III ii') {
 ```
 
 All we need to do is to allow passing a "key" and "scale" dynamically (we hard coded D4 harmonic minor here). To do this we'll just wrap this function inside another function that allows us to set the key and scale. We'll also use the [midi](/documentation/core/midi) method to produce a MIDI file. [Click here](https://gist.github.com/walmik/f3d2a0557810c68fa2e40ecff9f32343) to see how the entire script looks.
+
+If you download that script and run it from your terminal with `node riff.js`, you will get a MIDI file called `music.mid` which you can import in any DAW and play it with a virtual instrument of your choice. I used Ableton Live's Operator>Synth Lead>Epic Trance Lead along with Bazzism Kick plugin and Reaktor Blocks>Bling Deep Bass sound with some hats and snare to produce this riff:
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%230c0809&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
 
 
