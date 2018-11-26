@@ -69,13 +69,17 @@ aside a {
     background-position: center;
 }
 
-.documentation {
+.content {
     h4, h5, h6 {
         margin-top: 20px;
     }
 
     img {
         max-width: 100%;
+    }
+
+    a {
+        color: #ff5501;
     }
 }
 
