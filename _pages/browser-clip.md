@@ -47,8 +47,8 @@ Tone.Transport.start();
 You should now hear the synth play at each quarter note.
 
 <div>
-	<button id="btnStartSynth">Start</button>
-	<button id="btnStopSynth">Stop</button>
+	<button id="btnStartSynth">&#9654;</button>
+	<button id="btnStopSynth">&#9632;</button>
 </div>
 
 #### Sample
@@ -75,8 +75,8 @@ Tone.Transport.start();
 You should now hear your sample (a kick drum sample in this case) play at each quarter note.
 
 <div>
-	<button id="btnStartSample">Start</button>
-	<button id="btnStopSample">Stop</button>
+	<button id="btnStartSample">&#9654;</button>
+	<button id="btnStopSample">&#9632;</button>
 </div>
 
 
@@ -120,8 +120,8 @@ As always make sure Tone.Transport is started,
 Tone.Transport.start();
 ```
 <div>
-	<button id="btnStartPiano">Start</button>
-	<button id="btnStopPiano">Stop</button>
+	<button id="btnStartPiano">&#9654;</button>
+	<button id="btnStopPiano">&#9632;</button>
 </div>
 <br>
 
@@ -129,8 +129,6 @@ With the Sampler, you can create your own instruments from sampled sounds. This 
 
 Before we end this section, Tone.Transport also has a `stop` method that you can invoke too. So in most cases you'd have a button for Start Audio and another one for Stop Audio. You can assign Tone.Transport's start and stop methods to these.
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.2/scribbletune.js"></script>
 <script type="text/javascript">
 	// Create a sampler out of individual sound files
 	var piano = {
