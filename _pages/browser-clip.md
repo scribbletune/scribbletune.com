@@ -13,7 +13,7 @@ Scribbletune uses Tone.js to creates sequences to be played in the browser.
 
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.2/scribbletune.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.4/scribbletune.js"></script>
 ```
 
 The clip method is the same as the one [from the core Scribbletune node module](/documentation/core/clip) but with some added properties to enable playing them in the browser. Behind the scenes, Scribbletune makes use of a global Tone object to create Player, Instrument and Sampler along with Sequence to enable this behavior.

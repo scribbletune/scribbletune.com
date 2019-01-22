@@ -17,7 +17,7 @@ Use the precompiled version of Scribbletune from CDNjs and reference it in your 
 
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.2/scribbletune.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.4/scribbletune.js"></script>
 ```
 
 This will make a global object called `scribble` available for you to use in your script.

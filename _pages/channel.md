@@ -13,7 +13,7 @@ Scribbletune creates channels that can contain multiple clips.
 
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="path/to/scribbletune.js/or/compiled/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.4/scribbletune.js"></script>
 ```
 
 Before you can create a channel, you must create a [session](/documentation/browser/session). 
