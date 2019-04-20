@@ -28,6 +28,14 @@ This is a new section to this website. More content is being added and will be u
 
 <hr>
 
+##### Generate a simple melody
+`Use simply music constraints to create a melody`
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/606723279&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<a href="/examples/melody">Learn how to create this with JavaScript and Scribbletune</a>
+
+<hr>
+
 ##### Create a music related web application
 `Use Scribbletune with frameworks such as React to create UI applications specifically for music`
 <div><img src="https://scribbletune.github.io/johann/logo.png" style="max-width:200px" /></div><br>

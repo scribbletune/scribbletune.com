@@ -2,7 +2,7 @@
 layout: examples
 title: Simple melody
 permalink: /examples/melody
---- 
+---
 
 ### Simple melody
 Adding constraints or limitations to the construction of your melody can make you creative
@@ -26,7 +26,7 @@ const scribble = require('scribbletune');
 
 So lets select the C minor scale for our example and decide to use the progression i iii ii v. We can get the actual chords like this,
 
-```   
+```
 const chords = scribble.progression.getChords('C4 minor', 'i iii ii v');
 ```
 
@@ -39,14 +39,14 @@ const notes = [];
 let pattern = '';
 ```
 
-Next, we ll loop over the 4 chords and "randomly" decide at each chord if we want to use 2 quarter notes or 1 quarter note and 2 eighth notes. Depending on that we ll use that many notes from the chord themselves.
+Next, we ll loop over the 4 chords and decide at each chord if we want to use 2 quarter notes or 1 quarter note and 2 eighth notes. We can either use `Math.random()` to determine this or we can do it based on some other condition. For instance we'll do a modulo on the current index in the loop.
 
 ```
-chords.split(' ').forEach(chordName => {
+chords.split(' ').forEach((chordName, index) => {
   // Get the chord as an array of notes
   const chord = scribble.chord(chordName);
 
-  if (Math.round(Math.random())) {
+  if (index % 2 !== 0) {
     // Use 2 quarter notes
     pattern = pattern + 'xx';
 
@@ -54,7 +54,7 @@ chords.split(' ').forEach(chordName => {
     // You could very well use 2 random notes, but we ll keep things straightforward for now
     notes.push(chord[0]);
     notes.push(chord[1]);
-    
+
   } else {
     // Use a quarter note and 2 eigth notes
     pattern = pattern + 'x[xx]';
@@ -78,7 +78,8 @@ const clip1 = scribble.clip({
 scribble.midi(clip1, 'clip1.mid')
 ```
 
-Additionally, to make it sound interesting, let's render out the same clip with a longer note length. By default it's set to 4n (quarter notes), we ll create a clip which uses 2n (half notes) as it's `subdiv` property (which sets default note length).
+Additionally, to make it sound interesting, let's create another clip with a longer note length but the same notes and pattern. In Scribbletune note lengths are set to 4n (quarter notes) by default. We can change this by using the `subdiv` property. For this example, we ll create a clip which uses 2n (half notes) as the `subdiv` (which sets default note length).
+
 ```
 const clip2 = scribble.clip({
   notes,
