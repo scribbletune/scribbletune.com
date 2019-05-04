@@ -33,6 +33,23 @@ Install `scribbletune` and `webpack` from npm
 ```
 npm i scribbletune --save
 npm i webpack --save-dev
+npm i webpack-cli --save-dev
+```
+
+Create a bare minimum `webpack.config.js` file with
+```
+const webpack = require('webpack')
+
+module.exports = {
+  mode: "none",
+  entry: "./script.js",
+  output: {
+    filename: "main.js"
+  },
+  node: {
+    fs: "empty"
+  }
+}
 ```
 
 Create a file called `script.js` and enter the following in there
@@ -60,7 +77,7 @@ Now create a file called `index.html` and enter the following in it
 Note that we added a `script` tag with the `src` set to a filed called `main.js`. This file is not yet created. It will be created once you run the following webpack command,
 
 ```
-npx webpack script.js -o main.js
+npx webpack
 ```
 
 Now "serve" the HTML file we created by running a simple Python web server for testing purposes
