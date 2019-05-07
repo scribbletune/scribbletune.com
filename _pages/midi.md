@@ -39,16 +39,17 @@ const c = clip({
   pattern: 'x'
 });
 
-const bytes = midi(c, null); // Pass `null` as the second param to get bytes
-const b64 = btoa(bytes); // Encode byte string from Scribbletune as base64
-const uri = 'data:audio/midi;base64,' + b64;
-const link=document.createElement('a');
+scribble.midi(c, null, function (err, bytes) {
+  const b64 = btoa(bytes);
+  const uri = 'data:audio/midi;base64,' + b64;
+  const link=document.createElement('a');
 
-link.href=uri;
-link.download = 'music.mid';
-link.click(); // this will start a download of the MIDI byte string as a file called "music.mid"
+  link.href=uri;
+  link.download = 'music.mid';
+  link.click(); // this will start a download of the MIDI byte string as a file called "music.mid"
+});
 ```
 
-Here is a [barebones JS Bin](https://jsbin.com/nabirinovo/edit?html,js,console,output) to play with this code. Please note, it might instantly download the music.mid file if your default JS Bin settings have Auto Run JS selected.
+Here is a [barebones JS Bin](https://jsbin.com/tusogupiji/edit?html,js,console,output) to play with this code. Please note, it might instantly download the music.mid file if your default JS Bin settings have Auto Run JS selected.
 
 For additional information, please refer to the [installation section](/documentation/installation) to learn how to use Scribbletune in the browser.
