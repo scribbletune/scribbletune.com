@@ -69,7 +69,7 @@ Now create a file called `index.html` and enter the following in it
 </head>
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-  <script src="main.js"></script>
+  <script src="dist/main.js"></script>
 </body>
 </html>
 ```
