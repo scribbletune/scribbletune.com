@@ -3,15 +3,17 @@ layout: default
 ---
 
 <div class="hero px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-	<a href="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.4/scribbletune.js"><sup>Browser version now available from CDNjs</sup></a>
-	<h1 class="display-4">{{ site.title }}</h1>
-	<p class="lead">{{ site.description }}</p>
+  <h1 class="display-4">{{ site.title }}</h1>
+  <p class="lead">{{ site.description }}</p>
 </div>
 <div class="hero mx-auto">
-	<pre class="prettyprint"><code>npm install scribbletune</code></pre>
-	<p>Let's put something together. Create a file called chords.js and paste the following in it,</p>
-	
-	<pre class="prettyprint"><code>const scribble = require('scribbletune');
+  <pre class="prettyprint"><code>npm install scribbletune</code></pre>
+  <p>
+    Let's put something together. Create a file called chords.js and paste the
+    following in it,
+  </p>
+
+  <pre class="prettyprint"><code>const scribble = require('scribbletune');
 
 // Create a clip that contains a musical idea
 let clip = scribble.clip({
@@ -20,13 +22,32 @@ let clip = scribble.clip({
 });
 
 scribble.midi(clip, 'chords.mid');</code></pre>
-	<p>Now execute that file in the terminal at the same location as you saved it,</p>
-	<pre class="prettyprint"><code>node chords.js</code></pre>
+  <p>
+    Now execute that file in the terminal at the same location as you saved it,
+  </p>
+  <pre class="prettyprint"><code>node chords.js</code></pre>
 
-	<p>This will generate a MIDI file called chords.mid in the same location as you executed this script. Here's how it sounded when I imported it into Garage Band and used the Synthesizer > EDM Chord > Sunrise Chords virtual instrument with a little reverb:</p>
-	<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247079057&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  <p>
+    This will generate a MIDI file called chords.mid in the same location as you
+    executed this script. Here's how it sounded when I imported it into Garage
+    Band and used the Synthesizer > EDM Chord > Sunrise Chords virtual
+    instrument with a little reverb:
+  </p>
+  <iframe
+    width="100%"
+    height="166"
+    scrolling="no"
+    frameborder="no"
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247079057&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+  ></iframe>
 
-	<hr>
+  <hr />
 
-	<p>This is just a humble beginning. You can do a lot more with Scribbletune! <a href="/documentation">Read the documentation</a> or show your <i class="icon icon-heart" title="heart"></i> Star this project on <a href="https://github.com/scribbletune/scribbletune">Github</a>! </p>
+  <p>
+    This is just a humble beginning. You can do a lot more with Scribbletune!
+    <a href="/documentation">Read the documentation</a> or show your
+    <i class="icon icon-heart" title="heart"></i> Star this project on
+    <a href="https://github.com/scribbletune/scribbletune">Github</a>!
+  </p>
 </div>
