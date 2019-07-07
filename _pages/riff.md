@@ -2,9 +2,10 @@
 layout: examples
 title: Riff
 permalink: /examples/riff
---- 
+---
 
 ### Riff
+
 Scribbletune can be used to generate a commonly used pattern for riffs in trance music.
 {: .lead}
 
@@ -28,24 +29,27 @@ const getRandomPattern = function (count) {
   for (let i=0; i < (count || 8); i++) {
     str += Math.round(Math.random()) ? 'x-' : '-x';
   }
-  
+
   return str;
 }
 ```
+
 Here I m randomly alternating between `x-` and `-x` instead of `x` and `-` to avoid creating a pattern that is too sparse. The function will produce something like,
 
 ```
 x--xx-x--xx--x-x
 ```
 
-And it will create a slightly different pattern each time. 
+And it will create a slightly different pattern each time.
 
 #### Arp notes
+
 Next, we'll put together some code that generates the notes we need using Scribbletune's [progression](/documentation/core/progression) and [arp](/documentation/core/arp) methods.
 
 ```
+const scribble = require('scribbletune');
 const arpNotes = scribble.arp({
-  chords: scribble.progression.getChords('D4 harmonic minor', 'i III ii'),
+  chords: scribble.getChordsByProgression('D4 harmonic minor', 'i III ii'),
   count: 3, // you can set any number from 2 to 8
   // The default value of order is 01234567 as count is 8 by default
   // If the `count` was 3 then you can use any combination of 0, 1 and 2
@@ -55,9 +59,10 @@ const arpNotes = scribble.arp({
 });
 ```
 
-This will create an array of notes that form the `i III ii` progression of the harmonic minor scale in the key of D.
+This will create an array of notes that form the `i III ii` progression of the harmonic minor scale in the key of D. The notes of each chord will be in the order we set, which is `102`. Since JavaScript has a zero based index, 102 implies, the second note, followed by the first note and then the third note, in this example.
 
 #### Clip
+
 We'll use these notes inside a function that does this dynamically. But before that, a quick note about the array we are going to generate here. Typically we'd use the [clip](/documentation/core/clip) method to do this. But as of this article, the clip method doesnt know how to merge 2 different styles of subdivisions. In this clip, we want the lower notes to be 1/32 notes and the higher notes to be 1/16. Hence we'll put together the clip ourselves.
 
 The clip method just produces an array of object which look like this for each `x` (**MIDI note on**) in the pattern
@@ -67,6 +72,7 @@ The clip method just produces an array of object which look like this for each `
 ```
 
 For each `-` (**MIDI note off**) in the pattern, the object looks like this,
+
 ```
 { note: null, length: 16, level: 127 }
 ```
@@ -90,7 +96,7 @@ Let's put this together into a single function that lets us pass a progression a
 ```
 function getClip(prog = 'i III ii') {
   const arpNotes = scribble.arp({
-    chords: scribble.progression.getChords('D4 harmonic minor', prog),
+    chords: scribble.getChordsByProgression('D4 harmonic minor', prog),
     count: 3,
     order: '102'
   });
@@ -117,6 +123,3 @@ All we need to do now is to allow passing a "key" and "scale" dynamically (we ha
 If you download that script and run it from your terminal with `node riff.js`, you will get a MIDI file called `music.mid` which you can import in any DAW and play it with a virtual instrument of your choice. I used Ableton Live's Operator>Synth Lead>Epic Trance Lead along with Bazzism Kick plugin and Reaktor Blocks>Bling Deep Bass sound with some hats and snare to produce this riff:
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%230c0809&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-
-
-

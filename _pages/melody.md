@@ -5,15 +5,18 @@ permalink: /examples/melody
 ---
 
 ### Simple melody
+
 Adding constraints or limitations to the construction of your melody can make you creative
 {: .lead}
 
 Recently I went through [a (free) course on artofcomposing.com](https://courses.artofcomposing.com/courses/the-vocabulary-of-composition) and learnt that adding constraints or limitations to the construction of your melody can make you creative. Here are the basic constraints this course suggested as a starting point:
+
 - Select a root note and scale
 - Use only chord tones from the selected scale
 - Use only half notes, eighth notes and quarter notes
 
 Before we go on, here's a sample of what we are gonna end up creating using Scribbletune
+
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/606723279&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 Using the constraints the instructor created a simple melody. He laid out the chord progression I I V I for the C Major scale and randomly chosing between quarter notes and eigth notes. Of course he was a trained musician with a lot more to offer than just that but I thought this simple technique can easily be implemented with Scribbletune for creating simple melodies.
@@ -27,7 +30,7 @@ const scribble = require('scribbletune');
 So lets select the C minor scale for our example and decide to use the progression i iii ii v. We can get the actual chords like this,
 
 ```
-const chords = scribble.progression.getChords('C4 minor', 'i iii ii v');
+const chords = scribble.getChordsByProgression('C4 minor', 'i iii ii v');
 ```
 
 This will set `chords` to a string that looks like `Cm-4 Gm-4 Cm-4 Dm-4`. The number after the hyphen indicates the octave. In Ableton Live the middle C is on the third octave, hence the 4 you see here will transpose to 3 in Ableton live. I have an article that explains middle C a bit more. You can read it if that interests you.
