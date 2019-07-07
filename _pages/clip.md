@@ -28,6 +28,8 @@ scribble.midi(c, 'c.mid');
 
 The clip method accepts a JavaScript object as the only argument. This object can have the following properties:
 
+{:#notes}
+
 ###### notes `{String|Array}`
 
 This property lets you set up the notes we want to play in the clip. You can enter notes manually or use the built-in scale/mode method to generate notes from a scale and further mangle them into an array. For instance, in the preceding example we set the 'c4' note as the only note to be played across a pattern. You can even set up a bunch of notes:
@@ -44,9 +46,11 @@ const c = clip({
 
 In this example we explicitly set the notes of the C major scale in the 4th octave. Thanks to [tonal](https://github.com/danigb/tonal), Scribbletune also has a method to generate scales directly and output an array which you can then manipulate with JavaScript Array functions.
 
+{:#pattern}
+
 ###### pattern `{String}`
 
-This is the most important parameter for the clip method's object. It abstracts away the MIDI _note on_ and _note off_ events along with the individual note durations into a nifty 3 character instruction language made up only of `x`, `-`(hyphen) and `_`(underscore). This is native to Scribbletune and it's used in multiple ways across the Scribbletune library. Here's an example of what a pattern looks like and what it means:
+This is the most important parameter for the clip method's object. It abstracts away the MIDI _note on_ and _note off_ events along with the individual note durations and few other nifty characters to form a simple instruction language. It is made up only of `x`, `-`(hyphen), `_`(underscore), `[`, `]` and the letter `R`(for randomly setting a note - or not - in the specified position). This is native to Scribbletune and it's used in multiple ways across the Scribbletune library. Here's an example of what a pattern looks like and what it means:
 
 ```
 xxxx
@@ -66,6 +70,12 @@ An underscore implies a sustain to the preceding x. More underscores imply more 
 
 ![Quarter notes sustained](/images/quarter-notes-sustained.png)
 
+Square braces allow splitting a note further enabling interesting, complex patterns. For instance if the note length is set to 4n (quarter note - default), then using square braces will subdivide the note further to 8n (eighth notes) or 16n (sixteenth notes) or even triplets. For example, in this pattern `xxx[xx]`, there will be 3 quarter notes followed by 2 sixteenth notes. In `xxx[x[xx]]`, there will be 3 quarter notes followed by 1 sixteenth and then 2 thirtysecond notes!
+
+Lastly, the letter `R` is an experimental new addition to the pattern language and it will let you randomly decide if a note is to be added or not at the specified position. For example, in this patter `xxRx`, the quarter note at `R` will be randomly decided to be added or not. The volume of this note is governed by `accentLow` property of the clip.
+
+{:#shuffle}
+
 ###### shuffle `{Boolean}`
 
 Setting this property will randomize the order of the notes you set in the clip method.
@@ -73,6 +83,8 @@ Setting this property will randomize the order of the notes you set in the clip 
 Here is an example of how multiple clips exported as MIDI files sounded when I imported these into Garage Band and played them over samples of a kick drum, snare and hi hats and a basic synth,
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247079528&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+{:#sizzle}
 
 ###### sizzle `{Boolean | sin | cos | rampUp | rampDown}`
 
@@ -108,6 +120,8 @@ const c = clip({
 ```
 
 In this example, we are setting a clip with 16 notes playing the C4 note. Scribbletune will create a pattern of incremental volumens for 4 notes (coz sizzleReps is set to 4) and repeat it for the duration of the clip, creating a pattern out of ascending volumes.
+
+{:#accent}
 
 ###### accent `{String}`
 

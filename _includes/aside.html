@@ -5,7 +5,18 @@
 	</ul>
 	<h6>CORE API</h6>
 	<ul class="list-unstyled">
-		<li {% if page.title == 'clip' %} class="active"{% endif %}><a href="/documentation/core/clip">clip</a></li>
+		<li {% if page.title == 'clip' %} class="active"{% endif %}>
+			<a href="/documentation/core/clip">clip</a>
+			{% if page.title == 'clip' %}
+				<ul>
+					<li><a href="#notes">notes</a></li>
+					<li><a href="#pattern">pattern</a></li>
+					<li><a href="#shuffle">shuffle</a></li>
+					<li><a href="#sizzle">sizzle</a></li>
+					<li><a href="#accent">accent</a></li>
+				</ul>
+			{% endif %}
+		</li>
 		<li {% if page.title == 'scale' %} class="active"{% endif %}><a href="/documentation/core/scale">scale</a></li>
 		<li {% if page.title == 'chord' %} class="active"{% endif %}><a href="/documentation/core/chord">chord</a></li>
 		<li {% if page.title == 'arp' %} class="active"{% endif %}><a href="/documentation/core/arp">arp</a></li>
