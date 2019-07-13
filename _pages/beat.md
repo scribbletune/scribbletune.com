@@ -2,9 +2,10 @@
 layout: examples
 title: Simple 4x4 beat
 permalink: /examples/beat
---- 
+---
 
 ### Simple 4x4 beat
+
 Scribbletune can be used to generate beats made from sampled sounds right in your browser
 {: .lead}
 
@@ -14,12 +15,13 @@ Before we go on, here's a sample of what we are gonna end up creating using Scri
   <button class="btnStartAll">&#9654;</button>
   <button class="btnStopAll">&#9632;</button>
 </div>
+`Desktop browser only`
 
 As you can imagine, this can easily be done in any DAW but when you do it with JavaScript, you can get a little bit more out of your loops than simply pointing and clicking in a piano roll (which can be time consuming over time for simple beats). I ll lay down the basics for the beat, you can use your creativity to make the patterns intricate.
 
 We'll have a simple 4x4 kick drum along with a simple bass line, closed hat, open hats and a clap sound.
 
-Since we are going to use sample wav files, we will depend on Scribbletune's [clip](/documentation/core/clip) method which allow us to use patterns. There are 2 aspects to Scribbletune. One is a node module that you can use to export MIDI files OR you can directly use it in the browser, which we will do in this example. 
+Since we are going to use sample wav files, we will depend on Scribbletune's [clip](/documentation/core/clip) method which allow us to use patterns. There are 2 aspects to Scribbletune. One is a node module that you can use to export MIDI files OR you can directly use it in the browser, which we will do in this example.
 
 By default a single `x` implies a quarter note. 4 of these make up the common kick drum pattern that looks like this,
 
@@ -34,7 +36,7 @@ scribble.clip({
 }).start();
 ```
 
-This is how it sounds, 
+This is how it sounds,
 
 <div>
   <button id="btnStartX">&#9654;</button>
@@ -44,6 +46,7 @@ This is how it sounds,
 <br>
 
 #### Subdivide
+
 If you wanted to subdivide the last note, then you can use square braces for the 4th note like this `xxx[xx]` which would subdivide the last note (or kick) into 2 eighth notes making it look like this,
 
 ![Quarter notes](/images/x2.png)
@@ -52,7 +55,7 @@ If you wanted to subdivide further, then you can use another set of square brace
 
 ![Quarter notes](/images/x3.png)
 
-If you replace the pattern in the previous clip method, this is how it sounds, 
+If you replace the pattern in the previous clip method, this is how it sounds,
 
 <div>
   <button id="btnStartX3">&#9654;</button>
@@ -67,7 +70,6 @@ A very common bassline used in many dance tracks just has a single (low octave) 
 
 Let's change the pattern and the sample in the clip method to have this simple bassline,
 
-
 ```
 scribble.clip({
   pattern: '[-x]', // or [-x][-x][-x][-x]
@@ -75,7 +77,7 @@ scribble.clip({
 }).start();
 ```
 
-This is how it sounds, 
+This is how it sounds,
 
 <div>
   <button id="btnStartBass">&#9654;</button>

@@ -19,7 +19,7 @@ This is a new section to this website. More content is being added and will be u
 
 ##### Create a simple beat
 
-`Use the clip method with wav samples to create a looping beat in the browser`
+`Use the clip method with wav samples to create a looping beat (desktop browser only)`
 
 <div>
   <button class="btnStartAll">&#9654;</button>
