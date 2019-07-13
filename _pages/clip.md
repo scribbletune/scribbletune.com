@@ -72,7 +72,11 @@ An underscore implies a sustain to the preceding x. More underscores imply more 
 
 Square braces allow splitting a note further enabling interesting, complex patterns. For instance if the note length is set to 4n (quarter note - default), then using square braces will subdivide the note further to 8n (eighth notes) or 16n (sixteenth notes) or even triplets. For example, in this pattern `xxx[xx]`, there will be 3 quarter notes followed by 2 sixteenth notes. In `xxx[x[xx]]`, there will be 3 quarter notes followed by 1 sixteenth and then 2 thirtysecond notes!
 
-Lastly, the letter `R` is an experimental new addition to the pattern language and it will let you randomly decide if a note is to be added or not at the specified position. For example, in this patter `xxRx`, the quarter note at `R` will be randomly decided to be added or not. The volume of this note is governed by `accentLow` property of the clip.
+Lastly, the letter `R` is an experimental new addition to the pattern language and it will let you randomly decide if a note is to be added or not at the specified position. For example, in this patter `xxRx`, the quarter note at `R` will be randomly decided to be added or not (random midi note on/off). The volume of this note is governed by `accentLow` property of the clip.
+
+If you set an additional property called `randomNotes` with a string or array of notes, `R` will then randomly select a note to play from these provided notes instead of randomly deciding note on or note off events.
+
+`R` is a powerful feature to create interestingly intricate patterns.
 
 {:#shuffle}
 
