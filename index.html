@@ -14,14 +14,19 @@ layout: default
   </p>
 
   <pre class="prettyprint"><code>const scribble = require('scribbletune');
-
-// Create a clip that contains a musical idea
-let clip = scribble.clip({
-	notes: 'F#m C#m DM Bm EM AM DM C#m AM',
-	pattern: '[xx][x-]'.repeat(8)
-});
-
-scribble.midi(clip, 'chords.mid');</code></pre>
+  const clips = ['1032', '2032', '4021', '3052'].map(order =>
+    scribble.clip({
+      pattern: '[xx][xR]'.repeat(4),
+      notes: scribble.arp({
+        chords: 'Dm BbM Am FM BbM FM CM Gm',
+        count: 8,
+        order,
+      }),
+      accent: 'x-xx--xx',
+    })
+  );
+  scribble.midi([].concat(...clips), 'chords.mid');
+</code></pre>
   <p>
     Now execute that file in the terminal at the same location as you saved it,
   </p>
@@ -29,9 +34,10 @@ scribble.midi(clip, 'chords.mid');</code></pre>
 
   <p>
     This will generate a MIDI file called chords.mid in the same location as you
-    executed this script. Here's how it sounded when I imported it into Garage
-    Band and used the Synthesizer > EDM Chord > Sunrise Chords virtual
-    instrument with a little reverb:
+    executed this script. You can import this file into any music production
+    software like Ableton Live or even Garage Band! Here's how it sounded when I
+    did that and rendered it with a couple of synths and the same chords on a
+    pad sound:
   </p>
   <iframe
     width="100%"
@@ -39,7 +45,7 @@ scribble.midi(clip, 'chords.mid');</code></pre>
     scrolling="no"
     frameborder="no"
     allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247079057&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/652853867&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
   ></iframe>
 
   <br /><br />
