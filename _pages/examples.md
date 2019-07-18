@@ -17,7 +17,14 @@ This is a new section to this website. More content is being added and will be u
 
 <hr>
 
-##### Create a simple beat
+##### Create a starting point for an instant drum loop with a bassline
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/653204363&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<a href="/examples/beat2">Learn how to create this with JavaScript and Scribbletune</a>
+
+<hr>
+
+##### Create a simple beat right in the browser
 
 `Use the clip method with wav samples to create a looping beat (desktop browser only)`
 

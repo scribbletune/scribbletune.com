@@ -1,10 +1,10 @@
 ---
 layout: examples
-title: Simple 4x4 beat
+title: Simple 4x4 beat in the browser
 permalink: /examples/beat
 ---
 
-### Simple 4x4 beat
+### Simple 4x4 beat in the browser
 
 Scribbletune can be used to generate beats made from sampled sounds right in your browser
 {: .lead}

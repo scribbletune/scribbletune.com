@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 *,
 *::before,
 *::after {
@@ -14,6 +16,7 @@ body {
 body {
   background-color: #262b33;
   color: #c3c8d1;
+  font-family: 'Lato', sans-serif;
 }
 
 pre {
