@@ -117,13 +117,13 @@ const bassEnd = scribble.clip({
 scribble.midi(bass.concat(bassEnd), 'bass.mid');
 ```
 
-That's about it. Now if you run this script from the terminal, Scribbletune will produce 5 MIDI files:
+That's about it. Now if you run this script from the terminal, Scribbletune will produce 5 MIDI files (I ve linked them to sample outputs):
 
-- kick.mid
-- ch.mid
-- oh.mid
-- snare.mid
-- bass.mid
+- [kick.mid](/sounds/midi/kick.mid)
+- [ch.mid](/sounds/midi/ch.mid)
+- [oh.mid](/sounds/midi/oh.mid)
+- [snare.mid](/sounds/midi/snare.mid)
+- [bass.mid](/sounds/midi/bass.mid)
 
 I imported these into Ableton Live and rendered them with some samples from the free Mechanimal PsyTrance sample pack and used Ozone on the Master channel. Here it is again,
 
