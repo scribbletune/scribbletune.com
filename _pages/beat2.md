@@ -25,7 +25,7 @@ By default a single `x` implies a quarter note. 4 of these make up the common ki
 const ptn = 'xxxx';
 ```
 
-and 8 of these create a 8 bar section.
+and 8 of these create a 8 bar section. We'll however create only 7 as we want a variation on the last bar.
 
 ```
 const ptn = 'xxxx'.repeat(7);
