@@ -130,3 +130,7 @@ I imported these into Ableton Live and rendered them with some samples from the 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/653204363&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 Now you can use this script as a starting point to get a drum beat going. You can edit the patterns till they suit your preference. I usually use `nodemon` on the script I m working on to get MIDI files on save and keep trying them out in Ableton Live till I m satisfied with the result.
+
+Here's the script in it's entirety (make sure you have installed [Node.js](https://nodejs.org/en/download/) and [scribbletune](/documentation/installation) before running it from the terminal)
+
+<script src="https://gist.github.com/walmik/8c20b24492661f8ee5c1b7d6e9434108.js"></script>
