@@ -5,6 +5,7 @@ permalink: /documentation/browser/session
 ---
 
 ### Session
+
 Scribbletune can create a session that can contain multiple channels which can have multiple clips of musical ideas.
 {: .lead}
 
@@ -67,6 +68,5 @@ Tone.Transport.start();
 You can get a list of all the channels in the session by doing,
 
 ```
-session.channels();
+session.channels;
 ```
-

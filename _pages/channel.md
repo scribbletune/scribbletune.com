@@ -5,6 +5,7 @@ permalink: /documentation/browser/channel
 ---
 
 ### Channel
+
 Scribbletune creates channels that can contain multiple clips.
 {: .lead}
 
@@ -16,13 +17,13 @@ Scribbletune creates channels that can contain multiple clips.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.4/scribbletune.js"></script>
 ```
 
-Before you can create a channel, you must create a [session](/documentation/browser/session). 
+Before you can create a channel, you must create a [session](/documentation/browser/session).
 
 ```
-const session = scribble.session();
+const session = new scribble.Session();
 ```
 
-Now you can add channels to this session.
+You can either pass an array of channels to that or you can add them individually.
 
 ```
 const kickChannel = session.createChannel({
@@ -62,19 +63,22 @@ const synthChannel = session.createChannel({
 
 #### Methods
 
-In the [session](/documentation/browser/session) docs we didnt assign variables to the channels. Here we did. The reason is to focus on what you can do with channels. For instance you could play an individual clip on the channel. (In sessions you'd play an entire row). 
+In the [session](/documentation/browser/session) docs we didnt assign variables to the channels. Here we did. The reason is to focus on what you can do with channels. For instance you could play an individual clip on the channel. (In sessions you'd play an entire row).
 
 ```
 bassChannel.startClip(2);
 ```
-This will play the second clip from the channel we created as `bassChannel`. Scribbletune makes use of Tone's `Tone.Transport.nextSubdivision` method to make sure clip to be played aligns itself in correct time instead of abruptly playing it. 
+
+This will play the second clip from the channel we created as `bassChannel`. Scribbletune makes use of Tone's `Tone.Transport.nextSubdivision` method to make sure clip to be played aligns itself in correct time instead of abruptly playing it.
 
 You can even stop a particular clip,
+
 ```
 bassChannel.stopClip(2);
 ```
 
 To add more clips to an existing channel, use the `addClip` method,
+
 ```
 const params = { pattern: 'xx[xx]'};
 bassChannel.addClip(params, 4);
@@ -83,6 +87,7 @@ bassChannel.addClip(params, 4);
 This will add a new clip at index 4 in the channel strip. If you dont provide the index, then Scribbletune will automatically assign it to the last position in the channel's clips array.
 
 The channel will also keep a track of the currently active clip. You can get the information by doing,
+
 ```
-bassChannel.activeClipIdx(); // returns the currently playing clip
+bassChannel.activeClipIdx; // returns the currently playing clip
 ```
