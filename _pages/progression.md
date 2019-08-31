@@ -21,3 +21,22 @@ const c = clip({
 
 midi(c, 'chords.mid');
 ```
+
+You can even get chord degrees for select scales/modes:
+
+```
+const scribble = require('scribbletune'); // using es5 syntax
+console.log(scribble.getChordDegrees('minor')); // outputs [ 'i', 'ii°', 'III', 'iv', 'v', 'VI', 'VII' ]
+```
+
+You can pass the following scales/modes to this method:
+
+- ionian/major
+- dorian
+- phrygian
+- lydian
+- mixolydian
+- aeolian/minor
+- locrian
+- melodic minor
+- harmonic minor

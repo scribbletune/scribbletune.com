@@ -17,7 +17,7 @@ Here are a few tracks created with Scribbletune in Live events with their videos
 
 <!-- <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/439449453&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> -->
 
-<a href="https://www.youtube.com/watch?v=H6KOSUXLryw&feature=youtu.be&t=4325">Video</a>
+<a href="https://www.youtube.com/watch?v=G1bRi4El0iw">Video</a>
 
 ## <br>
 
