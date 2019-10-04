@@ -6,7 +6,9 @@ permalink: /examples/
 
 ### Scribbletune examples
 
-This is a new section to this website. More content is being added and will be updated here.
+##### [Generate chord progressions that always sound good](/examples/chord-progressions)
+
+Using basic music theory, Scribbletune can be used to generate arpeggiated chord progressions that always sound good!
 
 ##### [Generate a riff](/examples/riff)
 
