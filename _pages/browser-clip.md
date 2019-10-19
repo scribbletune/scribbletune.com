@@ -5,7 +5,8 @@ permalink: /documentation/browser/browser-clip
 ---
 
 ### Clip (extended for the browser)
-Scribbletune uses Tone.js to creates sequences to be played in the browser. 
+
+Scribbletune uses Tone.js to creates sequences to be played in the browser.
 {: .lead}
 
 **Note:** tone.js must be loaded in the browser via SCRIPT tag before Scribbletune (or your compiled app - with Scribbletune) is loaded.
@@ -13,7 +14,7 @@ Scribbletune uses Tone.js to creates sequences to be played in the browser.
 
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.4/scribbletune.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/3.3.2/scribbletune.js"></script>
 ```
 
 The clip method is the same as the one [from the core Scribbletune node module](/documentation/core/clip) but with some added properties to enable playing them in the browser. Behind the scenes, Scribbletune makes use of a global Tone object to create Player, Instrument and Sampler along with Sequence to enable this behavior.
@@ -29,10 +30,10 @@ Then you can go ahead and create a clip like you would normally do, but this tim
 #### Synth
 
 ```
-scribble.clip({ 
+scribble.clip({
 	synth: 'PolySynth', // new property: synth
-	pattern: '[xx]', 
-	notes: 'C4 D4 C4 D#4 C4 D4 C4 Bb3' 
+	pattern: '[xx]',
+	notes: 'C4 D4 C4 D#4 C4 D4 C4 Bb3'
 }).start();
 ```
 
@@ -47,13 +48,14 @@ Tone.Transport.start();
 #### Sample
 
 Along with Tone.js provided synths/instruments, you can even set up an individual `wav` file to play a pattern.
+
 ```
-scribble.clip({ 
+scribble.clip({
 	sample: 'https://scribbletune.com/sounds/kick.wav', // new property: sample
 	pattern: 'x'
 }).start();
 
-scribble.clip({ 
+scribble.clip({
 	sample: 'https://scribbletune.com/sounds/bass.wav', // new property: sample
 	pattern: '[-x]'
 }).start();
@@ -100,10 +102,13 @@ scribble.clip({
 	notes: [...notes, ...notes.reverse()] // here we did some variation on the notes
 }).start();
 ```
+
 As always make sure Tone.Transport is started,
+
 ```
 Tone.Transport.start();
 ```
+
 <br>
 
 With the Sampler, you can create your own instruments from sampled sounds. This is a good technique in case you are not satisfied with the "sound" of the Synths purely created out of the WebAudioAPI.

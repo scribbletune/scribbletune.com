@@ -3,6 +3,7 @@ layout: documentation
 title: installation
 permalink: /documentation/installation
 ---
+
 ### Installation
 
 Scribbletune can be used in the browser along with Tone.js OR as a Node.js module to export MIDI files from the terminal.
@@ -17,7 +18,7 @@ Use the precompiled version of Scribbletune from CDNjs and reference it in your 
 
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/1.9.4/scribbletune.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/3.3.2/scribbletune.js"></script>
 ```
 
 This will make a global object called `scribble` available for you to use in your script.
@@ -37,6 +38,7 @@ npm i webpack-cli --save-dev
 ```
 
 Create a bare minimum `webpack.config.js` file with
+
 ```
 const webpack = require('webpack')
 
@@ -53,6 +55,7 @@ module.exports = {
 ```
 
 Create a file called `script.js` and enter the following in there
+
 ```
 import { clip } from 'scribbletune';
 clip({ synth: 'Synth', notes: 'c4', pattern: 'x' }).start();
@@ -85,9 +88,11 @@ Now "serve" the HTML file we created by running a simple Python web server for t
 ```
 python -m SimpleHTTPServer 3000
 ```
+
 Now load `localhost:3000` in your browser and you should hear the C4 note played in a loop at an interval of a quarter note.
 
 ##### Node Module
+
 Install Scribbletune from npm
 
 ```
@@ -95,6 +100,7 @@ npm i scribbletune
 ```
 
 Now you can create MIDI files from the terminal
+
 ```
 const scribble = require('scribbletune');
 
