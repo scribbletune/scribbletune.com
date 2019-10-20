@@ -72,11 +72,9 @@ pattern: getRandomPattern() + getRandomPattern(),
 What we have so far can pass for a riff, but very soon we would like to spice it up a bit. Let's provide more notes to the `randomNotes` param. Instead of passing a single `D3` note, we could pass it a chord progression instead.
 
 ```
-randomNotes: scribble.arp({
-  chords: scribble.getChordsByProgression('D2 minor', 'ii iii'),
-  count: 3,
-  order: '012', // order doesnt really matter here as notes will be picked randomly
-}),
+randomNotes: scribble.arp(
+  scribble.getChordsByProgression('D2 minor', 'ii iii')
+),
 ```
 
 To take it up just one notch up, we could generate 2 clips, Clip A and Clip B. For Clip A, we will use the `ii` and `iii` chord degree and for Clip B, we'll use the `iii` and `v` chord degree and then concatenate the clips in this order:
@@ -91,6 +89,8 @@ Here's how the entire script looks now,
 
 ```
 const scribble = require('scribbletune');
+const root = 'B2';
+const scale = 'minor';
 
 const getRandomPattern = function(count = 8) {
   let str = '[x-]R';
@@ -101,31 +101,30 @@ const getRandomPattern = function(count = 8) {
   return str;
 };
 
+const pattern = getRandomPattern();
+
 const clipA = scribble.clip({
-  notes: 'D2',
-  randomNotes: scribble.arp({
-    chords: scribble.getChordsByProgression('D2 minor', 'ii iii'),
-    count: 3,
-    order: '012',
-  }),
-  pattern: getRandomPattern(),
+  notes: root,
+  randomNotes: scribble.arp(
+    scribble.getChordsByProgression(root + ' ' + scale, 'ii iii')
+  ),
+  pattern,
   subdiv: '16n',
 });
 
 const clipB = scribble.clip({
-  notes: 'D2',
-  randomNotes: scribble.arp({
-    chords: scribble.getChordsByProgression('D2 minor', 'iii v'),
-    count: 3,
-    order: '012',
-  }),
-  pattern: getRandomPattern(),
+  notes: root,
+  randomNotes: scribble.arp(
+    scribble.getChordsByProgression(root + ' ' + scale, 'vi v')
+  ),
+  pattern,
   subdiv: '16n',
 });
 
 scribble.midi([].concat(clipA, clipA, clipA, clipB), 'riff.mid');
+
 ```
 
-If you save this script as `riff.js` and run it from your terminal as `node riff.js`, you will get a MIDI file called `riff.mid` which you can import in any DAW and play it with a virtual instrument of your choice. I tried a bunch of options for the root note and the scale and used Ableton Live's Operator>Synth Lead>Epic Trance Lead along with Bazzism Kick plugin and Reaktor Blocks>Bling Deep Bass sound with some hats and snare to produce this riff:
+If you save this script as `riff.js` and run it from your terminal as `node riff.js`, you will get a MIDI file called `riff.mid` which you can import in any DAW and play it with a virtual instrument of your choice. Every time you run it, you ll get a new riff. You can even change the root note and the scale to create interesting variations. For instance change the root to D2 and the scale to "harmonic minor" and give it a shot. I tried a bunch of such options for the root note and the scale and used Ableton Live's Operator>Synth Lead>Epic Trance Lead along with Bazzism Kick plugin and Reaktor Blocks>Bling Deep Bass sound with some hats and snare to produce this riff:
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%230c0809&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
