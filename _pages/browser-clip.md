@@ -6,7 +6,7 @@ permalink: /documentation/browser/browser-clip
 
 ### Clip (extended for the browser)
 
-Scribbletune uses Tone.js to creates sequences to be played in the browser.
+Scribbletune uses Tone.js to create sequences that can be played in the browser.
 {: .lead}
 
 **Note:** tone.js must be loaded in the browser via SCRIPT tag before Scribbletune (or your compiled app - with Scribbletune) is loaded.
