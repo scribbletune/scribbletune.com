@@ -6,17 +6,19 @@ permalink: /examples/
 
 ### Scribbletune examples
 
+##### [Generate a riff (Updated)](/examples/riff)
+
+Use the arp and progression method with a custom clip. The riff at 6:25 in the following track uses this technique:
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/710079931&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+
+<hr>
+
 ##### [Generate chord progressions that always sound good](/examples/chord-progressions)
 
 Using basic music theory, Scribbletune can be used to generate arpeggiated chord progressions that always sound good!
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691481236&color=%23080404&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-
-##### [Generate a riff (Updated)](/examples/riff)
-
-Use the arp and progression method with a custom clip
-
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%230c0809&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 <hr>
 

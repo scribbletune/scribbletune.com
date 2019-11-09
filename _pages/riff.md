@@ -9,9 +9,9 @@ permalink: /examples/riff
 Scribbletune can be used to generate a commonly used pattern for riffs in trance music.
 {: .lead}
 
-Before we go on, here's a sample of what we are gonna end up creating using Scribbletune.
+Before we go on, here's a sample of what we are gonna end up creating using Scribbletune. The riff at 6:25 in this track is made with this technique:
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%230c0809&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/710079931&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
 As you can imagine, this is a commonly used technique to create riffs. You randomly click some of the steps in a 16 beat pattern and move them around while sticking to a particular scale. Then, on a lower octave, add notes to the missing steps on a particular key to act as the counter point notes. This works great and quickly creates a nice little riff that looks a bit like this,
 
@@ -125,6 +125,6 @@ scribble.midi([].concat(clipA, clipA, clipA, clipB), 'riff.mid');
 
 ```
 
-If you save this script as `riff.js` and run it from your terminal as `node riff.js`, you will get a MIDI file called `riff.mid` which you can import in any DAW and play it with a virtual instrument of your choice. Every time you run it, you ll get a new riff. You can even change the root note and the scale to create interesting variations. For instance change the root to D2 and the scale to "harmonic minor" and give it a shot. I tried a bunch of such options for the root note and the scale and used Ableton Live's Operator>Synth Lead>Epic Trance Lead along with Bazzism Kick plugin and Reaktor Blocks>Bling Deep Bass sound with some hats and snare to produce this riff:
+If you save this script as `riff.js` and run it from your terminal as `node riff.js`, you will get a MIDI file called `riff.mid` which you can import in any DAW and play it with a virtual instrument of your choice. Every time you run it, you ll get a new riff. You can even change the root note and the scale to create interesting variations. For instance change the root to D2 and the scale to "harmonic minor" and give it a shot. I tried a bunch of such options for the root note and the scale and used the output in a track of mine. The riff is at around 6:25 in this track:
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%230c0809&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/710079931&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
