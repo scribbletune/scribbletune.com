@@ -6,7 +6,7 @@ permalink: /documentation/core/clip
 
 ### Clip
 
-A clip is a container for a musical idea. is a like a measure of music. It can be a single bar or two bars or how many ever bars you need. In DAWs such as Ableton Live and Propellerhead Reason, a clip is what you create in the session or arrangement view to capture a musical idea.
+A clip is a container for a musical idea. It's like a measure of music. It can be a single bar or two bars or how many ever bars you need. In DAWs such as Ableton Live and Propellerhead Reason, a clip is what you create in the session or arrangement view to capture a musical idea.
 {: .lead}
 
 The clip method takes an object literal as an argument. This object lets you define the parameters of that clip. Here is an example of the clip method being called with an object that sets up the most basic properties of the clip:
