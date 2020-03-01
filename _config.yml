@@ -16,13 +16,13 @@
 title: Scribbletune
 email: walmik.deshpande@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Scribbletune is a Node.js module that helps you construct musical ideas 
-  with JavaScript String & Array functions and export them as MIDI files. 
-  You can also use Scribbletune in the browser!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  Scribbletune is a free and open source Node.js module that helps you construct musical ideas
+  with JavaScript and export them as MIDI files.
+  You can also use Scribbletune in the browser and directly in Ableton Live with Max for Live!
+baseurl: '' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: _walmik
-github_username:  walmik
+github_username: walmik
 
 # Build settings
 sass:
@@ -30,7 +30,6 @@ sass:
 include: ['_pages']
 kramdown:
   input: GFM
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
