@@ -66,6 +66,10 @@ If you were able to get this far, then you ve more or less made it :) Beyond thi
 
 ![Quarter notes](/images/scribble4max3.png)
 
+Here's a 21 seconds of this simple device in action:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m2CGoT1fpxU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 You can [download this device](https://github.com/scribbletune/scribble4max/raw/master/scribble.amxd) and try it out for yourself. Make sure to drop it on a channel and add a clip on it (keep it selected as you generate riffs on a click of a button). Clicking on any of the note names or the numbers (octaves) or any of the scales will generate a riff that has the pattern `x-xR-xRR`.
 
 ![Quarter notes](/images/scribble4max4.png)
