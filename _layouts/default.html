@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body>
-    {% include head.html %} {% include top-nav.html %}
-    <section style="min-height: 70%">
-      {{ content }}
-    </section>
-    {% include footer.html %}
-  </body>
+{% include head.html %}
+
+<body>
+  {% include head.html %} {% include top-nav.html %}
+  <section class="site-container">
+    {{ content }}
+  </section>
+  {% include footer.html %}
+</body>
+
 </html>
