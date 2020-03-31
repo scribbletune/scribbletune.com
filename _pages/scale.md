@@ -8,7 +8,7 @@ permalink: /documentation/core/scale
 A scale is a set of musical notes ordered by pitch. Scribbletune uses [tonal](https://github.com/danigb/tonal) to expose scales (or modes).
 {: .lead}
 
-The scale method takes a string input that denotes the key and the scale you want. 
+The scale method takes a string input that denotes the key and the scale you want.
 
 ```
 const scribble = require('scribbletune');
@@ -42,3 +42,97 @@ You can list all the available scales by invoking `scales` or `modes` method.
 ```
 const allScales = scribble.scales(); // returns an array of all the available scales from tonal
 ```
+
+#### List of available scales/modes
+
+- aeolian
+- altered
+- augmented
+- augmented heptatonic
+- balinese
+- bebop
+- bebop dominant
+- bebop locrian
+- bebop major
+- bebop minor
+- chromatic
+- composite blues
+- diminished
+- dorian
+- dorian #4
+- double harmonic lydian
+- double harmonic major
+- egyptian
+- enigmatic
+- flamenco
+- flat six pentatonic
+- flat three pentatonic
+- half-whole diminished
+- harmonic major
+- harmonic minor
+- hirajoshi
+- hungarian major
+- hungarian minor
+- ichikosucho
+- in-sen
+- ionian augmented
+- ionian pentatonic
+- iwato
+- kafi raga
+- kumoijoshi
+- leading whole tone
+- locrian
+- locrian #2
+- locrian major
+- locrian pentatonic
+- lydian
+- lydian #5P pentatonic
+- lydian #9
+- lydian augmented
+- lydian diminished
+- lydian dominant
+- lydian dominant pentatonic
+- lydian minor
+- lydian pentatonic
+- major
+- major blues
+- major flat two pentatonic
+- major pentatonic
+- malkos raga
+- melodic minor
+- melodic minor fifth mode
+- melodic minor second mode
+- minor #7M pentatonic
+- minor bebop
+- minor blues
+- minor hexatonic
+- minor pentatonic
+- minor six diminished
+- minor six pentatonic
+- mixolydian
+- mixolydian pentatonic
+- mystery #1
+- neopolitan
+- neopolitan major
+- neopolitan major pentatonic
+- neopolitan minor
+- oriental
+- pelog
+- persian
+- phrygian
+- phrygian dominant
+- piongio
+- prometheus
+- prometheus neopolitan
+- purvi raga
+- ritusen
+- romanian minor
+- scriabin
+- six tone symmetric
+- spanish heptatonic
+- super locrian pentatonic
+- todi raga
+- vietnamese 1
+- vietnamese 2
+- whole tone
+- whole tone pentatonic
