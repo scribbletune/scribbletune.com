@@ -62,6 +62,10 @@ Now, if you lock the device (lower left corner of the Max4Live window), you can 
 
 `js: C4 D4 E4 F4 G4 A4 B4`
 
+One final item would be to use Max's `live.thisdevice` to make sure your JS kicks in only after the device has fully loaded. It's like the browser's `window.onload` method if you have used JS to build websites.
+
+![live.thisdevice](/images/live.thisdevice.png)
+
 If you were able to get this far, then you ve more or less made it :) Beyond this is wonderful world waiting for you to explore! I went ahead and added a bunch of more nodes and a very simply script to generate a riff that allows you to select a root note and a scale.
 
 ![Quarter notes](/images/scribble4max3.png)
