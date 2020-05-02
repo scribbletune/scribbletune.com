@@ -8,9 +8,10 @@ permalink: /examples/
 
 ##### [Generate a riff (Updated)](/examples/riff)
 
-Use the arp and progression method with a custom clip. The riff at 6:25 in the following track uses this technique:
+Use the arp and progression method with a custom clip. All the riffs in the following track use this technique:
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/710079931&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/812276926&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 <hr>
 
