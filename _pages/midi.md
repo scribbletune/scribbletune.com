@@ -32,24 +32,37 @@ midi(c, 'c.mid'); // Will create a file called c.mid
 An additional feature as of v1.9.0 available in the `midi` method is the ability to export a byte string instead of MIDI file. This is useful when you want to provide an ability to allow users to create MIDI data and download it as a MIDI file from the browser. Just pass the `null` keyword as the second parameter of the `midi` method.
 
 ```
-import {clip, midi} from 'scribbletune';
-
-const c = clip({
-  notes: 'c4',
-  pattern: 'x'
+// Sample Clip that renders the C Major scale
+const c = scribble.clip({
+  notes: scribble.scale('C4 major'),
+  pattern: 'x'.repeat(7)
 });
 
-scribble.midi(c, null, function (err, bytes) {
-  const b64 = btoa(bytes);
-  const uri = 'data:audio/midi;base64,' + b64;
-  const link=document.createElement('a');
+// Get hold of the bytes from the scribble.midi method
+// (passing null as the second argument returns bytes)
+const b = scribble.midi(c, null);
 
-  link.href=uri;
-  link.download = 'music.mid';
-  link.click(); // this will start a download of the MIDI byte string as a file called "music.mid"
-});
+// Convert bytes to array buffer
+// Ref: Accepted answer on https://stackoverflow.com/questions/35038884/download-file-from-bytes-in-javascript
+var bytes = new Uint8Array(b.length);
+for (var i = 0; i < b.length; i++) {
+  var ascii = b.charCodeAt(i);
+  bytes[i] = ascii;
+}
+
+// Create a Blob so that we can set it up with the type of file we want (for eg MIDI)
+var blob = new Blob([bytes], {type: "audio/midi"});
+
+// Create a link element to be used (you can use an existing link on the page as well)
+var link = document.createElement('a');
+link.href = window.URL.createObjectURL(blob);
+
+// Give your downloadable file a name
+link.download = 'music.mid';
+link.innerText = 'Download MIDI file';
+document.body.appendChild(link);
 ```
 
-Here is a [barebones JS Bin](https://jsbin.com/tusogupiji/edit?html,js,console,output) to play with this code. Please note, it might instantly download the music.mid file if your default JS Bin settings have Auto Run JS selected.
+Here is a [complete HTML file](https://github.com/scribbletune/scribbletune/blob/master/dist/download.html#L13-L41) for reference.
 
 For additional information, please refer to the [installation section](/documentation/installation) to learn how to use Scribbletune in the browser.
