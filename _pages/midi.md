@@ -29,7 +29,17 @@ midi(c, 'c.mid'); // Will create a file called c.mid
 
 ##### Create downloadable MIDI files from the browser
 
-An additional feature as of v1.9.0 available in the `midi` method is the ability to export a byte string instead of MIDI file. This is useful when you want to provide an ability to allow users to create MIDI data and download it as a MIDI file from the browser. Just pass the `null` keyword as the second parameter of the `midi` method.
+v3.6.0 has a feature upgrade where using the `midi` method as is (with a filename as the second parameter), will generate a download link that looks like this
+
+```
+<a href="blob:http://yourDomainOrLocalhost/5f9aa791-3509-4584-81aa-656c74597e98" download="music.mid">Download MIDI file</a>
+```
+
+You can append this to any HTML node in your page.
+
+[v3.6.0](https://cdnjs.com/libraries/scribbletune) may not be available on CDNjs yet. Hence you must use the [dist/scribbletune.js](https://raw.githubusercontent.com/scribbletune/scribbletune/master/dist/scribbletune.js) file to get this functionality in the mean time. To change the text within the `HTMLAnchorElement`, simply use `innerText` on the returned element.
+
+If you dont want this `HTMLAnchorElement`, then continute passing `null` as the second argument. It will return `bytes` and you can wire up the download funtionality the way you like. Here is a reference you can follow:
 
 ```
 // Sample Clip that renders the C Major scale
@@ -63,6 +73,6 @@ link.innerText = 'Download MIDI file';
 document.body.appendChild(link);
 ```
 
-Here is a [complete HTML file](https://github.com/scribbletune/scribbletune/blob/master/dist/download.html#L13-L41) for reference.
+Here is a [complete HTML file](https://github.com/scribbletune/scribbletune/blob/master/dist/download.html) that makes use of this reference.
 
 For additional information, please refer to the [installation section](/documentation/installation) to learn how to use Scribbletune in the browser.
