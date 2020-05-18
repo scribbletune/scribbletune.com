@@ -35,11 +35,9 @@ v3.6.0 has a feature upgrade where using the `midi` method as is (with a filenam
 <a href="blob:http://yourDomainOrLocalhost/5f9aa791-3509-4584-81aa-656c74597e98" download="music.mid">Download MIDI file</a>
 ```
 
-You can append this to any HTML node in your page.
+You can append this to any HTML node in your page. To change the text within the `HTMLAnchorElement`, simply use `innerText` on the returned element.
 
-[v3.6.0](https://cdnjs.com/libraries/scribbletune) may not be available on CDNjs yet. Hence you must use the [dist/scribbletune.js](https://raw.githubusercontent.com/scribbletune/scribbletune/master/dist/scribbletune.js) file to get this functionality in the mean time. To change the text within the `HTMLAnchorElement`, simply use `innerText` on the returned element.
-
-If you dont want this `HTMLAnchorElement`, then continute passing `null` as the second argument. It will return `bytes` and you can wire up the download funtionality the way you like. Here is a reference you can follow:
+If you dont want this `HTMLAnchorElement`, then pass `null` as the second argument. It will return `bytes` and you can wire up the download funtionality the way you like. Here is a reference you can follow:
 
 ```
 // Sample Clip that renders the C Major scale
