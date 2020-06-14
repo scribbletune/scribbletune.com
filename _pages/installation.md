@@ -16,10 +16,7 @@ There are a couple of ways to use Scribbletune in the browser.
 
 Use the precompiled version of Scribbletune from CDNjs and reference it in your HTML right after Tone.js
 
-```
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/3.3.2/scribbletune.js"></script>
-```
+{% include browser-scripts.html %}
 
 This will make a global object called `scribble` available for you to use in your script.
 
@@ -71,7 +68,7 @@ Now create a file called `index.html` and enter the following in it
   <title>Testing Scribbletune</title>
 </head>
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.7/Tone.min.js"></script>
   <script src="dist/main.js"></script>
 </body>
 </html>

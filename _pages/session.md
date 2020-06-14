@@ -12,10 +12,7 @@ Scribbletune can create a session that can contain multiple channels which can h
 **Note:** tone.js must be loaded in the browser via SCRIPT tag before Scribbletune (or your compiled app - with Scribbletune) is loaded.
 {: .text-warning}
 
-```
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/3.3.2/scribbletune.js"></script>
-```
+{% include browser-scripts.html %}
 
 A session is a simplistic example of [Ableton Live's session view](https://www.ableton.com/en/manual/session-view/) where you can have channels of MIDI or Audio Data. Scribbletune provides just a basic interface to simulate something like that. It would be premature to consider Scribbletune's session as an exact and complete implementation of Ableton Live's session!
 

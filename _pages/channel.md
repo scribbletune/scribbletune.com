@@ -12,10 +12,7 @@ Scribbletune creates channels that can contain multiple clips.
 **Note:** tone.js must be loaded in the browser via SCRIPT tag before Scribbletune (or your compiled app - with Scribbletune) is loaded.
 {: .text-warning}
 
-```
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.1/Tone.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/3.3.2/scribbletune.js"></script>
-```
+{% include browser-scripts.html %}
 
 Before you can create a channel, you must create a [session](/documentation/browser/session).
 
