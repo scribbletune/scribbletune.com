@@ -6,6 +6,14 @@ permalink: /examples/
 
 ### Scribbletune examples
 
+##### [Random chords](/examples/random-chords)
+
+Using lodash, Scribbletune can be used to quickly generate random chord progressions
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691481236&color=%23080404&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+
+<hr>
+
 ##### [Generate a riff (Updated)](/examples/riff)
 
 Use the arp and progression method with a custom clip. The riff in the following clip use this technique:
