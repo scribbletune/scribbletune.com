@@ -161,6 +161,28 @@ footer a {
   display: none;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-around;
+  div {
+    padding: 10px;
+  }
+}
+
+.pad {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.dim {
+  opacity: 0.5;
+}
+
+.half {
+  transform: scale(0.5);
+  font-size: smaller;
+}
+
 @media (min-width: 768px) {
   .sub-menu {
     position: fixed;
@@ -168,5 +190,16 @@ footer a {
 
   .inline-when-visible {
     display: inline-block;
+  }
+}
+
+.content h4, .content h5, .content h6 {
+  margin-top: 10px;
+}
+
+/*Phone*/
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
   }
 }

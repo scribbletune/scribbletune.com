@@ -29,15 +29,21 @@ midi(c, 'c.mid'); // Will create a file called c.mid
 
 ##### Create downloadable MIDI files from the browser
 
-v3.6.0 has a feature upgrade where using the `midi` method as is (with a filename as the second parameter), will generate a download link that looks like this
+Using the `midi` method as is in the browser (with a filename as the second parameter), will generate a download href that looks like this
+
+```
+http://yourDomainOrLocalhost/5f9aa791-3509-4584-81aa-656c74597e98
+```
+
+You can create an anchor element out of it and set it's download attribute to whatever name you'd like to give to your MIDI file.
 
 ```
 <a href="blob:http://yourDomainOrLocalhost/5f9aa791-3509-4584-81aa-656c74597e98" download="music.mid">Download MIDI file</a>
 ```
 
-You can append this to any HTML node in your page. To change the text within the `HTMLAnchorElement`, simply use `innerText` on the returned element.
+You can append this to any HTML node in your page. To change the value of the `href`, simply use `setAttribute` or `href` directly on the anchor element.
 
-If you dont want this `HTMLAnchorElement`, then pass `null` as the second argument. It will return `bytes` and you can wire up the download funtionality the way you like. Here is a reference you can follow:
+If you dont want this functionality, then pass `null` as the second argument. It will return `bytes` and you can wire up the download funtionality the way you like. Here is a reference you can follow:
 
 ```
 // Sample Clip that renders the C Major scale

@@ -8,6 +8,68 @@ permalink: /examples/random-chords
 
 If you randomly pick 2 or 3 notes from a scale or mode, you ll end up creating random chords. They wont necessarily sound good, but since we will use JavaScript for this, we can generate a bunch of chord progressions and tweak something that we like from that bunch. We will use [lodash](https://lodash.com/) for the random picking.
 
+Here's a sample of what we will end up creating
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/872748478&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
+<br>
+If you do not want to write code OR are not a JavaScript programmer, then simply use this UI to generate and download MIDI files right from your browser.
+<section class="flex pad">
+  <div>
+    <h6>Root</h6>
+    <select id="root">
+      <option value="C">C</option>
+      <option value="Db">Db</option>
+      <option value="D">D</option>
+      <option value="Eb">Eb</option>
+      <option value="E">E</option>
+      <option value="F">F</option>
+      <option value="Gb">Gb</option>
+      <option value="G">G</option>
+      <option value="Ab">Ab</option>
+      <option value="A">A</option>
+      <option value="Bb">Bb</option>
+      <option value="B">B</option>
+    </select>
+  </div>
+  <div>
+    <h6>Scale</h6>
+    <select id="scales">
+      <option value="major">major</option>
+      <option value="minor">minor</option>
+      <option value="dorian">dorian</option>
+      <option value="lydian">lydian</option>
+      <option value="mixolydian">mixolydian</option>
+      <option value="phrygian">phrygian</option>
+      <option value="harmonic minor">harmonic minor</option>
+      <option value="melodic minor">melodic minor</option>
+    </select>
+  </div>
+  <div>
+    <h6>Octaves</h6>
+    <input type="checkbox" id="o1" checked /> <label for="o1">2</label>
+    <input type="checkbox" id="o2" /> <label for="o1">3</label>
+    <input type="checkbox" id="o3" checked /> <label for="o1">4</label>
+  </div>
+  <div>
+    <h6>Pattern <span class="dim half">x - _ [ ]</span></h6>
+    <input type="text" lastKnownValue="x__[xx]x_x_" value="x__[xx]x_x_" id="pattern" />
+  </div>
+  <div>
+    <h6>Repeat</h6>
+    <span style="display: inline-block; width: 19px; text-align:center" id="repeatPatternDisplay">4</span> <input type="range" min="1" max="16" value="4" id="repeatPattern" />
+  </div>
+  <div>
+    <h6>MIDI</h6>
+    <a href="#" id="downloadAnchor" download="random-chords.mid">Download</a>
+  </div>
+</section>
+
+<hr>
+
+##### Write your own script
+
+We will create a new file called random-chords.js and start by importing our dependencies.
+
 ```
 const _ = require('lodash');
 const scribble = require('scribbletune');
@@ -46,10 +108,19 @@ scribble.midi(
 );
 ```
 
-In Ableton Live, I created a new instrument by combining Arturia's Jupiter 8 V3 and U-he's Hive 2. I use the presets Space Osborne and HS Chapel Flowers respectively. On rendering the MIDI clip it sounded like this (your results may vary a bit as we pick notes randomly from the set of notes)
+Finally, execute this file in your terminal with Node.js
+
+```
+node random-chords.js
+```
+
+<hr>
+
+##### Ready to roll
+
+You can use any DAW to do the rest of the steps. I use Ableton Live and a bunch of fancy third party VST instruments, hence I created a new group instrument by combining Arturia's Jupiter 8 V3 and U-he's Hive 2. I use the presets Space Osborne and HS Chapel Flowers respectively. On rendering the MIDI clip it sounded like this (your results may vary a bit as we pick notes randomly from the set of notes)
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/872747692&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
-
 
 To make this a bit more interesting, I used the C lydian scale from 2 octaves and made the patttern a bit more intricate
 
@@ -66,5 +137,8 @@ I left the rest as is and rendered again, this is how it turned out.
 
 The final code is around a dozen lines. [Here is a gist](https://gist.github.com/walmik/2460f014daf10af5b6570296dcb2cf8f) for your reference.
 
-What next?
+##### What next?
 Try out [different scales](https://scribbletune.com/documentation/core/scale#list-of-available-scalesmodes), or notes from chords or manually set up the notes to get interesting chord progressions. Alter the pattern a bit and use the `R` character. Optionally use the randomNotes property in the `clip` method to pass the notes to be used for `R`. If you dont do this, then Scribbletune will simply adjust the level of that note or simply mute it randomly.
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.19/lodash.min.js"></script>
+<script src="/js/random-chords.js"></script>
