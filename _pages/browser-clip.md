@@ -39,7 +39,7 @@ As you can see, we have added a new prop called `synth`. Rest of the clip parame
 Make Tone's Transport class start the audio,
 
 ```
-Tone.Transport.start();
+Tone.context.resume().then(() => Tone.Transport.start());
 ```
 
 #### Sample
@@ -61,7 +61,7 @@ scribble.clip({
 Again, make sure you call start on Tone's Transport,
 
 ```
-Tone.Transport.start();
+Tone.context.resume().then(() => Tone.Transport.start());
 ```
 
 #### Sampler
@@ -103,7 +103,7 @@ scribble.clip({
 As always make sure Tone.Transport is started,
 
 ```
-Tone.Transport.start();
+Tone.context.resume().then(() => Tone.Transport.start());
 ```
 
 <br>

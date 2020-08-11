@@ -8,9 +8,15 @@
   var o2 = document.querySelector('#o2');
   var o3 = document.querySelector('#o3');
   var downloadAnchor = document.querySelector('#downloadAnchor');
+  var controls = document.querySelector('#controls');
+  var isPlaying = false;
+  var clip;
 
-  var hydrateDownloadLink = function () {
+  var getNotes = function () {
     var setOfNotes = [];
+    var p = (pattern.value || '').repeat(repeatPattern.value);
+    var count = p.replace(/[^x]/g, '').length;
+    var notes = [];
 
     if (o1.checked) {
       setOfNotes = setOfNotes.concat(
@@ -30,10 +36,6 @@
       );
     }
 
-    var p = (pattern.value || '').repeat(repeatPattern.value);
-    var count = p.replace(/[^x]/g, '').length;
-    var notes = [];
-
     for (let i = 0; i < count; i++) {
       notes.push(
         _.sampleSize(
@@ -45,12 +47,45 @@
       );
     }
 
-    console.log(notes);
+    return notes;
+  };
+
+  var hydrateDownloadLink = function () {
+    if (isPlaying) {
+      controls.click();
+    }
+
+    clip = scribble.clip({
+      notes: getNotes(),
+      pattern: (pattern.value || '').repeat(repeatPattern.value),
+      effects: ['Reverb'],
+      volume: -18,
+      instrument: new Tone.PolySynth(Tone.Synth, {
+        volume: 0,
+        detune: 0,
+        portamento: 2,
+        envelope: {
+          attack: 2.005,
+          attackCurve: 'linear',
+          decay: 0.1,
+          decayCurve: 'exponential',
+          release: 3,
+          releaseCurve: 'exponential',
+          sustain: 0.3,
+        },
+        oscillator: {
+          partialCount: 8,
+          partials: [1, 1, 1, 1, 1, 1, 1, 1],
+          phase: 0,
+          type: 'sine8',
+        },
+      }),
+    });
 
     downloadAnchor.href = scribble.midi(
       scribble.clip({
-        notes: notes,
-        pattern: p,
+        notes: getNotes(),
+        pattern: (pattern.value || '').repeat(repeatPattern.value),
       }),
       'random-chords.mid'
     );
@@ -75,5 +110,22 @@
     hydrateDownloadLink();
   });
 
+  controls.addEventListener('click', function (e) {
+    if (isPlaying) {
+      isPlaying = false;
+      controls.innerHTML = 'Play';
+      clip.stop();
+      Tone.Transport.stop();
+      // re hydrate as clip is not available anymore after stopping
+      hydrateDownloadLink();
+    } else {
+      isPlaying = true;
+      controls.innerHTML = 'Stop';
+      clip.start();
+      Tone.context.resume().then(() => Tone.Transport.start());
+    }
+
+    e.preventDefault();
+  });
   hydrateDownloadLink();
 })();

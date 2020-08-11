@@ -59,7 +59,7 @@ session.startRow(1);
 As always make sure Tone is loaded in the browser and it's Transport's start method is initiated
 
 ```
-Tone.Transport.start();
+Tone.context.resume().then(() => Tone.Transport.start());
 ```
 
 You can get a list of all the channels in the session by doing,

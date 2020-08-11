@@ -13,6 +13,8 @@ Here's a sample of what we will end up creating
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/872748478&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
 <br>
 If you do not want to write code OR are not a JavaScript programmer, then simply use this UI to generate and download MIDI files right from your browser.
+
+<em>Please note: The audio is generated using your browser's capability to produce sound, hence the quality cannot be compared to a synth running in a DAW! Download the MIDI file to try it in your DAW.</em>
 <section class="flex pad">
   <div>
     <h6>Root</h6>
@@ -37,7 +39,7 @@ If you do not want to write code OR are not a JavaScript programmer, then simply
       <option value="major">major</option>
       <option value="minor">minor</option>
       <option value="dorian">dorian</option>
-      <option value="lydian">lydian</option>
+      <option value="lydian" selected>lydian</option>
       <option value="mixolydian">mixolydian</option>
       <option value="phrygian">phrygian</option>
       <option value="harmonic minor">harmonic minor</option>
@@ -46,20 +48,23 @@ If you do not want to write code OR are not a JavaScript programmer, then simply
   </div>
   <div>
     <h6>Octaves</h6>
-    <input type="checkbox" id="o1" checked /> <label for="o1">2</label>
-    <input type="checkbox" id="o2" /> <label for="o1">3</label>
+    <input type="checkbox" id="o1" /> <label for="o1">2</label>
+    <input type="checkbox" id="o2" checked /> <label for="o1">3</label>
     <input type="checkbox" id="o3" checked /> <label for="o1">4</label>
   </div>
   <div>
     <h6>Pattern <span class="dim half">x - _ [ ]</span></h6>
-    <input type="text" lastKnownValue="x__[xx]x_x_" value="x__[xx]x_x_" id="pattern" />
+    <input type="text" lastKnownValue="x___x___x___x___" value="x___x___x___x___" id="pattern" />
   </div>
   <div>
-    <h6>Repeat</h6>
-    <span style="display: inline-block; width: 19px; text-align:center" id="repeatPatternDisplay">4</span> <input type="range" min="1" max="16" value="4" id="repeatPattern" />
+    <h6>Repeat
+    <span class="dim" style="display: inline-block; width: 19px; text-align:right" id="repeatPatternDisplay">4</span>
+    <span class="dim half">times</span></h6>
+    <input type="range" min="1" max="16" value="4" id="repeatPattern" />
   </div>
   <div>
     <h6>MIDI</h6>
+    <a href="#" id="controls">Play</a> (lo-fi)<br>
     <a href="#" id="downloadAnchor" download="random-chords.mid">Download</a>
   </div>
 </section>

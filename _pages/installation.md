@@ -56,7 +56,7 @@ Create a file called `script.js` and enter the following in there
 ```
 import { clip } from 'scribbletune';
 clip({ synth: 'Synth', notes: 'c4', pattern: 'x' }).start();
-Tone.Transport.start();
+Tone.context.resume().then(() => Tone.Transport.start());
 ```
 
 Now create a file called `index.html` and enter the following in it

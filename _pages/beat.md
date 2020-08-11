@@ -120,7 +120,7 @@ scribble.clip({
 }).start();
 
 Tone.Transport.bpm.value = 135;
-Tone.Transport.start();
+Tone.context.resume().then(() => Tone.Transport.start());
 ```
 
 <div>

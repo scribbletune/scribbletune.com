@@ -34,11 +34,11 @@ var kickClip3 = scribble.clip({
 });
 
 Tone.Transport.bpm.value = 135;
-Tone.Transport.start();
+Tone.context.resume().then(() => Tone.Transport.start());
 
 var clips = [kickClip, bassClip, chClip, ohClip, snareClip];
 function stopAllClips() {
-  clips.forEach(function(clip) {
+  clips.forEach(function (clip) {
     try {
       clip.stop();
     } catch (e) {
@@ -53,7 +53,7 @@ function stopAllClips() {
 }
 
 function startAllClips() {
-  clips.forEach(function(clip) {
+  clips.forEach(function (clip) {
     try {
       clip.start();
     } catch (e) {}
@@ -61,34 +61,36 @@ function startAllClips() {
 }
 
 document.querySelectorAll('.btnStartAll') &&
-  document.querySelectorAll('.btnStartAll').forEach(function(btn) {
-    btn.addEventListener('click', function() {
+  document.querySelectorAll('.btnStartAll').forEach(function (btn) {
+    btn.addEventListener('click', function () {
       stopAllClips();
       startAllClips();
     });
   });
 
 document.querySelectorAll('.btnStopAll') &&
-  document.querySelectorAll('.btnStopAll').forEach(function(btn) {
-    btn.addEventListener('click', function() {
+  document.querySelectorAll('.btnStopAll').forEach(function (btn) {
+    btn.addEventListener('click', function () {
       stopAllClips();
     });
   });
 
 document.querySelector('#btnStartX') &&
-  document.querySelector('#btnStartX').addEventListener('click', function() {
+  document.querySelector('#btnStartX').addEventListener('click', function () {
     stopAllClips();
     kickClip.start();
   });
 
 document.querySelector('#btnStartX3') &&
-  document.querySelector('#btnStartX3').addEventListener('click', function() {
+  document.querySelector('#btnStartX3').addEventListener('click', function () {
     stopAllClips();
     kickClip3.start();
   });
 
 document.querySelector('#btnStartBass') &&
-  document.querySelector('#btnStartBass').addEventListener('click', function() {
-    stopAllClips();
-    bassClip.start();
-  });
+  document
+    .querySelector('#btnStartBass')
+    .addEventListener('click', function () {
+      stopAllClips();
+      bassClip.start();
+    });
