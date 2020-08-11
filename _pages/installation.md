@@ -68,7 +68,7 @@ Now create a file called `index.html` and enter the following in it
   <title>Testing Scribbletune</title>
 </head>
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.7/Tone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.43/Tone.js"></script>
   <script src="dist/main.js"></script>
 </body>
 </html>
