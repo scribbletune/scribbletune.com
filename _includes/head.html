@@ -2,6 +2,9 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="midi, music, ableton, live, webaudio" />
+  <meta name="description" content="Create music with JavaScript" />
+  <meta name="author" content="Walmik Deshpande" />
 
   <title>
     {{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}
@@ -14,15 +17,38 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scribbletune/3.12.1/scribbletune.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8347688-20"></script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-8347688-20"
+  ></script>
   <script>
-    if (window.location.hostname !== 'localhost') {
+    if (window.location.hostname !== "localhost") {
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
-      gtag('config', 'UA-8347688-20');
+      gtag("js", new Date());
+      gtag("config", "UA-8347688-20");
     }
   </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    if (window.location.hostname !== "localhost") {
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PLSRNRN");
+    }
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
