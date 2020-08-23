@@ -56,7 +56,7 @@ This is the most important parameter for the clip method's object. It abstracts 
 xxxx
 ```
 
-These are 4 quarter notes. By default a single `x` is a quarter note. The default can be changed to eigth note or half note or whatever. It might look like this in a DAW (if exported as MIDI from Scribbletune):
+These are 4 quarter notes. By default a single `x` is a quarter note. The default can be changed to eighth note or half note or whatever. It might look like this in a DAW (if exported as MIDI from Scribbletune):
 
 ![Quarter notes](/images/quarter-notes.png)
 
@@ -77,6 +77,38 @@ Lastly, the letter `R` is an experimental new addition to the pattern language a
 If you set an additional property called `randomNotes` with a string or array of notes, `R` will then randomly select a note to play from these provided notes instead of randomly deciding note on or note off events.
 
 `R` is a powerful feature to create interestingly intricate patterns.
+
+{:#subdiv}
+
+###### subdiv `{String}`
+
+Setting this property will allow you to set the duration of each `x`. If not set, the default value is "4n" (quarter note).
+
+```
+import { clip } from 'scribbletune';
+
+// Create a clip that plays the C major scale
+const c = clip({
+	notes: 'c4',
+	subdiv: '8n', // the default it a quarter note
+	pattern: 'xx_[xx]'
+});
+```
+In this example, we set the `subdiv` value to be "8n" (eigth note). This will set the default duration of each `x` to be a eighth note. Using this in combination with the rest of the pattern notation will now act as per eighth notes. So if the `pattern` is set to "xx_[xx]", each `x_` will be twice it's size, each `x` in square braces will be divided by the number of `x` s in the square braces (in this example, they ll be sixteenth notes each) and finally, each individual `x` which is not followed by an underscore nor within square braces will be one eighth note long.
+
+To round it up, each `-` note off will also be eighth note long.
+
+Valid values for subdiv are:
+- 1m  (entire measure/bar)
+- 2m (two measures)
+- 3m (three measures)
+- 4m (four measures)
+- 1n (whole note)
+- 2n (half note)
+- 4n (eighth)
+- 8n (sixteenth)
+- 16n (sixteenth)
+
 
 {:#shuffle}
 
