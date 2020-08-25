@@ -11,6 +11,12 @@ If you randomly pick 2 or 3 notes from a scale or mode, you ll end up creating r
 Here's a sample of what we will end up creating
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/872748478&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
+
+<br>
+If you d like to watch a video of how it's done, you can do so from here
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cCOElYQ1RzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <br>
 If you do not want to write code OR are not a JavaScript programmer, then simply use this UI to generate and download MIDI files right from your browser.
 
