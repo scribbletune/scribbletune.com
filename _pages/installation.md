@@ -6,7 +6,7 @@ permalink: /documentation/installation
 
 ### Installation
 
-Scribbletune can be used in the browser along with Tone.js OR as a Node.js module to export MIDI files from the terminal.
+Scribbletune can be used in the browser along with Tone.js OR as a Node.js module to export MIDI files from the terminal. If you'd like to see how you can use Scribbletune in the browser, please watch [this video](https://youtu.be/6Ru2H-IrOWU).
 
 ##### Browser
 
