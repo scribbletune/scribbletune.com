@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 *,
 *::before,
@@ -16,7 +16,7 @@ body {
 body {
   background-color: #262b33;
   color: #c3c8d1;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 pre {
@@ -113,7 +113,7 @@ footer a {
   white-space: nowrap;
   overflow: hidden;
   background-image: url(/images/scribbletune-logo.png);
-  background-size: 40px;
+  background-size: 32px;
   background-repeat: no-repeat;
   background-position: center;
   margin: 8px;
@@ -193,7 +193,9 @@ footer a {
   }
 }
 
-.content h4, .content h5, .content h6 {
+.content h4,
+.content h5,
+.content h6 {
   margin-top: 10px;
 }
 
