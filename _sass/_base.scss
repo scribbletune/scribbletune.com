@@ -11,6 +11,7 @@
 html,
 body {
   height: 100%;
+  line-height: 1.7;
 }
 
 body {
@@ -32,6 +33,11 @@ h6 {
   color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
 p {
   margin-bottom: 1.5rem;
 }
@@ -84,7 +90,9 @@ sup {
   width: 100%;
   top: 0;
   z-index: 1;
-  background: #121213;
+  nav {
+    background: #262b33;
+  }
   li:not(:last-child) {
     border-right: 1px solid #262b33;
     margin-right: 0;
@@ -181,6 +189,19 @@ footer a {
 .half {
   transform: scale(0.5);
   font-size: smaller;
+}
+
+pre.prettyprint {
+  border-color: #3c3c3c !important;
+}
+
+.examples {
+  h5 {
+    margin-bottom: 1rem;
+  }
+  iframe {
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: 768px) {

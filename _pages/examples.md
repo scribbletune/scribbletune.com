@@ -12,7 +12,6 @@ Using lodash, Scribbletune can be used to quickly generate random chord progress
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/872748478&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
 
-<hr>
 
 ##### [Generate a riff (Updated)](/examples/riff)
 
@@ -21,7 +20,6 @@ Use the arp and progression method with a custom clip. The riff in the following
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
       src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
-<hr>
 
 ##### [Generate chord progressions that always sound good](/examples/chord-progressions)
 
@@ -29,7 +27,6 @@ Using basic music theory, Scribbletune can be used to generate arpeggiated chord
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691481236&color=%23080404&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
-<hr>
 
 ##### [Classic breakbeats](/examples/breakbeats)
 
@@ -37,7 +34,6 @@ Generate classic breakbeats with slight variations each time
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/653692301&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-<hr>
 
 ##### [Drum loop with a bassline](/examples/beat2)
 
@@ -45,7 +41,6 @@ Create a starting point for an instant drum loop with a bassline
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/653204363&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-<hr>
 
 ##### [Create a simple beat right in the browser](/examples/beat)
 
@@ -58,7 +53,6 @@ Use the clip method with wav samples to create a looping beat (desktop browser o
 
 <script src="/js/beat.js"></script>
 
-<hr>
 
 ##### [Generate a simple melody](/examples/melody)
 
@@ -66,7 +60,6 @@ Use music constraints to create a very simple melody
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/606723279&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-<hr>
 
 ##### Create a music related web application
 
