@@ -13,9 +13,9 @@ Using a few methods from the [LiveAPI](https://docs.cycling74.com/max8/vignettes
 
 Scribbletune uses the currently selected clip in Ableton Live as the default clip to render MIDI information in. The `max` method also accepts a second `String` param that lets you define the Ableton Live clip you'd rather use than the currently selected one.
 
-#### How to create a Max4Live device with Scribbletune
+#### How to prep for creating a Max for Live device with Scribbletune
 
-The JS object from Max4Live uses ES5 (somewhere between JS 1.7 and 1.8.5). Which means, if you'd like to use ES6 syntax, then you will need transpilation. Additionally, methods such as `String.repeat` will not work out of the box. Transpilation does not provision for these ES5 methods and you will need to add polyfills yourself. You will also need to export the transpiled JS to a global object so that Max4Live can reach it.
+The JS object from Max for Live uses ES5 (somewhere between JS 1.7 and 1.8.5). Which means, if you'd like to use ES6 syntax, then you will need transpilation. Additionally, methods such as `String.repeat` and `String.replace` will not work out of the box. Transpilation does not provision for these ES5 methods and you will need to add polyfills yourself. Additionally v3.15 introduces a breaking change for max for live devices making it mandatory to provide a polyfill for Object.entries. Finally, you will also need to export the transpiled JS to a global object so that Max for Live can reach it.
 
 ##### Get busy
 
@@ -33,11 +33,11 @@ output: {
 },
 ```
 
-Once we have this, we can start building our Max4Live device.
+Once we have this, we can start building our Max for Live device.
 
-Open up Ableton Live and drag a _Max Midi Effect_ on to a channel and click the edit button on it's top right. Once Max4Live opens up, save the device (amxd file) in the same location as our Webpack's output destination.
+Open up Ableton Live and drag a _Max Midi Effect_ on to a channel and click the edit button on it's top right. Once Max for Live opens up, save the device (amxd file) in the same location as our Webpack's output destination.
 
-Let's write a simple program in our index.js (webpack entry point) that prints out the C Major scale in Max4Live's console (Max > Window > Max Console).
+Let's write a simple program in our index.js (webpack entry point) that prints out the C Major scale in Max for Live's console (Max > Window > Max Console).
 
 ```javascript
 /*global post:true*/
@@ -50,7 +50,7 @@ module.exports = function(scale) {
 
 If you run `npx webpack`, then we should have the scribble.js file available at the same location as our `amxd` file.
 
-Click within the Max4Live editing environment and type `n`. In the box that appears, type `js scribble.js`. This tells Max4Live to use our transpiled JS file to be used by Max4Live's `js` object. This is how our Max4Live device looks so far:
+Click within the Max for Live editing environment and type `n`. In the box that appears, type `js scribble.js`. This tells Max for Live to use our transpiled JS file to be used by Max for Live's `js` object. This is how our Max for Live device looks so far:
 
 ![Quarter notes](/images/scribble4max1.png)
 
@@ -58,7 +58,7 @@ Now type `m` in the editing area of the device and then type `scribble "C4 major
 
 ![Quarter notes](/images/scribble4max2.png)
 
-Now, if you lock the device (lower left corner of the Max4Live window), you can click the message box and you should see the C major scale printed out in the Max Console:
+Now, if you lock the device (lower left corner of the Max for Live window), you can click the message box and you should see the C major scale printed out in the Max Console:
 
 `js: C4 D4 E4 F4 G4 A4 B4`
 
@@ -82,4 +82,4 @@ This is just a very simple script but it does produce interesting patterns in an
 
 I have a separate repo for this. Feel free to can fork it and make it better: [https://github.com/scribbletune/scribble4max](https://github.com/scribbletune/scribble4max)
 
-And here's a (slightly old but pretty solid) great set of articles by [Adam Murray](https://twitter.com/compusition) that can help you with JavaScript and Max4Live in general: [http://compusition.com/writings/js-live-api](http://compusition.com/writings/js-live-api)
+And here's a (slightly old but pretty solid) great set of articles by [Adam Murray](https://twitter.com/compusition) that can help you with JavaScript and Max for Live in general: [http://compusition.com/writings/js-live-api](http://compusition.com/writings/js-live-api)
