@@ -50,7 +50,18 @@ In this example we explicitly set the notes of the C major scale in the 4th octa
 
 ###### pattern `{String}`
 
-This is the most important parameter for the clip method's object. It abstracts away the MIDI _note on_ and _note off_ events along with the individual note durations and few other nifty characters to form a simple instruction language. It is made up only of `x`, `-`(hyphen), `_`(underscore), `[`, `]` and the letter `R`(for randomly setting a note - or not - in the specified position). This is native to Scribbletune and it's used in multiple ways across the Scribbletune library. Here's an example of what a pattern looks like and what it means:
+This is the most important parameter for the clip method's object. It abstracts away the MIDI _note on_ and _note off_ events along with the individual note durations and few other MIDI instructions to form a simple notation language. It is made up only of the following characters:
+
+<table class="table table-dark">
+	<tr><td>x</td><td>Play a note</td></tr>
+	<tr><td>-</td><td>Rest (dont play a note)</td></tr>
+	<tr><td>_</td><td>Sustain a note </td></tr>
+	<tr><td>R</td><td>Use a random notes from the randomNotes property (if defined) OR randomly set volume</td></tr>
+	<tr><td>[</td><td>Start subdividing the note duration (based on the number of characters inserted)</td></tr>
+	<tr><td>]</td><td>End subdividing (you can use nest subdivisions as well)</td></tr>
+</table>
+
+This is native to Scribbletune and it's used in multiple ways across the Scribbletune library. Here's an example of what a very simply pattern looks like,
 
 ```
 xxxx
