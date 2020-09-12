@@ -13,7 +13,7 @@ Using lodash, Scribbletune can be used to quickly generate random chord progress
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/872748478&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
 
 
-##### [Generate a riff (Updated)](/examples/riff)
+##### [Generate a riff](/examples/riff)
 
 Use the arp and progression method with a custom clip. The riff in the following clip use this technique:
 

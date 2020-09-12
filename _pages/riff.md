@@ -4,7 +4,7 @@ title: Riff
 permalink: /examples/riff
 ---
 
-### Riff (Updated)
+### Riff
 
 Scribbletune can be used to generate a commonly used pattern for riffs in trance music.
 {: .lead}
