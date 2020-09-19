@@ -28,7 +28,7 @@ Since we start by clicking around randomly in a DAW, we can easily create a Java
 const getRandomPattern = function (count) {
   let str = '[x-]R';
   for (let i = 1; i < (count || 8); i++) {
-    str += Math.round(Math.random()) ? '[x-]R' : 'R[-x]';
+    str += Math.round(Math.random()) ? '[x-]R' : 'R[x-]';
   }
 
   return str;
