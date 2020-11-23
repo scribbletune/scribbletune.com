@@ -14,6 +14,9 @@ Before we go on, here's a sample of what we are gonna end up creating using Scri
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
       src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535502394&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
+If you d like to watch a video on how to do this,
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-eYCm-XIOdM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 As you can imagine, this is a commonly used technique to create riffs. You randomly click some of the steps in a 16 beat pattern and move them around while sticking to a particular scale. Then, on a lower octave, add notes to the missing steps on a particular key to act as the counter point notes. This works great and quickly creates a nice little riff that looks a bit like this,
 
 ![Quarter notes](/images/riff-piano-roll.png)
