@@ -84,11 +84,19 @@ sup {
   min-height: 70%;
   margin-top: 60px;
 }
-
+.announcement {
+  background-color: #8d4141;
+  padding: 5px;
+  text-align: center;
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
 .top-nav {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 40px;
   z-index: 1;
   nav {
     background: #262b33;
