@@ -1,8 +1,7 @@
 pre {
-	padding: 20px !important;
+	padding: 30px !important;
 	font-size: 15px;
 	tab-size: 4;
-	margin-bottom: 10px;
 }
 
 /* desert scheme ported from vim to google prettify */

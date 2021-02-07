@@ -5,7 +5,7 @@ permalink: /documentation/core/scale
 ---
 
 ### Scale
-A scale is a set of musical notes ordered by pitch. Scribbletune uses [tonal](https://github.com/danigb/tonal) to expose scales (or modes).
+A scale is a set of musical notes ordered by pitch. Scribbletune uses [tonal](https://github.com/danigb/tonal) as a dev dependency to expose a dumb downed version of it's scales (or modes).
 {: .lead}
 
 The scale method takes a string input that denotes the key and the scale you want.

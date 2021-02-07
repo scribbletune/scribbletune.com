@@ -5,10 +5,10 @@ permalink: /documentation/core/chord
 ---
 
 ### Chord
-A chord is 2 (typically 3) or more notes that combine harmoniously. Scribbletune uses [tonal](https://github.com/danigb/tonal) to expose chords.
+A chord is 2 (typically 3) or more notes that combine harmoniously. Scribbletune uses [tonal](https://github.com/danigb/tonal) as a dev dependency to create a dumbed down version of it's chords.
 {: .lead}
 
-Scribbletune recognizes chords by their commonly used names. For instance here is a chord progression set up via chord names:
+Use chords by their commonly used names. For instance here is a chord progression set up via chord names:
 
 ```
 import { chord, clip } from 'scribbletune';
