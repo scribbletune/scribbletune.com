@@ -44,7 +44,7 @@ Let's write a simple program in our index.js (webpack entry point) that prints o
 const scribble = require('scribbletune');
 
 module.exports = function(scale) {
-  post(scale);
+  post(scribble.scale(scale));
 };
 ```
 
