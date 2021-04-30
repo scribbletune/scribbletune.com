@@ -16,7 +16,7 @@ import { clip } from 'scribbletune';
 
 // Create a clip that plays the middle C
 const c = clip({
-	notes: 'c4',
+	notes: 'C4',
 	pattern: 'x'
 });
 
@@ -39,7 +39,7 @@ import { clip } from 'scribbletune';
 
 // Create a clip that plays the C major scale
 const c = clip({
-	notes: 'c4 d4 e4 f4 g4 a4 b4 c5', // Or ['c4', 'd4', 'e4' ...]
+	notes: 'C4 D4 E4 F4 G4 A4 B4 C5', // Or ['C4', 'D4', 'E4' ...]
 	pattern: 'x'.repeat(8)
 });
 ```
@@ -100,7 +100,7 @@ import { clip } from 'scribbletune';
 
 // Create a clip that plays the C major scale
 const c = clip({
-	notes: 'c4',
+	notes: 'C4',
 	subdiv: '8n', // the default it a quarter note
 	pattern: 'xx_[xx]'
 });
@@ -142,7 +142,7 @@ import { clip } from 'scribbletune';
 
 // Create a clip that plays the C major scale
 const c = clip({
-	notes: 'c4',
+	notes: 'C4',
 	pattern: 'x'.repeat(8),
 	sizzle: true, // this is the same as setting it to 'sin'
 });
@@ -159,7 +159,7 @@ import { clip } from 'scribbletune';
 
 // Create a clip that plays the C major scale
 const c = clip({
-	notes: 'c4',
+	notes: 'C4',
 	pattern: 'x'.repeat(16),
 	sizzle: 'rampUp',
 	sizzleReps: 4
@@ -179,7 +179,7 @@ import { clip } from 'scribbletune';
 
 // Create a clip that plays the C major scale
 const c = clip({
-	notes: 'c4',
+	notes: 'C4',
 	pattern: 'x'.repeat(8),
 	accent: 'x--x',
 });
@@ -198,7 +198,7 @@ import { clip } from 'scribbletune';
 
 // Create a clip that plays the C major scale
 const c = clip({
-	notes: 'c4',
+	notes: 'C4',
 	pattern: 'x'.repeat(8),
 	accent: 'x--x',
 	amp: 127,
@@ -219,7 +219,7 @@ import { clip } from 'scribbletune';
 
 // Create a clip that plays the C major scale
 const c = clip({
-	notes: 'c4',
+	notes: 'C4',
 	pattern: 'x'.repeat(8),
 	accent: 'x--x',
 	amp: 127,

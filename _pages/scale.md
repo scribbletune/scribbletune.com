@@ -5,7 +5,7 @@ permalink: /documentation/core/scale
 ---
 
 ### Scale
-A scale is a set of musical notes ordered by pitch. Scribbletune uses [tonal](https://github.com/danigb/tonal) as a dev dependency to expose a dumb downed version of it's scales (or modes).
+A scale is a set of musical notes ordered by pitch. Scribbletune uses [tonal](https://github.com/danigb/tonal) as a dev dependency in [harmonics](https://github.com/scribbletune/harmonics) to expose a dumb downed version of it's scales (or modes).
 {: .lead}
 
 The scale method takes a string input that denotes the key and the scale you want.
@@ -14,10 +14,10 @@ The scale method takes a string input that denotes the key and the scale you wan
 const scribble = require('scribbletune');
 
 // Get the C major scale
-let cMajor = scribble.scale('c4 major'); // [ 'c4', 'd4', 'e4' ... ]
+let cMajor = scribble.scale('C4 major'); // [ 'C4', 'D4', 'E4' ... ]
 
 // That's the same as
-cMajor = scribble.scale('c4 ionian'); // [ 'c4', 'd4', 'e4', 'f4' ...]
+cMajor = scribble.scale('C4 ionian'); // [ 'C4', 'D4', 'E4', 'F4' ...]
 
 // Create a clip that plays this C major scale
 const clip = scribble.clip({
@@ -34,7 +34,7 @@ This will generate a MIDI file at the same location as you run this script. This
 
 Scales are also exposed as modes.
 ```
-let cMinor = scribble.mode('c4 aeolian'); // [ 'c4', 'd4', 'd#4', 'f4' ...]
+let cMinor = scribble.mode('C4 aeolian'); // [ 'C4', 'D4', 'D#4', 'F4' ...]
 ```
 
 You can list all the available scales by invoking `scales` or `modes` method.

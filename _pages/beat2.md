@@ -65,7 +65,7 @@ For the closed and open hats, we will have a single patterns sprinkled with `R` 
 ```
 const ch = scribble.clip({
   pattern: '[xR][[x[xR]]]'.repeat(16),
-  notes: 'c4',
+  notes: 'C4',
   sizzle: 'sin',
   sizzleReps: 32,
 });
@@ -73,7 +73,7 @@ const ch = scribble.clip({
 scribble.midi(ch, 'ch.mid');
 
 const oh = scribble.clip({
-  notes: 'c4',
+  notes: 'C4',
   pattern: '[-x][Rx][Rx][Rx]'.repeat(8),
 });
 
@@ -88,7 +88,7 @@ For the snare we will stick to the very common snare loop style where a downbeat
 const D = '-x-x'; // base pattern
 const E = '-[xR]-[Rx]'; // variation
 const snare = scribble.clip({
-  notes: 'c4',
+  notes: 'C4',
   pattern: (D + D + E + D + D + E + D + D).repeat(4),
 });
 

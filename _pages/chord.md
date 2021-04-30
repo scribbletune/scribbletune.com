@@ -33,13 +33,13 @@ Other than recognizing chords in a notes array, you can get a particular chord a
 import { chord } from 'scribbletune';
 
 // Get C Major (Major is denoted by M)
-const cMajorChord = chord('CM'); // [ 'c4', 'e4', 'g4' ]
+const cMajorChord = chord('CM'); // [ 'C4', 'E4', 'G4' ]
 
 // Get the C Major chord on the 5th octave
-const cMajorChord5 = scribble.chord('CM-5'); // [ 'c5', 'e5', 'g5' ]
+const cMajorChord5 = scribble.chord('CM-5'); // [ 'C5', 'E5', 'G5' ]
 
 // Get the C minor chord (denoted with a lowercase `m`)
-const cMinorChord = chord('Cm'); // [ 'c4', 'eb4', 'g4' ]
+const cMinorChord = chord('Cm'); // [ 'C4', 'EB4', 'G4' ]
 ```
 
 Lastly, you can get an array of the available chords by calling the `chords` method ([Tonal's](https://github.com/danigb/tonal) `Chord.names()` is exposed as `chords` in Scribbletune.

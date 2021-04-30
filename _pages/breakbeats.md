@@ -52,7 +52,7 @@ for (const p in funkyDrummer) {
   scribble.midi(
     scribble.clip({
       pattern: funkyDrummer[p].repeat(4), // Repeat the pattern to get 4 bars
-      notes: 'c4',
+      notes: 'C4',
       subdiv: '16n',
     }),
     'funkyDrummer_' + p + '.mid' // Give a name to your MIDI file
@@ -86,7 +86,7 @@ const generateMidiFiles = (obj, prefix) => {
     scribble.midi(
       scribble.clip({
         pattern: obj[p].repeat(4), // Repeat the pattern to get 4 bars
-        notes: 'c4',
+        notes: 'C4',
         subdiv: '16n',
       }),
       prefix + '_' + p + '.mid' // Give a name to your MIDI file

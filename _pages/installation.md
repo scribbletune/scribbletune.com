@@ -102,7 +102,7 @@ Now you can create MIDI files from the terminal
 const scribble = require('scribbletune');
 
 const clip = scribble.clip({
-  notes: scribble.scale('c4 major'),
+  notes: scribble.scale('C4 major'),
   pattern: 'x'.repeat(8)
 });
 
