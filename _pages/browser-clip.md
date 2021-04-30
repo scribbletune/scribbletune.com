@@ -12,17 +12,11 @@ Scribbletune uses Tone.js to create sequences that can be played in the browser.
 **Note:** Tone.js must be loaded in the browser via SCRIPT tag before Scribbletune (or your compiled app - with Scribbletune) is loaded.
 {: .text-warning}
 
-{% include browser-scripts.html %}
-
-The clip method is the same as the one [from the core Scribbletune node module](/documentation/core/clip) but with some added properties to enable playing them in the browser. Behind the scenes, Scribbletune makes use of a global Tone object to create Player, Instrument and Sampler along with Sequence to enable this behavior.
-
-If you are using scribbletune.js directly from CDNjs (or have downloaded it and referenced it from your project), then it exposes a global object called `scribble`. This has all the methods you need. If you are importing or requiring Scribbletune then lets assume it is initiated like this:
-
 ```
-const scribble = require('scribbletune');
+const scribble = require('scribbletune/browser');
 ```
 
-Then you can go ahead and create a clip like you would normally do, but this time you would also add an additional property to make it use the global Tone.js (which you loaded via SCRIPT tag earlier).
+Create a clip like you would normally do, but this time also add an additional property to make it use the global Tone.js (which you loaded via SCRIPT tag earlier).
 
 #### Synth
 

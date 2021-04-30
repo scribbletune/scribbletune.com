@@ -6,13 +6,13 @@ permalink: /documentation/installation
 
 ### Installation
 
-Scribbletune can be used in the browser along with Tone.js OR as a Node.js module to export MIDI files from the terminal. If you'd like to see how you can use Scribbletune with React in the browser, please watch [this video](https://youtu.be/6Ru2H-IrOWU).
+Scribbletune can be used in the browser along with Tone.js, within the Max for Live development environment OR as a Node.js module to export MIDI files from the terminal.
 
-##### Browser
+#### Browser
 
 There are a couple of ways to use Scribbletune in the browser.
 
-###### 1. Use a precompiled version of Scribbletune
+##### 1. Quick and dirty -> Use a precompiled version of Scribbletune
 
 Use the precompiled version of Scribbletune from CDNjs and reference it in your HTML right after Tone.js
 
@@ -24,7 +24,7 @@ This will make a global object called `scribble` available for you to use in you
 console.log(scribble.scale('c4 major')); // outputs ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4']
 ```
 
-###### 2. Use Scribbletune as a dependency in your package.json
+##### 2. Use Scribbletune as a dependency in your package.json (recommended)
 
 Install `scribbletune` and `webpack` from npm
 
@@ -54,7 +54,7 @@ module.exports = {
 Create a file called `script.js` and enter the following in there
 
 ```
-import { clip } from 'scribbletune';
+import { clip } from 'scribbletune/browser';
 clip({ synth: 'Synth', notes: 'c4', pattern: 'x' }).start();
 Tone.context.resume().then(() => Tone.Transport.start());
 ```
@@ -107,4 +107,18 @@ const clip = scribble.clip({
 });
 
 scribble.midi(clip); // creates a file called music.mid in the same location as this script was created and run.
+```
+
+##### Max for Live
+
+Install Scribbletune from npm
+
+```
+npm i scribbletune
+```
+
+Import the Scribbletune API for Max for Live device development
+
+```
+const scribble = require('scribbletune/max');
 ```

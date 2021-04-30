@@ -41,7 +41,7 @@ Let's write a simple program in our index.js (webpack entry point) that prints o
 
 ```javascript
 /*global post:true*/
-const scribble = require('scribbletune');
+const scribble = require('scribbletune/max');
 
 module.exports = function(scale) {
   post(scribble.scale(scale));
