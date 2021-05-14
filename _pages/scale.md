@@ -5,12 +5,13 @@ permalink: /documentation/core/scale
 ---
 
 ### Scale
-A scale is a set of musical notes ordered by pitch. Scribbletune uses [tonal](https://github.com/danigb/tonal) as a dev dependency in [harmonics](https://github.com/scribbletune/harmonics) to expose a dumb downed version of it's scales (or modes).
+
+A scale is a set of musical notes ordered by pitch. Scribbletune uses [tonal](https://github.com/danigb/tonal) as a dev dependency to create a dumbed down version of it's scales in another node module called [harmonics](https://github.com/scribbletune/harmonics) and uses that as a dependency of Scribbletune (this is done so as to have a very small footprint in Scribbletune for the music theory).
 {: .lead}
 
 The scale method takes a string input that denotes the key and the scale you want.
 
-```
+```javascript
 const scribble = require('scribbletune');
 
 // Get the C major scale
@@ -22,24 +23,26 @@ cMajor = scribble.scale('C4 ionian'); // [ 'C4', 'D4', 'E4', 'F4' ...]
 // Create a clip that plays this C major scale
 const clip = scribble.clip({
   notes: cMajor,
-  pattern: 'xxxxxxx'
+  pattern: 'xxxxxxx',
 });
 
 // Export this clip as a MIDI file
 scribble.midi(clip, 'c-major.mid');
 ```
+
 This will generate a MIDI file at the same location as you run this script. This is how it sounded when I imported the generated `c-major.mid` MIDI file into Garage Band
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247076595&color=%232e2e2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 Scales are also exposed as modes.
-```
+
+```javascript
 let cMinor = scribble.mode('C4 aeolian'); // [ 'C4', 'D4', 'D#4', 'F4' ...]
 ```
 
 You can list all the available scales by invoking `scales` or `modes` method.
 
-```
+```javascript
 const allScales = scribble.scales(); // returns an array of all the available scales from tonal
 ```
 

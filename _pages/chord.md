@@ -5,19 +5,20 @@ permalink: /documentation/core/chord
 ---
 
 ### Chord
-A chord is 2 (typically 3) or more notes that combine harmoniously. Scribbletune uses [tonal](https://github.com/danigb/tonal) as a dev dependency to create a dumbed down version of it's chords.
+
+A chord is 2 (typically 3) or more notes that combine harmoniously. Scribbletune uses [tonal](https://github.com/danigb/tonal) as a dev dependency to create a dumbed down version of it's chords in another node module called [harmonics](https://github.com/scribbletune/harmonics) and uses that as a dependency of Scribbletune (this is done so as to have a very small footprint in Scribbletune for the music theory).
 {: .lead}
 
 Use chords by their commonly used names. For instance here is a chord progression set up via chord names:
 
-```
-import { chord, clip } from 'scribbletune';
+```javascript
+import { clip } from 'scribbletune';
 
 const chordsClip = clip({
-	// Use chord names directly in the notes array
-	// M stands for Major, m stands for minor
-	notes: 'CM FM GM CM',
-	pattern: 'x---'.repeat(4)
+  // Use chord names directly in the notes array
+  // M stands for Major, m stands for minor
+  notes: 'CM FM GM CM',
+  pattern: 'x---'.repeat(4),
 });
 
 midi(chordsClip, 'chords.mid');
@@ -27,24 +28,24 @@ Here's how _chords.mid_ looks on a piano roll when imported into a DAW:
 
 ![Chords](/images/chords.png)
 
-Other than recognizing chords in a notes array, you can get a particular chord as an array of notes for a  chord as well. Scribbletune adds some sugar on top of ([Tonal's](https://github.com/danigb/tonal) `Tonal.chord` method to get hold of chord notes.
+Other than recognizing chords in a notes array, you can get a particular chord as an array of notes for a chord as well.
 
-```
+```javascript
 import { chord } from 'scribbletune';
 
 // Get C Major (Major is denoted by M)
-const cMajorChord = chord('CM'); // [ 'C4', 'E4', 'G4' ]
+const cMajorChord = chord('C4 M'); // [ 'C4', 'E4', 'G4' ]
 
 // Get the C Major chord on the 5th octave
-const cMajorChord5 = scribble.chord('CM-5'); // [ 'C5', 'E5', 'G5' ]
+const cMajorChord5 = scribble.chord('C5 M'); // [ 'C5', 'E5', 'G5' ]
 
 // Get the C minor chord (denoted with a lowercase `m`)
-const cMinorChord = chord('Cm'); // [ 'C4', 'EB4', 'G4' ]
+const cMinorChord = chord('C4 m'); // [ 'C4', 'EB4', 'G4' ]
 ```
 
 Lastly, you can get an array of the available chords by calling the `chords` method ([Tonal's](https://github.com/danigb/tonal) `Chord.names()` is exposed as `chords` in Scribbletune.
 
-```
+```javascript
 import { chords } from 'scribbletune';
 
 // Get a list of all the available chords
