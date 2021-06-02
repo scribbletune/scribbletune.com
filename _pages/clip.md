@@ -105,7 +105,7 @@ const c = clip({
 	pattern: 'xx_[xx]'
 });
 ```
-In this example, we set the `subdiv` value to be "8n" (eigth note). This will set the default duration of each `x` to be a eighth note. Using this in combination with the rest of the pattern notation will now act as per eighth notes. So if the `pattern` is set to "xx_[xx]", each `x_` will be twice it's size, each `x` in square braces will be divided by the number of `x` s in the square braces (in this example, they ll be sixteenth notes each) and finally, each individual `x` which is not followed by an underscore nor within square braces will be one eighth note long.
+In this example, we set the `subdiv` value to be "8n" (eighth note). This will set the default duration of each `x` to be an eighth note. Using this in combination with the rest of the pattern notation will now act as per eighth notes. So if the `pattern` is set to "xx_[xx]", each `x_` will be twice it's size, each `x` in square braces will be divided by the number of `x` s in the square braces (in this example, they'll be sixteenth notes each) and finally, each individual `x` which is not followed by an underscore nor within square braces will be one eighth note long.
 
 To round it up, each `-` note off will also be eighth note long.
 
@@ -116,8 +116,8 @@ Valid values for subdiv are:
 - 4m (four measures)
 - 1n (whole note)
 - 2n (half note)
-- 4n (eighth)
-- 8n (sixteenth)
+- 4n (quarter note)
+- 8n (eighth)
 - 16n (sixteenth)
 
 
