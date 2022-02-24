@@ -6,6 +6,10 @@ permalink: /examples/
 
 ### Scribbletune examples
 
+##### [Web app showcasing the session interface inspired by Ableton Live](http://live.scribbletune.com/)
+
+Using Scribbletune's session and channel API, you can put together applications that are targeted toward music creation and performance in the browser. [live.scribbletune.com](http://live.scribbletune.com/) is just such an app. And [here is the repo](https://github.com/scribbletune/live) for this React + Apollo project in case you'd like to take a look under the hood on how this application manages state and renders the UI that is instrumental for driving the audio using Tone.js.
+
 ##### [Create a music related web application](http://johann.scribbletune.com/)
 
 Use Scribbletune with frameworks such as React to create UI applications specifically for music
