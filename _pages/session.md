@@ -12,13 +12,13 @@ Scribbletune can create a session that can contain multiple channels which can h
 **Note:** tone.js must be loaded in the browser via SCRIPT tag before Scribbletune (or your compiled app - with Scribbletune) is loaded.
 {: .text-warning}
 
-A session is a simplistic example of [Ableton Live's session view](https://www.ableton.com/en/manual/session-view/) where you can have channels of MIDI or Audio Data. Scribbletune provides just a basic interface to simulate something like that. It would be premature to consider Scribbletune's session as an exact and complete implementation of Ableton Live's session!
+A session is a simplistic example of [Ableton Live's session view](https://www.ableton.com/en/manual/session-view/) where you can have channels of MIDI or Audio Data. Scribbletune provides just a basic interface to simulate something like that. It would be premature to consider Scribbletune's session as an exact and complete implementation of Ableton Live's session! Having said that, here is a [cool browser app](https://live.scribbletune.com/) built out using this interface from Scribbletune. And [this is the repo](https://github.com/scribbletune/live) for this app in case you want to look under the hood.
 
 You can start by creating a session like this,
 
 ```
 const scribble = require('scribbletune/browser');
-const session = scribble.session();
+const session = new scribble.Session();
 ```
 
 Now you can add channels to this session. Let's add a channel with a kick drum sound.
