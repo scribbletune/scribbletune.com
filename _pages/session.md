@@ -6,7 +6,7 @@ permalink: /documentation/browser/session
 
 ### Session
 
-Scribbletune can create a session that can contain multiple channels which can have multiple clips of musical ideas.
+Scribbletune can create a session that can contain multiple channels which can have a single clip or even multiple clips of musical ideas.
 {: .lead}
 
 **Note:** tone.js must be loaded in the browser via SCRIPT tag before Scribbletune (or your compiled app - with Scribbletune) is loaded.
