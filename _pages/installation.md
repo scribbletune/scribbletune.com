@@ -12,7 +12,7 @@ Scribbletune can be used in the browser along with Tone.js, within the Max for L
 
 There are a couple of ways to use Scribbletune in the browser.
 
-##### 1. Quick and dirty (not recommended) -> Use a precompiled version of Scribbletune
+##### 1. (Quick and dirty - not recommended) Precompiled version of Scribbletune
 
 Use the latest available precompiled version of [Scribbletune from CDNjs](https://cdnjs.com/libraries/scribbletune) and reference it in your HTML right after Tone.js (replace LATEST_VERSION_FROM_CDNJS with the latest version from CDNjs).
 
@@ -85,7 +85,7 @@ Now create a file called `index.html` and enter the following in it
 <body>
   <div>
     <p>The Audio context needs to be started by a user gesture.</p>
-    <button id="start">Start context</button>  
+    <button id="start">Start context</button>
   </div>
   <div>
     <p>Once audio context is started by a user gesture, you can use the start/stop methods on clip objects.</p>
