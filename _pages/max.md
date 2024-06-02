@@ -82,4 +82,4 @@ This is just a very simple script but it does produce interesting patterns in an
 
 I have a separate repo for this. Feel free to can fork it and make it better: [https://github.com/scribbletune/scribble4max](https://github.com/scribbletune/scribble4max)
 
-And here's a (slightly old but pretty solid) great set of articles by [Adam Murray](https://twitter.com/compusition) that can help you with JavaScript and Max for Live in general: [http://compusition.com/writings/js-live-api](http://compusition.com/writings/js-live-api)
+And here's a (slightly old but pretty solid) great set of articles by [Adam Murray](https://twitter.com/compusition) that can help you with JavaScript and Max for Live in general (captured from archive.org): [https://web.archive.org/web/20180828101800/http://compusition.com/writings/js-live-api](https://web.archive.org/web/20180828101800/http://compusition.com/writings/js-live-api)
