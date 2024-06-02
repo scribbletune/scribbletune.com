@@ -6,7 +6,7 @@ permalink: /documentation/max
 
 ### Max for Live
 
-Scribbletune clips can be exported to be consumed by Max for Live devices in Ableton Live.
+Scribbletune clips created from an older version of Scribbletune (v3.2.1) can be exported to be consumed by Max for Live devices in Ableton Live.
 {: .lead}
 
 Using a few methods from the [LiveAPI](https://docs.cycling74.com/max8/vignettes/jsliveapi), Scribbletune exposes a simple method called `max` which can draw MIDI notes in a [Ableton Live clip](https://www.ableton.com/en/manual/live-concepts/#4-7-midi-clips-and-midi-files). You can create a Scribbletune clip using the regular method `clip` and pass it on to the `max` method as it's first argument.
