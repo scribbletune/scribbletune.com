@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 3.9"
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8"
 gem "kramdown-parser-gfm"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
