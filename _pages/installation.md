@@ -6,7 +6,7 @@ permalink: /documentation/installation
 
 ### Installation
 
-Scribbletune can be used in the browser along with Tone.js, within the Max for Live development environment OR as a Node.js module to export MIDI files from the terminal.
+Scribbletune can be used in the browser along with Tone.js OR as a Node.js module to export MIDI files from the terminal.
 
 #### Browser
 
@@ -133,16 +133,3 @@ const clip = scribble.clip({
 scribble.midi(clip); // creates a file called music.mid in the same location as this script was created and run.
 ```
 
-##### Max for Live
-
-Install Scribbletune from npm
-
-```
-npm i scribbletune
-```
-
-Import the Scribbletune API for Max for Live device development
-
-```
-const scribble = require('scribbletune/max');
-```
