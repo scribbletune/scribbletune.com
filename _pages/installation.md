@@ -6,7 +6,28 @@ permalink: /documentation/installation
 
 ### Installation
 
-Scribbletune can be used in the browser along with Tone.js OR as a Node.js module to export MIDI files from the terminal.
+Scribbletune can be used as a Node.js module to export MIDI files from the terminal OR in the browser along with Tone.js.
+
+##### Node Module
+
+Install Scribbletune from npm
+
+```
+npm i scribbletune
+```
+
+Now you can create MIDI files from the terminal
+
+```
+const scribble = require('scribbletune');
+
+const clip = scribble.clip({
+  notes: scribble.scale('C4 major'),
+  pattern: 'x'.repeat(8)
+});
+
+scribble.midi(clip); // creates a file called music.mid in the same location as this script was created and run.
+```
 
 #### Browser
 
@@ -111,25 +132,3 @@ python -m SimpleHTTPServer 3000
 ```
 
 Now load `localhost:3000` in your browser and you should hear the C4 note played in a loop at an interval of a quarter note.
-
-##### Node Module
-
-Install Scribbletune from npm
-
-```
-npm i scribbletune
-```
-
-Now you can create MIDI files from the terminal
-
-```
-const scribble = require('scribbletune');
-
-const clip = scribble.clip({
-  notes: scribble.scale('C4 major'),
-  pattern: 'x'.repeat(8)
-});
-
-scribble.midi(clip); // creates a file called music.mid in the same location as this script was created and run.
-```
-
