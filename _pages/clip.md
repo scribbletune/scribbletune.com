@@ -56,7 +56,7 @@ This is the most important parameter for the clip method's object. It abstracts 
 	<tr><td>x</td><td>Play a note</td></tr>
 	<tr><td>-</td><td>Rest (dont play a note)</td></tr>
 	<tr><td>_</td><td>Sustain a note </td></tr>
-	<tr><td>R</td><td>Use a random notes from the randomNotes property (if defined) OR randomly set volume</td></tr>
+	<tr><td>R</td><td>If the randomNotes property is defined, use either a random selection from it or the next note in the notes sequence, OR randomly set the volume of the next note</td></tr>
 	<tr><td>[</td><td>Start subdividing the note duration (based on the number of characters inserted)</td></tr>
 	<tr><td>]</td><td>End subdividing (you can use nest subdivisions as well)</td></tr>
 </table>
