@@ -31,3 +31,25 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
 A Max for Live version of Riff is availabe for Ableton Live 11.
 
 - [Download Riff v0.8.0 Max for Live for Ableton Live 11](https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing)
+
+### Drummer Max for Live device
+
+A Max for Live device that generates drum patterns using Scribbletune's pattern language and concepts.
+
+![Drummer - Max for Live device](/images/drummer.png)
+
+Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book extending it in interesting ways.
+
+Key features:
+
+- 260+ authentic patterns across 18+ genres (rock, funk, reggae, jazz,
+  hip-hop, etc.)
+- Intelligent variation engine that adds fills, flams, and human feel
+- Genre-specific selection or full random mode
+- Pattern complexity knob (minimal grooves → complex fills)
+- Perfect integration with Live's drum devices and NI Battery
+- Performance features like "remove kick" for live use
+
+- Download (for Ableton Live 11): [https://drive.google.com/file/d/1YuiqKTqj7lbhMboKzF_Yx23qalmeQ8SY/view?usp=sharing](https://drive.google.com/file/d/1YuiqKTqj7lbhMboKzF_Yx23qalmeQ8SY/view?usp=sharing)
+
+_Please note: Support for Ableton Live 12 is coming soon._
