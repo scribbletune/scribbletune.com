@@ -7,7 +7,7 @@ permalink: /plugins/
 <style>
 .plugin-tabs {
   display: flex;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #666;
   margin-bottom: 20px;
 }
 
@@ -28,8 +28,9 @@ permalink: /plugins/
 }
 
 .tab-button.active {
-  color: #333;
-  border-bottom-color: #007acc;
+  color: white;
+  background-color: #333;
+  border-bottom-color: #000;
 }
 
 .tab-content {
