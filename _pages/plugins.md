@@ -145,7 +145,7 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
   
   <img src="/images/drummer.png" alt="Drummer - Max for Live device">
 
-  <p><a href="https://drive.google.com/file/d/1YuiqKTqj7lbhMboKzF_Yx23qalmeQ8SY/view?usp=sharing">Download (for Ableton Live 11)</a></p>
+  <p><a href="https://maxforlive.com/library/device.php?id=13431">Download from MaxForLive.com</a></p>
   
   <p>Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book extending it in interesting ways.</p>
 
