@@ -87,6 +87,7 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
 <div class="plugin-tabs">
   <button class="tab-button active" onclick="showTab(event, 'riff-vst')">Riff VST3/AU Plugin</button>
   <button class="tab-button" onclick="showTab(event, 'riff-live')">Riff Max for Live</button>
+  <button class="tab-button" onclick="showTab(event, 'drummer-vst')">Drummer VST3/AU Plugin</button>
   <button class="tab-button" onclick="showTab(event, 'drummer-live')">Drummer Max for Live</button>
 </div>
 
@@ -129,12 +130,45 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
     <iframe src="https://www.youtube.com/embed/cA_SYO2TI3M" title="Riff Max for Live Device Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 
-  <p><a href="https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing">Download Riff v0.8.0 Max for Live for Ableton Live 11</a></p>
+  <p><a href="https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing">Download Riff v0.8.0 Max for Live for Ableton Live 11 & 12</a></p>
   
   <ul>
     <li><strong>Melodic Riff Generation</strong> - Create melodic patterns with scale and chord progression support for complete musical arrangements</li>
     <li><strong>Real-Time Integration</strong> - Seamlessly generates MIDI clips directly in Ableton Live for immediate use in your productions OR live performance</li>
     <li><strong>Manual and preset pattern generation</strong> - Enter patterns manually or chose a preset for generation</li>
+  </ul>
+</div>
+
+<div id="drummer-vst" class="tab-content">
+  <h2>Drummer VST3/AU Plugin</h2>
+  
+  <p><strong>Drummer</strong> is a VST3/AU plugin that generates drum patterns using Scribbletune's pattern language and concepts. It's also available as an AU plugin and a standalone app for Mac OS and Windows.</p>
+  
+  <img src="/images/drummer-vst.png" alt="Drummer VST3/AU Plugin">
+
+  <p>
+    <a href="https://drive.google.com/file/d/1e80T22L14z9-nENjBdaZX_jnKGSAy0Am/view?usp=sharing">Download Drummer VST3/AU for Mac</a>
+  <br>
+    Drummer VST3/AU for Windows - COMING SOON!
+  </p>
+  
+  <p>Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book extending it in interesting ways.</p>
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/H76q-O8APdI" title="Drummer VST3/AU Plugin Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  
+  <h4>Key features:</h4>
+  
+  <ul>
+    <li>260+ authentic patterns across 18+ genres (rock, funk, reggae, jazz, hip-hop, etc.)</li>
+    <li>Intelligent variation engine that adds fills, flams, and human feel</li>
+    <li>Genre-specific selection or full random mode</li>
+    <li>Pattern complexity knob (minimal grooves → complex fills)</li>
+    <li>Perfect integration with popular DAWs and drum devices</li>
+    <li>Performance features like "remove kick" for live use</li>
+    <li>Real-time parameter control</li>
+    <li>Built on Scribbletune's proven algorithms</li>
   </ul>
 </div>
 
@@ -163,8 +197,6 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
     <li>Perfect integration with Live's drum devices and NI Battery</li>
     <li>Performance features like "remove kick" for live use</li>
   </ul>
-  
-  <p><em>Please note: Support for Ableton Live 12 is coming soon.</em></p>
 </div>
 
 <script>
