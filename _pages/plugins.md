@@ -149,7 +149,7 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
   <p>
     <a href="https://drive.google.com/file/d/1e80T22L14z9-nENjBdaZX_jnKGSAy0Am/view?usp=sharing">Download Drummer VST3/AU for Mac</a>
   <br>
-    <a href="https://drive.google.com/file/d/1G7JewLS002881RkQhuj8aOmGzx1JkRgu/view?usp=sharing">Drummer VST3/AU for Windows - Needs testing!</a>
+    <a href="https://drive.google.com/file/d/1G7JewLS002881RkQhuj8aOmGzx1JkRgu/view?usp=sharing">Drummer VST3/Clap/exe for Windows - Needs testing!</a>
   </p>
   
   <p>Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book extending it in interesting ways.</p>
