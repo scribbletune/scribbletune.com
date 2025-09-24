@@ -223,6 +223,46 @@ function showTab(evt, tabName) {
   
   // Show the selected tab and mark button as active
   document.getElementById(tabName).classList.add("active");
-  evt.currentTarget.classList.add("active");
+  if (evt && evt.currentTarget) {
+    evt.currentTarget.classList.add("active");
+  } else {
+    // Find and activate the correct button when called programmatically
+    var buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(function(button) {
+      if (button.getAttribute('onclick').includes(tabName)) {
+        button.classList.add('active');
+      }
+    });
+  }
+  
+  // Update URL hash
+  window.location.hash = tabName;
 }
+
+function loadTabFromHash() {
+  var hash = window.location.hash.substring(1);
+  var validTabs = ['riff-vst', 'riff-live', 'drummer-vst', 'drummer-live'];
+  
+  if (hash && validTabs.includes(hash)) {
+    showTab(null, hash);
+    
+    // Scroll to tab buttons instead of content
+    setTimeout(function() {
+      var tabsContainer = document.querySelector('.plugin-tabs');
+      if (tabsContainer) {
+        tabsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  }
+}
+
+// Load tab based on hash when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  loadTabFromHash();
+});
+
+// Handle browser back/forward navigation
+window.addEventListener('hashchange', function() {
+  loadTabFromHash();
+});
 </script>
