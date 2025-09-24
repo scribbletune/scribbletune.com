@@ -147,18 +147,16 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
   <img src="/images/drummer-vst.png" alt="Drummer VST3/AU Plugin">
 
   <p>
-    <a href="https://drive.google.com/file/d/1e80T22L14z9-nENjBdaZX_jnKGSAy0Am/view?usp=sharing">Download Drummer VST3/AU for Mac</a>
+    <a href="https://drive.google.com/file/d/1FknTYhUTATRqrbprQO7LwKLNtMSMNO1x/view?usp=sharing">Download Drummer VST3/AU for Mac</a>
   <br>
-    <a href="https://drive.google.com/file/d/1G7JewLS002881RkQhuj8aOmGzx1JkRgu/view?usp=sharing">Drummer VST3/Clap/exe for Windows</a>
+    <a href="https://drive.google.com/file/d/1iLJVHdXyFhUqYDjIGrtFlIJseSo17YKd/view?usp=sharing">Drummer VST3/Clap/exe for Windows</a>
   <br>
-    In case Windows Defender prevents the download because of the standalone exe provided in it, you can download VST and Clap separately:
+    <h6>Download Issue:</h6> In case Windows Defender prevents the download because of the standalone exe provided in it, you can download VST and Clap separately.
   <ul>
-    <li><a href="https://drive.google.com/file/d/1gV5d8hR0VThnhicqSA0BCkkuPVau0nmh/view?usp=sharing">VST 3</a></li>
-    <li><a href="https://drive.google.com/file/d/1XAphhbwKI_0IpX7D3xknVHsUStaoK8Ej/view?usp=sharing">Clap (for Bitwig)</a></li>
+    <li><a href="https://drive.google.com/file/d/1nDIMd1lkdk6Fa2m-T5Icrmul6Br5X7_b/view?usp=sharing">VST 3</a></li>
+    <li><a href="https://drive.google.com/file/d/1huIBme_8a6th9Cv0GC1QoZUgI3XXotHQ/view?usp=sharing">Clap (for Bitwig)</a></li>
   </ul>
   </p>
-  
-  <p>Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book extending it in interesting ways.</p>
 
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/TwF0JsuJ06M" title="Drummer VST3/AU Plugin Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
