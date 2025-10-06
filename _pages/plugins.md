@@ -159,7 +159,7 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
   </p>
 
   <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/TwF0JsuJ06M" title="Drummer VST3/AU Plugin Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/nB3zI5J2Yls" title="Drummer VST3/AU Plugin Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
   
   <h4>Key features:</h4>
