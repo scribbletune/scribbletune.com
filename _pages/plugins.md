@@ -92,16 +92,16 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
 </div>
 
 <div id="riff-vst" class="tab-content active">
-  <h2>Riff VST3/AU Plugin</h2>
+  <h2>Riff VST3/AU Plugin v0.8.0</h2>
   
   <p><strong>Riff</strong> is a VST3/AU plugin that brings Scribbletune's pattern-based music generation directly into your DAW. It's also available as an AU plugin and a standalone app for Mac OS and Windows.</p>
   
   <img src="/images/riff-v0.8.0.png" alt="Riff VST3 Plugin">
 
   <p>
-    <a href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link">Download Riff v0.8.0 for Mac</a>
+    <a href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link">Download Riff for Mac</a>
   <br>
-    <a href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link">Download Riff v0.8.0 for Windows</a>
+    <a href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link">Download Riff for Windows</a>
   </p>
   
   
@@ -130,7 +130,7 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
     <iframe src="https://www.youtube.com/embed/cA_SYO2TI3M" title="Riff Max for Live Device Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 
-  <p><a href="https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing">Download Riff v0.8.0 Max for Live for Ableton Live 11 & 12</a></p>
+  <p><a href="https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing">Download Riff Max for Live device</a> (works with Ableton Live 11 & 12)</p>
   
   <ul>
     <li><strong>Melodic Riff Generation</strong> - Create melodic patterns with scale and chord progression support for complete musical arrangements</li>
@@ -183,7 +183,7 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
   
   <img src="/images/drummer.png" alt="Drummer - Max for Live device">
 
-  <p><a href="https://maxforlive.com/library/device.php?id=13431">Download from MaxForLive.com</a></p>
+  <p><a href="https://maxforlive.com/library/device.php?id=13431">Download Drummer Max for Live Device</a> (works with Ableton Live 11 & 12)</p>
   
   <p>Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book extending it in interesting ways.</p>
 
