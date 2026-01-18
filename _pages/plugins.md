@@ -39,10 +39,12 @@ permalink: /plugins/
   }
 .plugin-tabs {
   display: flex;
+  flex-wrap: wrap;
   border-bottom: 2px solid #666;
   margin-bottom: 20px;
   position: relative;
   z-index: 1000;
+  gap: 8px;
 }
 
 .tab-button {
@@ -55,6 +57,7 @@ permalink: /plugins/
   color: #666;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .tab-button:hover {
@@ -65,6 +68,27 @@ permalink: /plugins/
   color: white;
   background-color: #333;
   border-bottom-color: #000;
+}
+
+@media (max-width: 768px) {
+  .plugin-tabs {
+    gap: 4px;
+  }
+
+  .tab-button {
+    padding: 10px 16px;
+    font-size: 14px;
+    flex: 1 1 auto;
+    min-width: calc(50% - 4px);
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+    padding: 8px 12px;
+    font-size: 13px;
+    min-width: 100%;
+  }
 }
 
 .tab-content {
@@ -87,6 +111,7 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
 <div class="plugin-tabs">
   <button class="tab-button active" onclick="showTab(event, 'riff-vst')">Riff VST3/AU Plugin</button>
   <button class="tab-button" onclick="showTab(event, 'riff-live')">Riff Max for Live</button>
+  <button class="tab-button" onclick="showTab(event, 'riff-bitwig')">Riff for Bitwig</button>
   <button class="tab-button" onclick="showTab(event, 'drummer-vst')">Drummer VST3/AU Plugin</button>
   <button class="tab-button" onclick="showTab(event, 'drummer-live')">Drummer Max for Live</button>
 </div>
@@ -136,6 +161,47 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
     <li><strong>Melodic Riff Generation</strong> - Create melodic patterns with scale and chord progression support for complete musical arrangements</li>
     <li><strong>Real-Time Integration</strong> - Seamlessly generates MIDI clips directly in Ableton Live for immediate use in your productions OR live performance</li>
     <li><strong>Manual and preset pattern generation</strong> - Enter patterns manually or chose a preset for generation</li>
+  </ul>
+</div>
+
+<div id="riff-bitwig" class="tab-content">
+  <h2>Riff for Bitwig Controller Script</h2>
+
+  <p><strong>Riff for Bitwig</strong> is a controller script that brings Scribbletune's pattern-based music generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Riff VST3 plugin, optimized for Bitwig's unique workflow.</p>
+
+  <img src="/images/riff4bitwig.png" alt="Riff for Bitwig">
+
+  <p>
+    <a href="https://drive.google.com/file/d/1eB_OQ08D6CYxrU6Wgzfn44sjWns7cIoz/view?usp=sharing">Download Riff for Bitwig Script</a>
+  </p>
+
+  <h4>How to install and use Riff for Bitwig</h4>
+
+  <ul>
+    <li>Download the controller script Riff.control.js by clicking the above button (it will take you to Google drive for the download)</li>
+    <li>Copy the JS to Bitwig Studio's Controllers Scripts folder (on Mac this is in ~/Documents/Bitwig Studio/Controller Scripts</li>
+    <li>Open Bitwig Studio and access the Controllers section in the Settings</li>
+    <li>Click Add Controller and in the Hardware Vendors list, select Scribbletune and then Riff</li>
+    <li>You should now see a controllers icon on the top right in the Bitwig window (it looks like a small keyboard).</li>
+    <li>Make sure to create and select a MIDI clip and then expand Riff. Make changes to the settings the way you want and hit Generate!</li>
+    <li>Selecting a MIDI clip is crucial. Once it s selected, you can keep hitting Generate till you like what you hear (you can also make changes directly to the generated MIDI)</li>
+  </ul>
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/Pxa6T1t0Ips" title="Riff for Bitwig Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <h4>Features</h4>
+
+  <ul>
+<li>Two modes: Riffs (monophonic) and Chords (polyphonic progressions)</li>
+<li>16 pattern styles: pulse, melody, syncopated, breakbeat, buildup, conversation, stutter, hypnotic, and more</li>
+<li>Pattern combinations: A, AAAB, ABAC, ABBB, ABCD, AAABAAAC, ABACABAD</li>
+<li>12 musical scales: Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian, Harmonic Minor, Pentatonic Major/Minor, Blues, Chromatic</li>
+<li>Scale filtering: all, odd, even, first half, second half, thirds</li>
+<li>7 chord progressions: I-V-vi-IV, I-IV-V, vi-IV-I-V, I-vi-IV-V, ii-V-I, I-V, I-IV</li>
+<li>Variable note lengths from 16n to 4m</li>
+<li>Pattern reuse option for variations</li>
   </ul>
 </div>
 
@@ -239,8 +305,8 @@ function showTab(evt, tabName) {
 
 function loadTabFromHash() {
   var hash = window.location.hash.substring(1);
-  var validTabs = ['riff-vst', 'riff-live', 'drummer-vst', 'drummer-live'];
-  
+  var validTabs = ['riff-vst', 'riff-live', 'riff-bitwig', 'drummer-vst', 'drummer-live'];
+
   if (hash && validTabs.includes(hash)) {
     showTab(null, hash);
     
