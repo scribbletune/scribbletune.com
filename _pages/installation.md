@@ -51,27 +51,15 @@ Install `scribbletune` and `webpack` from npm
 
 ```
 npm i scribbletune
-npm i webpack --save-dev
-npm i webpack-cli --save-dev
+npm i vite --save-dev
 ```
 
-Create a bare minimum `webpack.config.js` file with
+Create a bare minimum `vite.config.js` file with
 
 ```
-const webpack = require("webpack");
+import { defineConfig } from "vite";
 
-module.exports = {
-  mode: "none",
-  entry: "./script.js",
-  output: {
-    filename: "main.js",
-  },
-  resolve: {
-    fallback: {
-      fs: false,
-    },
-  },
-};
+export default defineConfig({});
 ```
 
 Create a file called `script.js` and enter the following in there
@@ -136,43 +124,34 @@ btnStop.addEventListener("click", () => {
 Now create a file called `index.html` and enter the following in it
 
 ```
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Testing Scribbletune</title>
-</head>
-<body>
-  <div>
-    <p>The Audio context needs to be started by a user gesture.</p>
-    <button id="start">Start context</button>
-  </div>
-  <div>
-    <p>Once audio context is started by a user gesture, you can use the start/stop methods on clip objects.</p>
-    <button id="play">Play</button>
-    <button id="stop">Stop</button>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.43/Tone.js"></script>
-  <script src="dist/main.js"></script>
-</body>
+  <head>
+    <title>Testing Scribbletune</title>
+  </head>
+  <body>
+    <div>
+      <p>The Audio context needs to be started by a user gesture.</p>
+      <button id="start">Start context</button>
+    </div>
+    <div>
+      <p>
+        Once audio context is started by a user gesture, you can use the
+        start/stop methods on clip objects.
+      </p>
+      <button id="play">Play</button>
+      <button id="stop">Stop</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.43/Tone.js"></script>
+    <script type="module" src="/script.js"></script>
+  </body>
 </html>
 ```
 
-Note that we added a `script` tag with the `src` set to a filed called `main.js`. This file is not yet created. It will be created once you run the following webpack command,
+Run the following command to start a dev server locally,
 
 ```
-npx webpack
+npx vite
 ```
 
-Now "serve" the HTML file we created by running a simple Python web server for testing purposes
-
-```
-python3 -m http.server 3000
-```
-
-Or, if using python 2, then,
-
-```
-python -m SimpleHTTPServer 3000
-```
-
-Now load `localhost:3000` in your browser and you should hear the C4 note played in a loop at an interval of a quarter note.
+Now load `http://localhost:5173/` in your browser and click the start button to start the audio context. After that, click Play to hear the C4, E4, G4 notes played in a loop at an interval of a quarter note.
