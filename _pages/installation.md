@@ -58,40 +58,78 @@ npm i webpack-cli --save-dev
 Create a bare minimum `webpack.config.js` file with
 
 ```
-const webpack = require('webpack')
+const webpack = require("webpack");
 
 module.exports = {
   mode: "none",
   entry: "./script.js",
   output: {
-    filename: "main.js"
+    filename: "main.js",
   },
-  node: {
-    fs: "empty"
-  }
-}
+  resolve: {
+    fallback: {
+      fs: false,
+    },
+  },
+};
 ```
 
 Create a file called `script.js` and enter the following in there
 
 ```
-import { clip } from 'scribbletune/browser';
+import { Session } from "scribbletune/browser";
 
-const btnStart = document.getElementById('start');
-const btnPlay = document.getElementById('play');
-const btnStop = document.getElementById('stop');
+const btnStart = document.getElementById("start");
+const btnPlay = document.getElementById("play");
+const btnStop = document.getElementById("stop");
+let channel;
+let isReady = false;
 
-btnStart.addEventListener('click', () => {
-    Tone.context.resume().then(() => Tone.Transport.start());
+btnStart.addEventListener("click", async () => {
+  // Resume audio context (required for browsers)
+  await Tone.start();
+  console.log("Audio context started");
+
+  // Create session and channel
+  const session = new Session();
+  channel = session.createChannel({
+    instrument: "PolySynth",
+    clips: [
+      { pattern: "x-x-", notes: "C4 E4 G4" },
+      { pattern: "[--xx]", notes: "C4 D#4" },
+      { pattern: "[-xxx]", notes: ["E4", "D#4"] },
+    ],
+    eventCb: (event, data) => {
+      console.log("Channel event:", event, data);
+      if (event === "loaded") {
+        isReady = true;
+        console.log("Channel is ready to play!");
+      }
+      if (event === "error") {
+        console.error("Channel error:", data.e);
+      }
+    },
+  });
+
+  // Start the transport
+  Tone.Transport.start();
+  console.log("Transport started");
 });
 
-const simpleLoop = clip({ synth: 'Synth', notes: 'c4', pattern: 'x' });
-btnPlay.addEventListener('click', () => {
-    simpleLoop.start();
+btnPlay.addEventListener("click", () => {
+  if (!isReady) {
+    console.log("Channel not ready yet. Click 'Start context' first.");
+    return;
+  }
+  console.log("Starting clip 0");
+  channel.startClip(0);
 });
 
-btnStop.addEventListener('click', () => {
-    simpleLoop.stop();
+btnStop.addEventListener("click", () => {
+  if (channel) {
+    console.log("Stopping clip 0");
+    channel.stopClip(0);
+  }
 });
 ```
 
@@ -126,6 +164,12 @@ npx webpack
 ```
 
 Now "serve" the HTML file we created by running a simple Python web server for testing purposes
+
+```
+python3 -m http.server 3000
+```
+
+Or, if using python 2, then,
 
 ```
 python -m SimpleHTTPServer 3000
