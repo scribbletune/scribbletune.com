@@ -68,7 +68,9 @@ Create a file called `script.js` and enter the following in there
 import { Session } from "scribbletune/browser";
 
 const btnStart = document.getElementById("start");
-const btnPlay = document.getElementById("play");
+const btnPlay1 = document.getElementById("play1");
+const btnPlay2 = document.getElementById("play2");
+const btnPlay3 = document.getElementById("play3");
 const btnStop = document.getElementById("stop");
 let channel;
 let isReady = false;
@@ -84,8 +86,8 @@ btnStart.addEventListener("click", async () => {
     instrument: "PolySynth",
     clips: [
       { pattern: "x-x-", notes: "C4 E4 G4" },
-      { pattern: "[--xx]", notes: "C4 D#4" },
-      { pattern: "[-xxx]", notes: ["E4", "D#4"] },
+      { pattern: "x[xx]", notes: "C#4 D#4" },
+      { pattern: "[xxxx]", notes: ["G4", "D5"] },
     ],
     eventCb: (event, data) => {
       console.log("Channel event:", event, data);
@@ -104,7 +106,7 @@ btnStart.addEventListener("click", async () => {
   console.log("Transport started");
 });
 
-btnPlay.addEventListener("click", () => {
+btnPlay1.addEventListener("click", () => {
   if (!isReady) {
     console.log("Channel not ready yet. Click 'Start context' first.");
     return;
@@ -113,10 +115,28 @@ btnPlay.addEventListener("click", () => {
   channel.startClip(0);
 });
 
+btnPlay2.addEventListener("click", () => {
+  if (!isReady) {
+    console.log("Channel not ready yet. Click 'Start context' first.");
+    return;
+  }
+  console.log("Starting clip 1");
+  channel.startClip(1);
+});
+
+btnPlay3.addEventListener("click", () => {
+  if (!isReady) {
+    console.log("Channel not ready yet. Click 'Start context' first.");
+    return;
+  }
+  console.log("Starting clip 2");
+  channel.startClip(2);
+});
+
 btnStop.addEventListener("click", () => {
   if (channel) {
-    console.log("Stopping clip 0");
-    channel.stopClip(0);
+    console.log(`Stopping clip ${channel.activeClipIdx}`);
+    channel.stopClip(channel.activeClipIdx);
   }
 });
 ```
@@ -137,11 +157,17 @@ Now create a file called `index.html` and enter the following in it
     <div>
       <p>
         Once audio context is started by a user gesture, you can use the
-        start/stop methods on clip objects.
+        start/stop methods on clip objects. The clips will align per bar, so if
+        you start a clip in the middle of a bar, it will wait until the next bar
+        to start playing.
       </p>
-      <button id="play">Play</button>
+      <button id="play1">Play Clip 1</button>
+      <button id="play2">Play Clip 2</button>
+      <button id="play3">Play Clip 3</button>
+      <hr />
       <button id="stop">Stop</button>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.43/Tone.js"></script>
     <script type="module" src="/script.js"></script>
   </body>
