@@ -18,16 +18,16 @@ email: walmik.deshpande@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Scribbletune is a free and open source Node.js module that helps you construct musical ideas
   with JavaScript and export them as MIDI files.
-  You can also use Scribbletune in the browser with Tone.js!
-baseurl: '' # the subpath of your site, e.g. /blog
-url: '' # the base hostname & protocol for your site, e.g. http://example.com
+  You can also use Scribbletune in the browser with Tone.js or in your terminal via a CLI.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: _walmik
 github_username: walmik
 
 # Build settings
 sass:
   sass_dir: _sass
-include: ['_pages']
+include: ["_pages"]
 kramdown:
   input: GFM
 # Exclude from processing.
