@@ -141,9 +141,9 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
   <img src="/images/riff-v0.8.0.png" alt="Riff VST3 Plugin">
 
   <p>
-    <a href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link">Download Riff for Mac</a>
+    <a href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Mac'})">Download Riff for Mac</a>
   <br>
-    <a href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link">Download Riff for Windows</a>
+    <a href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Windows'})">Download Riff for Windows</a>
   </p>
   
   
@@ -172,7 +172,7 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
     <iframe src="https://www.youtube.com/embed/cA_SYO2TI3M" title="Riff Max for Live Device Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 
-  <p><a href="https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing">Download Riff Max for Live device</a> (works with Ableton Live 11 & 12)</p>
+  <p><a href="https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff Max for Live'})">Download Riff Max for Live device</a> (works with Ableton Live 11 & 12)</p>
   
   <ul>
     <li><strong>Melodic Riff Generation</strong> - Create melodic patterns with scale and chord progression support for complete musical arrangements</li>
@@ -189,7 +189,7 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
   <img src="/images/riff4bitwig.png" alt="Riff for Bitwig">
 
   <p>
-    <a href="https://drive.google.com/file/d/1eB_OQ08D6CYxrU6Wgzfn44sjWns7cIoz/view?usp=sharing">Download Riff for Bitwig Script</a>
+    <a href="https://drive.google.com/file/d/1eB_OQ08D6CYxrU6Wgzfn44sjWns7cIoz/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Bitwig'})">Download Riff for Bitwig Script</a>
   </p>
 
   <h4>How to install and use Riff for Bitwig</h4>
@@ -230,14 +230,14 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
   <img src="/images/drummer-vst.png" alt="Drummer VST3/AU Plugin">
 
   <p>
-    <a href="https://drive.google.com/file/d/1FknTYhUTATRqrbprQO7LwKLNtMSMNO1x/view?usp=sharing">Download Drummer VST3/AU for Mac</a>
+    <a href="https://drive.google.com/file/d/1FknTYhUTATRqrbprQO7LwKLNtMSMNO1x/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer for Mac'})">Download Drummer VST3/AU for Mac</a>
   <br>
-    <a href="https://drive.google.com/file/d/1iLJVHdXyFhUqYDjIGrtFlIJseSo17YKd/view?usp=sharing">Drummer VST3/Clap/exe for Windows</a>
+    <a href="https://drive.google.com/file/d/1iLJVHdXyFhUqYDjIGrtFlIJseSo17YKd/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer for Windows'})">Drummer VST3/Clap/exe for Windows</a>
   <br>
     <h6>Download Issue:</h6> In case Windows Defender prevents the download because of the standalone exe provided in it, you can download VST and Clap separately.
   <ul>
-    <li><a href="https://drive.google.com/file/d/1nDIMd1lkdk6Fa2m-T5Icrmul6Br5X7_b/view?usp=sharing">VST 3</a></li>
-    <li><a href="https://drive.google.com/file/d/1huIBme_8a6th9Cv0GC1QoZUgI3XXotHQ/view?usp=sharing">Clap (for Bitwig)</a></li>
+    <li><a href="https://drive.google.com/file/d/1nDIMd1lkdk6Fa2m-T5Icrmul6Br5X7_b/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer VST3 for Windows'})">VST 3</a></li>
+    <li><a href="https://drive.google.com/file/d/1huIBme_8a6th9Cv0GC1QoZUgI3XXotHQ/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer Clap for Bitwig'})">Clap (for Bitwig)</a></li>
   </ul>
   </p>
 
@@ -266,7 +266,7 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
   
   <img src="/images/drummer.png" alt="Drummer - Max for Live device">
 
-  <p><a href="https://maxforlive.com/library/device.php?id=13431">Download Drummer Max for Live Device</a> (works with Ableton Live 11 & 12)</p>
+  <p><a href="https://maxforlive.com/library/device.php?id=13431" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer Max for Live'})">Download Drummer Max for Live Device</a> (works with Ableton Live 11 & 12)</p>
   
   <p>Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book extending it in interesting ways.</p>
 
@@ -293,7 +293,7 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
 
   <img src="/images/pnt.png" alt="Patch Notation Tool">
 
-  <p><a href="https://scribbletune.github.io/patch-notation-tool/">Open Patch Notation Tool</a></p>
+  <p><a href="https://scribbletune.github.io/patch-notation-tool/" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Patch Notation Tool'})">Open Patch Notation Tool</a></p>
 
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/L2ui9IocaAo" title="Patch Notation Tool Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
