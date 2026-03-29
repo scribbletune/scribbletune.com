@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Plugins
+title: Plugins & Tools
 permalink: /plugins/
 ---
 
@@ -106,7 +106,7 @@ permalink: /plugins/
 }
 </style>
 
-Explore plugins and extensions that extend Scribbletune's concepts and pattern language into different music production environments.
+Explore plugins, extensions, and tools that extend Scribbletune's concepts and pattern language into different music production environments.
 
 <div class="plugin-tabs">
   <button class="tab-button active" onclick="showTab(event, 'riff-vst')">Riff VST3/AU Plugin</button>
@@ -114,6 +114,7 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
   <button class="tab-button" onclick="showTab(event, 'riff-bitwig')">Riff for Bitwig</button>
   <button class="tab-button" onclick="showTab(event, 'drummer-vst')">Drummer VST3/AU Plugin</button>
   <button class="tab-button" onclick="showTab(event, 'drummer-live')">Drummer Max for Live</button>
+  <button class="tab-button" onclick="showTab(event, 'pnt')">Patch Notation Tool</button>
 </div>
 
 <div id="riff-vst" class="tab-content active">
@@ -269,6 +270,30 @@ Explore plugins and extensions that extend Scribbletune's concepts and pattern l
   </ul>
 </div>
 
+<div id="pnt" class="tab-content">
+  <h2>Patch Notation Tool</h2>
+
+  <p><strong>Patch Notation Tool</strong> is a browser-based webapp for building Eurorack and VCV Rack patch diagrams using the official <a href="https://www.patchandtweak.com/patch-symbols-explained/">PATCH &amp; TWEAK</a> patch symbols.</p>
+
+  <img src="/images/pnt.png" alt="Patch Notation Tool">
+
+  <p><a href="https://scribbletune.github.io/patch-notation-tool/">Open Patch Notation Tool</a></p>
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/L2ui9IocaAo" title="Patch Notation Tool Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <h4>Features</h4>
+  <ul>
+    <li>91 SVG symbol assets from the PATCH &amp; TWEAK symbol library</li>
+    <li>Drag-and-drop patch canvas with pan, zoom, reset view, fit-to-content, and grid snapping</li>
+    <li>Tool modes for selection, cable patching, and inline text annotations</li>
+    <li>Cable types with distinct colors: sound, modulation, gate/trigger, clock, and pitch</li>
+    <li>Local patch library backed by IndexedDB, plus JSON import/export</li>
+    <li>SVG and PNG export</li>
+  </ul>
+</div>
+
 <script>
 function showTab(evt, tabName) {
   var i, tabcontent, tablinks;
@@ -305,7 +330,7 @@ function showTab(evt, tabName) {
 
 function loadTabFromHash() {
   var hash = window.location.hash.substring(1);
-  var validTabs = ['riff-vst', 'riff-live', 'riff-bitwig', 'drummer-vst', 'drummer-live'];
+  var validTabs = ['riff-vst', 'riff-live', 'riff-bitwig', 'drummer-vst', 'drummer-live', 'pnt'];
 
   if (hash && validTabs.includes(hash)) {
     showTab(null, hash);
