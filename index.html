@@ -2,47 +2,158 @@
 layout: default
 ---
 
-<div class="hero px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+<div class="home-hero text-center px-3 py-5">
   <h1 class="display-4">{{ site.title }}</h1>
-  <p class="lead">{{ site.description }}</p>
-</div>
-<div class="hero mx-auto">
-  <pre class="prettyprint"><code>npm install scribbletune</code></pre>
-  <p>
-    Let's put something together. Create a file called chords.js and paste the
-    following in it,
+  <p class="lead home-hero__lead">
+    A pattern language for music — available as a Node module, as VST3 plugins
+    or Max for Live devices, and as standalone browser tools.
   </p>
-
-  <pre class="prettyprint"><code>const scribble = require('scribbletune');
-  const clips = ['1032', '2032', '4021', '3052'].map(order =>
-    scribble.clip({
-      pattern: '[xx][xR]'.repeat(4),
-      notes: scribble.arp({
-        chords: 'Dm BbM Am FM BbM FM CM Gm',
-        count: 8,
-        order,
-      }),
-      accent: 'x-xx--xx',
-    })
-  );
-  scribble.midi([].concat(...clips), 'chords.mid');
-</code></pre>
-  <p>
-    Now execute that file in the terminal at the same location as you saved it,
-  </p>
-  <pre class="prettyprint"><code>node chords.js</code></pre>
-
-  <p>
-    This will generate a MIDI file called chords.mid in the same location as you
-    executed this script. You can import this file into any music production
-    software like Ableton Live or even Garage Band! Here's how it sounded when I
-    did that and rendered it with a couple of synths and the same chords on a
-    pad sound:
-  </p>
-  <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/652853867&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-
-  <div>
-    <a href="/documentation">Read the documentation</a> or show your ❤️ on <a href="https://github.com/scribbletune/scribbletune">Github <img class="social-icon" src="/images/icons/gh.svg" alt="Star on Github" /></a>
+  <p class="home-hero__sub">If JavaScript is your thing:</p>
+  <div class="my-4">
+    <pre
+      class="prettyprint d-inline-block mb-0"
+    ><code>npm install scribbletune</code></pre>
   </div>
+  <a class="btn-home-primary mr-3" href="/documentation">Documentation</a>
+  <a
+    class="btn-home-secondary"
+    href="https://github.com/scribbletune/scribbletune"
+  >
+    GitHub <img class="social-icon" src="/images/icons/gh.svg" alt="GitHub" />
+  </a>
 </div>
+
+<section class="home-pillars py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="pillar-card">
+          <div class="pillar-card__icon"><i class="icon icon-music"></i></div>
+          <h3 class="pillar-card__title">Node Module &amp; Browser</h3>
+          <p class="pillar-card__body">
+            Generate MIDI files with JavaScript using the core
+            <code>scribbletune</code> npm package. Use the same API in the
+            browser — paired with Tone.js — to play patterns live.
+          </p>
+          <div class="pillar-card__code">
+            <pre class="prettyprint"><code>const clip = scribble.clip({
+  notes: scribble.scale('C4 major'),
+  pattern: 'x-x-xx-x',
+});
+scribble.midi(clip, 'melody.mid');</code></pre>
+          </div>
+          <a class="pillar-card__link" href="/documentation"
+            >Read the docs <i class="icon icon-right"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="pillar-card">
+          <div class="pillar-card__icon"><i class="icon icon-sliders"></i></div>
+          <h3 class="pillar-card__title">DAW Plugins</h3>
+          <p class="pillar-card__body">
+            Bring Scribbletune's pattern language directly into your DAW. Riff
+            and Drummer are available as VST3/AU plugins for Mac and Windows,
+            Max for Live devices, and a Bitwig controller script.
+          </p>
+          <ul class="pillar-card__list">
+            <li>Riff VST3/AU — melodic pattern generation</li>
+            <li>Drummer VST3/AU — 260+ genre patterns</li>
+            <li>Riff &amp; Drummer Max for Live devices</li>
+            <li>Riff for Bitwig controller script</li>
+          </ul>
+          <a class="pillar-card__link" href="/plugins"
+            >Explore plugins <i class="icon icon-right"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="pillar-card">
+          <div class="pillar-card__icon"><i class="icon icon-screen"></i></div>
+          <h3 class="pillar-card__title">Web Apps &amp; Tools</h3>
+          <p class="pillar-card__body">
+            Browser-based tools built on Scribbletune's concepts. Sketch
+            Eurorack and VCV Rack patch diagrams with the Patch Notation Tool,
+            or build your own music apps using the browser API.
+          </p>
+          <ul class="pillar-card__list">
+            <li>Patch Notation Tool — SVG patch diagrams</li>
+            <li>
+              <a href="http://live.scribbletune.com/">live.scribbletune.com</a>
+              — session interface
+            </li>
+          </ul>
+          <a class="pillar-card__link" href="/plugins#pnt"
+            >Open tools <i class="icon icon-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-audio py-4">
+  <div class="container">
+    <p class="home-section-title">Hear it</p>
+    <p class="home-section-sub">
+      Chords generated with the arp API, imported into Ableton Live:
+    </p>
+    <iframe
+      width="100%"
+      height="166"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/652853867&color=%23080404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+    ></iframe>
+    <a class="home-section-more" href="/examples"
+      >More examples <i class="icon icon-right"></i
+    ></a>
+  </div>
+</section>
+
+<section class="home-latest py-5">
+  <div class="container">
+    <p class="home-section-title">Latest</p>
+    <div class="row mt-3">
+      {% for item in site.data.latest limit:3 %}
+      <div class="col-md-4 mb-4">
+        <div class="latest-card">
+          {% if item.type == "video" %}
+          <div class="video-wrapper">
+            <iframe
+              src="{{ item.embed }}"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            ></iframe>
+          </div>
+          {% elsif item.type == "audio" %}
+          <iframe
+            width="100%"
+            height="100"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="{{ item.embed }}"
+          ></iframe>
+          {% endif %}
+          <p class="latest-card__label">
+            <span class="latest-card__type">{{ item.type | upcase }}</span>{{
+            item.title }}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

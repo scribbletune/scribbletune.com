@@ -7,7 +7,7 @@ permalink: /plugins/
 <style>
  .tab-content a {
     display: inline-block;
-    background-color: #000;
+    background-color: #c47038;
     color: white !important;
     padding: 10px 16px;
     text-decoration: none !important;
@@ -16,10 +16,26 @@ permalink: /plugins/
     margin: 4px 8px 4px 0;
     transition: background-color 0.3s ease;
   }
-  
+
   .tab-content a:hover {
-    background-color: #333;
+    background-color: #a85e2a;
     transform: translateY(-1px);
+  }
+
+  .tab-content a.inline-link {
+    display: inline;
+    background-color: transparent;
+    color: #c47038 !important;
+    padding: 0;
+    border-radius: 0;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .tab-content a.inline-link:hover {
+    background-color: transparent;
+    color: #a85e2a !important;
+    transform: none;
   }
 
   .video-wrapper {
@@ -273,7 +289,7 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
 <div id="pnt" class="tab-content">
   <h2>Patch Notation Tool</h2>
 
-  <p><strong>Patch Notation Tool</strong> is a browser-based webapp for building Eurorack and VCV Rack patch diagrams using the official <a href="https://www.patchandtweak.com/patch-symbols-explained/">PATCH &amp; TWEAK</a> patch symbols.</p>
+  <p><strong>Patch Notation Tool</strong> is a browser-based webapp for building Eurorack and VCV Rack patch diagrams using the official <a class="inline-link" href="https://www.patchandtweak.com/patch-symbols-explained/">PATCH &amp; TWEAK</a> patch symbols.</p>
 
   <img src="/images/pnt.png" alt="Patch Notation Tool">
 

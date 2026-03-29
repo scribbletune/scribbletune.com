@@ -15,3 +15,172 @@ img, iframe {
   max-width: 100%;
   width: 100%;
 }
+
+// ─── Homepage hero ────────────────────────────────────────────────────────────
+.home-hero {
+  max-width: 860px;
+  margin: 0 auto;
+
+  &__lead {
+    max-width: 640px;
+    margin: 0 auto 1.5rem;
+  }
+
+  &__sub {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.btn-home-primary,
+.btn-home-secondary {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-home-primary {
+  background-color: #c47038;
+  color: #fff;
+  &:hover { background-color: #a85e2a; color: #fff; text-decoration: none; }
+}
+
+.btn-home-secondary {
+  border: 1px solid #4a5260;
+  color: #c3c8d1;
+  &:hover { border-color: #c47038; color: #c47038; text-decoration: none; }
+}
+
+// ─── Section labels ───────────────────────────────────────────────────────────
+.home-section-title {
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.home-section-sub {
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+
+.home-section-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+// ─── Pillar cards ─────────────────────────────────────────────────────────────
+.home-pillars {
+  border-top: 1px solid #2e3540;
+}
+
+.pillar-card {
+  background-color: #262b33;
+  border: 1px solid #2e3540;
+  border-radius: 4px;
+  padding: 28px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+    font-size: 1.6rem;
+    color: #c47038;
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  &__body {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+  }
+
+  &__code {
+    margin-bottom: 1rem;
+    pre.prettyprint { font-size: 0.78rem; margin-bottom: 0; }
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+    flex-grow: 1;
+
+    li {
+      padding: 4px 0;
+      border-bottom: 1px solid #2e3540;
+      &:last-child { border-bottom: none; }
+      &::before { content: "–"; margin-right: 6px; color: #c47038; }
+    }
+  }
+
+  &__link {
+    font-size: 0.88rem;
+    font-weight: bold;
+    color: #c47038;
+    margin-top: auto;
+    &:hover { color: #257eb3; text-decoration: none; }
+  }
+}
+
+// ─── Audio + Latest sections ──────────────────────────────────────────────────
+.home-audio,
+.home-latest {
+  border-top: 1px solid #2e3540;
+}
+
+.latest-card {
+  background-color: #262b33;
+  border: 1px solid #2e3540;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100%;
+      max-width: none;
+    }
+  }
+
+  &__label {
+    padding: 10px 14px 12px;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  &__type {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #c47038;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+}
