@@ -1,51 +1,58 @@
 ---
-layout: page
+layout: default
 title: Plugins & Tools
 permalink: /plugins/
 ---
 
+<div class="container pt-5">
+<h2>Plugins &amp; Tools</h2>
+
 <style>
- .tab-content a {
+  .download-btn {
     display: inline-block;
-    background-color: #c47038;
+    background-color: #000;
     color: white !important;
-    padding: 10px 16px;
+    padding: 10px 18px;
     text-decoration: none !important;
     border-radius: 5px;
-    font-weight: 500;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    border: 2px solid #000;
     margin: 4px 8px 4px 0;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
   }
 
-  .tab-content a:hover {
-    background-color: #a85e2a;
+  .download-btn:hover {
+    background-color: #222;
     transform: translateY(-1px);
   }
 
-  .tab-content a.inline-link {
-    display: inline;
-    background-color: transparent;
-    color: #c47038 !important;
-    padding: 0;
-    border-radius: 0;
-    font-weight: bold;
-    margin: 0;
+  .download-btns {
+    margin: 12px 0 24px;
   }
 
-  .tab-content a.inline-link:hover {
-    background-color: transparent;
+  .tab-content > h4:first-child {
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight: 700;
+  }
+
+  .inline-link {
+    color: #c47038 !important;
+    font-weight: bold;
+  }
+
+  .inline-link:hover {
     color: #a85e2a !important;
-    transform: none;
   }
 
   .video-wrapper {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     margin: 20px 0;
   }
-  
+
   .video-wrapper iframe {
     position: absolute;
     top: 0;
@@ -53,106 +60,146 @@ permalink: /plugins/
     width: 100%;
     height: 100%;
   }
-.plugin-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom: 2px solid #666;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1000;
-  gap: 8px;
-}
 
-.tab-button {
-  padding: 12px 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  color: #666;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
+  .plugins-layout {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+  }
 
-.tab-button:hover {
-  color: #333;
-}
+  .plugin-sidebar {
+    flex: 0 0 200px;
+    min-width: 160px;
+    border-right: 2px solid #666;
+    margin-right: 30px;
+  }
 
-.tab-button.active {
-  color: white;
-  background-color: #333;
-  border-bottom-color: #000;
-}
-
-@media (max-width: 768px) {
-  .plugin-tabs {
-    gap: 4px;
+  .plugin-nav {
+    display: flex;
+    flex-direction: column;
   }
 
   .tab-button {
-    padding: 10px 16px;
-    font-size: 14px;
-    flex: 1 1 auto;
-    min-width: calc(50% - 4px);
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    text-align: left;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
   }
-}
 
-@media (max-width: 480px) {
-  .tab-button {
-    padding: 8px 12px;
-    font-size: 13px;
-    min-width: 100%;
+  .tab-button:hover {
+    color: #333;
+    background-color: #f5f5f5;
   }
-}
 
-.tab-content {
-  display: none;
-}
+  .tab-button.active {
+    color: white;
+    background-color: #333;
+    border-left-color: #000;
+  }
 
-.tab-content.active {
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
-}
+  .plugin-main {
+    flex: 1;
+    min-width: 0;
+  }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    .plugins-layout {
+      flex-direction: column;
+    }
+
+    .plugin-sidebar {
+      flex: none;
+      width: 100%;
+      border-right: none;
+      border-bottom: 2px solid #666;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .plugin-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .tab-button {
+      flex: 1 1 auto;
+      min-width: calc(50% - 4px);
+      text-align: center;
+      border-left: none;
+      border-bottom: 3px solid transparent;
+      font-size: 14px;
+    }
+
+    .tab-button.active {
+      border-left-color: transparent;
+      border-bottom-color: #000;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tab-button {
+      min-width: 100%;
+      font-size: 13px;
+    }
+  }
 </style>
 
-Explore plugins, extensions, and tools that extend Scribbletune's concepts and pattern language into different music production environments.
+<div style="margin-bottom: 1.5rem;">Explore plugins, extensions, and tools that extend Scribbletune's concepts and pattern language into different music production environments.</div>
 
-<div class="plugin-tabs">
-  <button class="tab-button active" onclick="showTab(event, 'riff-vst')">Riff VST3/AU Plugin</button>
-  <button class="tab-button" onclick="showTab(event, 'riff-live')">Riff Max for Live</button>
-  <button class="tab-button" onclick="showTab(event, 'riff-bitwig')">Riff for Bitwig</button>
-  <button class="tab-button" onclick="showTab(event, 'drummer-vst')">Drummer VST3/AU Plugin</button>
-  <button class="tab-button" onclick="showTab(event, 'drummer-live')">Drummer Max for Live</button>
-  <button class="tab-button" onclick="showTab(event, 'pnt')">Patch Notation Tool</button>
-</div>
+<div class="plugins-layout">
+  <div class="plugin-sidebar">
+    <nav class="plugin-nav">
+      <button class="tab-button active" onclick="showTab(event, 'riff-vst')">Riff VST3/AU Plugin</button>
+      <button class="tab-button" onclick="showTab(event, 'riff-live')">Riff Max for Live</button>
+      <button class="tab-button" onclick="showTab(event, 'riff-bitwig')">Riff for Bitwig</button>
+      <button class="tab-button" onclick="showTab(event, 'drummer-vst')">Drummer VST3/AU Plugin</button>
+      <button class="tab-button" onclick="showTab(event, 'drummer-live')">Drummer Max for Live</button>
+      <button class="tab-button" onclick="showTab(event, 'pnt')">Patch Notation Tool</button>
+    </nav>
+  </div>
+  <div class="plugin-main">
 
 <div id="riff-vst" class="tab-content active">
-  <h2>Riff VST3/AU Plugin v0.8.0</h2>
-  
+  <h4>Riff VST3/AU Plugin v0.8.0</h4>
+
   <p><strong>Riff</strong> is a VST3/AU plugin that brings Scribbletune's pattern-based music generation directly into your DAW. It's also available as an AU plugin and a standalone app for Mac OS and Windows.</p>
-  
+
+  <div class="download-btns">
+    <a class="download-btn" href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Mac'})">Download Riff for Mac</a>
+    <a class="download-btn" href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Windows'})">Download Riff for Windows</a>
+  </div>
+
   <img src="/images/riff-v0.8.0.png" alt="Riff VST3 Plugin">
 
-  <p>
-    <a href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Mac'})">Download Riff for Mac</a>
-  <br>
-    <a href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Windows'})">Download Riff for Windows</a>
-  </p>
-  
-  
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/IlwI-7ojcyI" title="Riff VST3/AU Plugin Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
-  
+
   <h4>Features</h4>
-  
+
   <ul>
     <li>Pattern-based melody and rhythm generation</li>
     <li>Real-time parameter control</li>
@@ -162,9 +209,15 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
 </div>
 
 <div id="riff-live" class="tab-content">
-  <h2>Riff Max for Live Device</h2>
+  <h4>Riff Max for Live Device</h4>
 
   <p>Transform your music production workflow with Riff, a sophisticated Max for Live device that generates realistic drum sequences and melodic patterns. Built with TypeScript and optimized for professional music creation.</p>
+
+  <div class="download-btns">
+    <a class="download-btn" href="https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff Max for Live'})">Download Riff Max for Live</a>
+  </div>
+
+  <p>Works with Ableton Live 11 &amp; 12.</p>
 
   <img src="/images/riff4live11.png" alt="Riff Max for Live device">
 
@@ -172,8 +225,6 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
     <iframe src="https://www.youtube.com/embed/cA_SYO2TI3M" title="Riff Max for Live Device Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 
-  <p><a href="https://drive.google.com/file/d/1GjoluU6yObhf_d-CvLnhKSYNNm108STW/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff Max for Live'})">Download Riff Max for Live device</a> (works with Ableton Live 11 & 12)</p>
-  
   <ul>
     <li><strong>Melodic Riff Generation</strong> - Create melodic patterns with scale and chord progression support for complete musical arrangements</li>
     <li><strong>Real-Time Integration</strong> - Seamlessly generates MIDI clips directly in Ableton Live for immediate use in your productions OR live performance</li>
@@ -182,15 +233,15 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
 </div>
 
 <div id="riff-bitwig" class="tab-content">
-  <h2>Riff for Bitwig Controller Script</h2>
+  <h4>Riff for Bitwig Controller Script</h4>
 
   <p><strong>Riff for Bitwig</strong> is a controller script that brings Scribbletune's pattern-based music generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Riff VST3 plugin, optimized for Bitwig's unique workflow.</p>
 
-  <img src="/images/riff4bitwig.png" alt="Riff for Bitwig">
+  <div class="download-btns">
+    <a class="download-btn" href="https://drive.google.com/file/d/1eB_OQ08D6CYxrU6Wgzfn44sjWns7cIoz/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Bitwig'})">Download Riff for Bitwig</a>
+  </div>
 
-  <p>
-    <a href="https://drive.google.com/file/d/1eB_OQ08D6CYxrU6Wgzfn44sjWns7cIoz/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Bitwig'})">Download Riff for Bitwig Script</a>
-  </p>
+  <img src="/images/riff4bitwig.png" alt="Riff for Bitwig">
 
   <h4>How to install and use Riff for Bitwig</h4>
 
@@ -223,23 +274,18 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
 </div>
 
 <div id="drummer-vst" class="tab-content">
-  <h2>Drummer VST3/AU Plugin</h2>
-  
-  <p><strong>Drummer</strong> is a VST3/AU plugin that generates drum patterns using Scribbletune's pattern language and concepts. It's also available as an AU plugin and a standalone app for Mac OS and Windows.</p>
-  
-  <img src="/images/drummer-vst.png" alt="Drummer VST3/AU Plugin">
+  <h4>Drummer VST3/AU Plugin</h4>
 
-  <p>
-    <a href="https://drive.google.com/file/d/1FknTYhUTATRqrbprQO7LwKLNtMSMNO1x/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer for Mac'})">Download Drummer VST3/AU for Mac</a>
-  <br>
-    <a href="https://drive.google.com/file/d/1iLJVHdXyFhUqYDjIGrtFlIJseSo17YKd/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer for Windows'})">Drummer VST3/Clap/exe for Windows</a>
-  <br>
-    <h6>Download Issue:</h6> In case Windows Defender prevents the download because of the standalone exe provided in it, you can download VST and Clap separately.
-  <ul>
-    <li><a href="https://drive.google.com/file/d/1nDIMd1lkdk6Fa2m-T5Icrmul6Br5X7_b/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer VST3 for Windows'})">VST 3</a></li>
-    <li><a href="https://drive.google.com/file/d/1huIBme_8a6th9Cv0GC1QoZUgI3XXotHQ/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer Clap for Bitwig'})">Clap (for Bitwig)</a></li>
-  </ul>
-  </p>
+  <p><strong>Drummer</strong> is a VST3/AU plugin that generates drum patterns using Scribbletune's pattern language and concepts. It's also available as an AU plugin and a standalone app for Mac OS and Windows.</p>
+
+  <div class="download-btns">
+    <a class="download-btn" href="https://drive.google.com/file/d/1FknTYhUTATRqrbprQO7LwKLNtMSMNO1x/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer for Mac'})">Download Drummer for Mac</a>
+    <a class="download-btn" href="https://drive.google.com/file/d/1iLJVHdXyFhUqYDjIGrtFlIJseSo17YKd/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer for Windows'})">Download Drummer for Windows</a>
+  </div>
+
+  <p><strong>Windows download issue:</strong> If Windows Defender blocks the download due to the standalone exe, you can download <a class="inline-link" href="https://drive.google.com/file/d/1nDIMd1lkdk6Fa2m-T5Icrmul6Br5X7_b/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer VST3 for Windows'})">VST3</a> or <a class="inline-link" href="https://drive.google.com/file/d/1huIBme_8a6th9Cv0GC1QoZUgI3XXotHQ/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer Clap for Bitwig'})">Clap (for Bitwig)</a> separately.</p>
+
+  <img src="/images/drummer-vst.png" alt="Drummer VST3/AU Plugin">
 
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/nB3zI5J2Yls" title="Drummer VST3/AU Plugin Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -260,15 +306,17 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
 </div>
 
 <div id="drummer-live" class="tab-content">
-  <h2>Drummer Max for Live Device</h2>
-  
-  <p>A Max for Live device that generates drum patterns using Scribbletune's pattern language and concepts.</p>
-  
-  <img src="/images/drummer.png" alt="Drummer - Max for Live device">
+  <h4>Drummer Max for Live Device</h4>
 
-  <p><a href="https://maxforlive.com/library/device.php?id=13431" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer Max for Live'})">Download Drummer Max for Live Device</a> (works with Ableton Live 11 & 12)</p>
-  
-  <p>Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book extending it in interesting ways.</p>
+  <p>A Max for Live device that generates drum patterns using Scribbletune's pattern language and concepts. Instead of algorithmic generation or generic loops, Drummer is built around the "260 Drum Machine Patterns" book, extending it in interesting ways.</p>
+
+  <div class="download-btns">
+    <a class="download-btn" href="https://maxforlive.com/library/device.php?id=13431" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer Max for Live'})">Download Drummer Max for Live</a>
+  </div>
+
+  <p>Works with Ableton Live 11 &amp; 12.</p>
+
+  <img src="/images/drummer.png" alt="Drummer - Max for Live device">
 
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/H76q-O8APdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -287,13 +335,15 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
 </div>
 
 <div id="pnt" class="tab-content">
-  <h2>Patch Notation Tool</h2>
+  <h4>Patch Notation Tool</h4>
 
   <p><strong>Patch Notation Tool</strong> is a browser-based webapp for building Eurorack and VCV Rack patch diagrams using the official <a class="inline-link" href="https://www.patchandtweak.com/patch-symbols-explained/">PATCH &amp; TWEAK</a> patch symbols.</p>
 
-  <img src="/images/pnt.png" alt="Patch Notation Tool">
+  <div class="download-btns">
+    <a class="download-btn" href="https://scribbletune.github.io/patch-notation-tool/" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Patch Notation Tool'})">Open Patch Notation Tool</a>
+  </div>
 
-  <p><a href="https://scribbletune.github.io/patch-notation-tool/" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Patch Notation Tool'})">Open Patch Notation Tool</a></p>
+  <img src="/images/pnt.png" alt="Patch Notation Tool">
 
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/L2ui9IocaAo" title="Patch Notation Tool Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -308,6 +358,8 @@ Explore plugins, extensions, and tools that extend Scribbletune's concepts and p
     <li>Local patch library backed by IndexedDB, plus JSON import/export</li>
     <li>SVG and PNG export</li>
   </ul>
+  </div>
+  </div>
 </div>
 
 <script>
@@ -340,8 +392,8 @@ function showTab(evt, tabName) {
     });
   }
   
-  // Update URL hash
-  window.location.hash = tabName;
+  // Update URL hash without triggering browser scroll-to-anchor
+  history.replaceState(null, '', '#' + tabName);
 }
 
 function loadTabFromHash() {
@@ -350,14 +402,6 @@ function loadTabFromHash() {
 
   if (hash && validTabs.includes(hash)) {
     showTab(null, hash);
-    
-    // Scroll to tab buttons instead of content
-    setTimeout(function() {
-      var tabsContainer = document.querySelector('.plugin-tabs');
-      if (tabsContainer) {
-        tabsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 100);
   }
 }
 
@@ -371,3 +415,4 @@ window.addEventListener('hashchange', function() {
   loadTabFromHash();
 });
 </script>
+</div>
