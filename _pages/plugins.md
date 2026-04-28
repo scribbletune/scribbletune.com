@@ -178,6 +178,7 @@ permalink: /plugins/
       <button class="tab-button" onclick="showTab(event, 'drummer-vst')">Drummer VST3/AU Plugin</button>
       <button class="tab-button" onclick="showTab(event, 'drummer-live')">Drummer Max for Live</button>
       <button class="tab-button" onclick="showTab(event, 'pnt')">Patch Notation Tool</button>
+      <button class="tab-button" onclick="showTab(event, 'johann')">Johann</button>
     </nav>
   </div>
   <div class="plugin-main">
@@ -359,6 +360,25 @@ permalink: /plugins/
     <li>SVG and PNG export</li>
   </ul>
   </div>
+
+<div id="johann" class="tab-content">
+  <h4>Johann</h4>
+
+  <p><strong>Johann</strong> is a browser-based tool built with Scribbletune that visualises any scale or chord across an entire guitar fretboard or piano keyboard — so you can see exactly where every note sits and use it as a reference chart while you practice.</p>
+
+  <div class="download-btns">
+    <a class="download-btn" href="https://johann.scribbletune.com/" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Johann'})">Open Johann</a>
+  </div>
+
+  <img src="/images/johann.png" alt="Johann" style="border-radius: 8px; box-shadow: 0 2px 16px rgba(0,0,0,0.12);">
+
+  <h4>Features</h4>
+  <ul>
+    <li>Visualise any scale or chord across a full guitar fretboard or piano keyboard</li>
+    <li>Instantly generates a reference chart for any key and scale you are practicing</li>
+    <li>Built with Scribbletune's music theory engine</li>
+  </ul>
+</div>
   </div>
 </div>
 
@@ -398,7 +418,7 @@ function showTab(evt, tabName) {
 
 function loadTabFromHash() {
   var hash = window.location.hash.substring(1);
-  var validTabs = ['riff-vst', 'riff-live', 'riff-bitwig', 'drummer-vst', 'drummer-live', 'pnt'];
+  var validTabs = ['riff-vst', 'riff-live', 'riff-bitwig', 'drummer-vst', 'drummer-live', 'pnt', 'johann'];
 
   if (hash && validTabs.includes(hash)) {
     showTab(null, hash);
