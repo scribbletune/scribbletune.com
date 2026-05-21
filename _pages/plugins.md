@@ -236,7 +236,7 @@ permalink: /plugins/
 <div id="riff-bitwig" class="tab-content">
   <h4>Riff for Bitwig Controller Script</h4>
 
-  <p><strong>Riff for Bitwig</strong> is a controller script that brings Scribbletune's pattern-based music generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Riff VST3 plugin, optimized for Bitwig's unique workflow.</p>
+  <p><strong>Riff for Bitwig</strong> is a controller script that brings Scribbletune's pattern-based music generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Riff VST3 plugin, optimized for Bitwig's unique workflow. It is open source and <a class="inline-link" href="https://github.com/scribbletune/riff4bitwig">available on GitHub</a>.</p>
 
   <div class="download-btns">
     <a class="download-btn" href="https://drive.google.com/file/d/1eB_OQ08D6CYxrU6Wgzfn44sjWns7cIoz/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Bitwig'})">Download Riff for Bitwig</a>
