@@ -184,16 +184,16 @@ permalink: /plugins/
   <div class="plugin-main">
 
 <div id="riff-vst" class="tab-content active">
-  <h4>Riff VST3/AU Plugin v0.8.0</h4>
+  <h4>Riff VST3/AU Plugin v0.9.0</h4>
 
   <p><strong>Riff</strong> is a VST3/AU plugin that brings Scribbletune's pattern-based music generation directly into your DAW. It's also available as an AU plugin and a standalone app for Mac OS and Windows.</p>
 
   <div class="download-btns">
-    <a class="download-btn" href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Mac'})">Download Riff for Mac</a>
-    <a class="download-btn" href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Windows'})">Download Riff for Windows</a>
+    <a class="download-btn" href="https://drive.google.com/file/d/1yYgee7RQxX2OoEWKlFtnHjj8dIKYJ-Hd/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Mac'})">Download Riff for Mac</a>
+    <a class="download-btn" href="https://drive.google.com/file/d/1Uv4p6N6tKG-v9C4xDK-q0oJlW3fTnpE7/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Windows'})">Download Riff for Windows</a>
   </div>
 
-  <img src="/images/riff-v0.8.0.png" alt="Riff VST3 Plugin">
+  <img src="/images/riff-v0.9.0.png" alt="Riff VST3 Plugin">
 
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/IlwI-7ojcyI" title="Riff VST3/AU Plugin Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -207,6 +207,13 @@ permalink: /plugins/
     <li>Integration with popular DAWs</li>
     <li>Built on Scribbletune's proven algorithms</li>
   </ul>
+
+  <h4>Older versions</h4>
+  <p>
+    v0.8.0:
+    <a href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link">Mac</a> /
+    <a href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link">Windows</a>
+  </p>
 </div>
 
 <div id="riff-live" class="tab-content">
