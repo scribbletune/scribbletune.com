@@ -251,22 +251,6 @@ permalink: /plugins/
 
   <img src="/images/riff4bitwig.png" alt="Riff for Bitwig">
 
-  <h4>How to install and use Riff for Bitwig</h4>
-
-  <ul>
-    <li>Download the controller script Riff.control.js by clicking the above button (it will take you to Google drive for the download)</li>
-    <li>Copy the JS to Bitwig Studio's Controllers Scripts folder (on Mac this is in ~/Documents/Bitwig Studio/Controller Scripts</li>
-    <li>Open Bitwig Studio and access the Controllers section in the Settings</li>
-    <li>Click Add Controller and in the Hardware Vendors list, select Scribbletune and then Riff</li>
-    <li>You should now see a controllers icon on the top right in the Bitwig window (it looks like a small keyboard).</li>
-    <li>Make sure to create and select a MIDI clip and then expand Riff. Make changes to the settings the way you want and hit Generate!</li>
-    <li>Selecting a MIDI clip is crucial. Once it s selected, you can keep hitting Generate till you like what you hear (you can also make changes directly to the generated MIDI)</li>
-  </ul>
-
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/Pxa6T1t0Ips" title="Riff for Bitwig Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-
   <h4>Features</h4>
 
   <ul>
@@ -279,6 +263,28 @@ permalink: /plugins/
 <li>Variable note lengths from 16n to 4m</li>
 <li>Pattern reuse option for variations</li>
   </ul>
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/Pxa6T1t0Ips" title="Riff for Bitwig Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <h4>How to install and use Riff for Bitwig</h4>
+
+  <ul>
+    <li>Download the controller script Riff.control.js by clicking the above button (it will take you to Google drive for the download)</li>
+    <li>Copy the JS to Bitwig Studio's Controllers Scripts folder (on Mac this is in ~/Documents/Bitwig Studio/Controller Scripts</li>
+    <li>Open Bitwig Studio and access the Controllers section in the Settings</li>
+    <li>Click Add Controller and in the Hardware Vendors list, select Scribbletune and then Riff</li>
+    <li>You should now see a controllers icon on the top right in the Bitwig window (it looks like a small keyboard).</li>
+    <li>Make sure to create and select a MIDI clip and then expand Riff. Make changes to the settings the way you want and hit Generate!</li>
+    <li>Selecting a MIDI clip is crucial. Once it s selected, you can keep hitting Generate till you like what you hear (you can also make changes directly to the generated MIDI)</li>
+  </ul>
+
+  <p>The following video walks through the download and installation steps on Mac OS. Similar steps apply on Windows.</p>
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/-n78xOSXGWQ" title="Riff for Bitwig - Download and Install" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
 </div>
 
 <div id="drummer-vst" class="tab-content">
