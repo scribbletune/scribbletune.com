@@ -184,7 +184,7 @@ permalink: /plugins/
   <div class="plugin-main">
 
 <div id="riff-vst" class="tab-content active">
-  <h4>Riff VST3/AU Plugin v0.9.0</h4>
+  <h4>Riff VST3/AU Plugin v0.9.1</h4>
 
   <p><strong>Riff</strong> is a VST3/AU plugin that brings Scribbletune's pattern-based music generation directly into your DAW. It's also available as an AU plugin and a standalone app for Mac OS and Windows.</p>
 
@@ -208,12 +208,6 @@ permalink: /plugins/
     <li>Built on Scribbletune's proven algorithms</li>
   </ul>
 
-  <h4>Older versions</h4>
-  <p>
-    v0.8.0:
-    <a href="https://drive.google.com/file/d/1wPKkUUOQm4TvESknDTh9-nWHUUsZaW4Y/view?usp=drive_link">Mac</a> /
-    <a href="https://drive.google.com/file/d/16IbCYZZI2HeX7k0CqvLbnGL-SrFmma5X/view?usp=drive_link">Windows</a>
-  </p>
 </div>
 
 <div id="riff-live" class="tab-content">
@@ -241,7 +235,7 @@ permalink: /plugins/
 </div>
 
 <div id="riff-bitwig" class="tab-content">
-  <h4>Riff for Bitwig Controller Script</h4>
+  <h4>Riff for Bitwig Controller Script v0.9.1</h4>
 
   <p><strong>Riff for Bitwig</strong> is a controller script that brings Scribbletune's pattern-based music generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Riff VST3 plugin, optimized for Bitwig's unique workflow. It is open source and <a class="inline-link" href="https://github.com/scribbletune/scribble-for-bitwig">available on GitHub</a>.</p>
 
