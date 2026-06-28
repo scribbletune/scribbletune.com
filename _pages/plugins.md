@@ -177,6 +177,7 @@ permalink: /plugins/
       <button class="tab-button" onclick="showTab(event, 'riff-bitwig')">Riff for Bitwig</button>
       <button class="tab-button" onclick="showTab(event, 'drummer-vst')">Drummer VST3/AU Plugin</button>
       <button class="tab-button" onclick="showTab(event, 'drummer-live')">Drummer Max for Live</button>
+      <button class="tab-button" onclick="showTab(event, 'drummer-bitwig')">Drummer for Bitwig</button>
       <button class="tab-button" onclick="showTab(event, 'pnt')">Patch Notation Tool</button>
       <button class="tab-button" onclick="showTab(event, 'johann')">Johann</button>
     </nav>
@@ -342,6 +343,33 @@ permalink: /plugins/
   </ul>
 </div>
 
+<div id="drummer-bitwig" class="tab-content">
+  <h4>Drummer for Bitwig Controller Script v0.1.0</h4>
+
+  <p><strong>Drummer for Bitwig</strong> is a controller script that brings Scribbletune's drum pattern generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Drummer VST3 plugin, optimized for Bitwig's unique workflow.</p>
+
+  <div class="download-btns">
+    <a class="download-btn" href="https://drive.google.com/file/d/16BXvpZ2efxytctowCZinHRb2cKaIT79N/view" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer for Bitwig'})">Download Drummer for Bitwig</a>
+  </div>
+
+  <img src="/images/drummer-for-bitwig.png" alt="Drummer for Bitwig">
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/RVCqJ2hTiC4" title="Drummer for Bitwig Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <h4>Key features:</h4>
+
+  <ul>
+    <li>260+ authentic patterns across 18+ genres (rock, funk, reggae, jazz, hip-hop, etc.)</li>
+    <li>Intelligent variation engine that adds fills, flams, and human feel</li>
+    <li>Genre-specific selection or full random mode</li>
+    <li>Pattern complexity setting (minimal grooves → complex fills)</li>
+    <li>Use with Bitwig's native drum sampler instrument or Native Instruments Battery</li>
+    <li>Performance features like "remove kick" for live use</li>
+  </ul>
+</div>
+
 <div id="pnt" class="tab-content">
   <h4>Patch Notation Tool</h4>
 
@@ -425,7 +453,7 @@ function showTab(evt, tabName) {
 
 function loadTabFromHash() {
   var hash = window.location.hash.substring(1);
-  var validTabs = ['riff-vst', 'riff-live', 'riff-bitwig', 'drummer-vst', 'drummer-live', 'pnt', 'johann'];
+  var validTabs = ['riff-vst', 'riff-live', 'riff-bitwig', 'drummer-vst', 'drummer-live', 'drummer-bitwig', 'pnt', 'johann'];
 
   if (hash && validTabs.includes(hash)) {
     showTab(null, hash);
