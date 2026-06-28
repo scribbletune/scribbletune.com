@@ -238,7 +238,7 @@ permalink: /plugins/
 <div id="riff-bitwig" class="tab-content">
   <h4>Riff for Bitwig Controller Script v0.9.1</h4>
 
-  <p><strong>Riff for Bitwig</strong> is a controller script that brings Scribbletune's pattern-based music generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Riff VST3 plugin, optimized for Bitwig's unique workflow. It is open source and <a class="inline-link" href="https://github.com/scribbletune/scribble-for-bitwig">available on GitHub</a>.</p>
+  <p><strong>Riff for Bitwig</strong> is a controller script that brings Scribbletune's pattern-based music generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Riff VST3 plugin, optimized for Bitwig's unique workflow. It is free to use and <a class="inline-link" href="https://github.com/scribbletune/scribble-for-bitwig">open sourced via GitHub</a>.</p>
 
   <div class="download-btns">
     <a class="download-btn" href="https://drive.google.com/file/d/1eB_OQ08D6CYxrU6Wgzfn44sjWns7cIoz/view?usp=sharing" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Riff for Bitwig'})">Download Riff for Bitwig</a>
@@ -346,7 +346,7 @@ permalink: /plugins/
 <div id="drummer-bitwig" class="tab-content">
   <h4>Drummer for Bitwig Controller Script v0.1.0</h4>
 
-  <p><strong>Drummer for Bitwig</strong> is a controller script that brings Scribbletune's drum pattern generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Drummer VST3 plugin, optimized for Bitwig's unique workflow.</p>
+  <p><strong>Drummer for Bitwig</strong> is a controller script that brings Scribbletune's drum pattern generation directly into Bitwig Studio. This JavaScript-based controller script is a port of the popular Drummer VST3 plugin, optimized for Bitwig's unique workflow. It is free to use and <a class="inline-link" href="https://github.com/scribbletune/scribble-for-bitwig">open sourced via GitHub</a>.</p>
 
   <div class="download-btns">
     <a class="download-btn" href="https://drive.google.com/file/d/16BXvpZ2efxytctowCZinHRb2cKaIT79N/view" onclick="gtag('event', 'download_click', {transport_type: 'beacon', file_name: 'Drummer for Bitwig'})">Download Drummer for Bitwig</a>
